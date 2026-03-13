@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalorieCalc — AI-Powered Calorie Tracker & Nutrition Coach</title>
+    <meta name="description" content="Track your calories effortlessly with AI-powered food scanning, personalized nutrition coaching, and smart meal planning. Download CalorieCalc for free.">
+    <meta name="keywords" content="calorie tracker, nutrition app, food scanner, AI diet coach, meal planner, macro tracker, Indian food tracker">
+    <meta name="author" content="CalorieCalc">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="CalorieCalc — AI-Powered Calorie Tracker">
+    <meta property="og:description" content="Track calories with AI food scanning, personalized coaching & smart meal planning.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://caloriecalcapp.com">
+    <meta property="og:image" content="https://caloriecalcapp.com/assets/images/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/app-icon.png">
+    <link rel="apple-touch-icon" href="assets/images/app-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://caloriecalcapp.com">
+</head>
+<body>
+
+    <!-- ═══ NAVIGATION ═══ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand">
+                <img src="assets/images/app-icon.png" alt="CalorieCalc" width="36" height="36">
+                <span>CalorieCalc</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#ai-coach">AI Coach</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Download Free</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══ HERO SECTION ═══ -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    AI-Powered Nutrition Tracking
+                </div>
+                <h1 class="heading-xl">
+                    Track Calories.<br>
+                    <span class="text-gradient">Powered by AI.</span>
+                </h1>
+                <p class="hero-description">
+                    Snap a photo of your food and get instant calorie & macro breakdowns.
+                    Personalized coaching, smart meal plans, and health insights — all in one beautiful app.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                        Get on Google Play
+                    </a>
+                    <a href="#features" class="btn btn-secondary btn-lg">
+                        Explore Features →
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">50K+</div>
+                        <div class="hero-stat-label">Active Users</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">7M+</div>
+                        <div class="hero-stat-label">Foods in Database</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">4.8★</div>
+                        <div class="hero-stat-label">App Rating</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-phone-wrapper">
+                    <img src="assets/images/hero-mockup.png" alt="CalorieCalc App Dashboard" class="hero-phone">
+
+                    <!-- Floating cards -->
+                    <div class="hero-floating-card card-1">
+                        <div class="float-title">Protein</div>
+                        <div class="float-value protein">82g ✓</div>
+                    </div>
+                    <div class="hero-floating-card card-2">
+                        <div class="float-title">Today's Calories</div>
+                        <div class="float-value calories">1,680 kcal</div>
+                    </div>
+                    <div class="hero-floating-card card-3">
+                        <div class="float-title">Carbs</div>
+                        <div class="float-value carbs">195g</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FEATURES SECTION ═══ -->
+    <section class="section features-section" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">✨ Features</span>
+                <h2 class="heading-lg">Everything You Need to<br><span class="text-gradient">Eat Smarter</span></h2>
+                <p>Powerful AI tools and beautiful insights that make healthy eating effortless — not stressful.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon emerald">📸</div>
+                    <h3>AI Food Scanner</h3>
+                    <p>Snap a photo of any meal and get instant calorie & macro breakdowns. Works with Indian, Western, and global cuisines.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon blue">🤖</div>
+                    <h3>AI Nutrition Coach</h3>
+                    <p>Get personalized advice, smart meal swaps, and real-time coaching powered by advanced AI — like having a nutritionist in your pocket.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon purple">📊</div>
+                    <h3>Smart Insights</h3>
+                    <p>Discover eating patterns, track weekly trends, and get AI-generated health insights that help you make better food choices.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon orange">🍽️</div>
+                    <h3>Auto Meal Planner</h3>
+                    <p>AI generates personalized weekly meal plans based on your goals, dietary preferences, and cuisine choices.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon pink">🏆</div>
+                    <h3>Gamification & XP</h3>
+                    <p>Earn XP, unlock badges, complete daily challenges, and climb the leaderboard. Health tracking has never been this fun.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon amber">⏱️</div>
+                    <h3>Fasting Tracker</h3>
+                    <p>Built-in intermittent fasting timer with multiple protocols (16/8, 5:2, OMAD) and correlation insights with your diet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ HOW IT WORKS ═══ -->
+    <section class="section how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">🚀 How It Works</span>
+                <h2 class="heading-lg">Start Tracking in<br>3 Simple Steps</h2>
+                <p>No complicated setup. No manual data entry. Just snap, track, and improve.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card reveal">
+                    <div class="step-icon">📸</div>
+                    <div class="step-number">1</div>
+                    <h3>Snap Your Food</h3>
+                    <p>Take a photo of your meal, scan a barcode, or search from our database of 7M+ foods. AI does the rest.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-icon">📈</div>
+                    <div class="step-number">2</div>
+                    <h3>Track & Learn</h3>
+                    <p>Get instant calorie, protein, carbs & fat breakdowns. Watch your daily progress and discover eating patterns.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-icon">🎯</div>
+                    <div class="step-number">3</div>
+                    <h3>Reach Your Goals</h3>
+                    <p>Follow personalized AI coaching, stick to smart meal plans, and achieve your health goals faster than ever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ AI COACH SECTION ═══ -->
+    <section class="section ai-section" id="ai-coach">
+        <div class="container">
+            <div class="ai-grid">
+                <div class="ai-content reveal">
+                    <span class="section-label">🧠 AI Coach</span>
+                    <h2 class="heading-lg">Your Personal<br><span class="text-gradient">Nutrition AI</span></h2>
+                    <p class="body-lg">Powered by Google Gemini, our AI coach understands your eating patterns, preferences, and goals to give truly personalized advice.</p>
+                    <ul class="ai-features-list">
+                        <li>
+                            <span class="ai-check">✓</span>
+                            <div class="ai-feature-text">
+                                <strong>Real-Time Coaching</strong>
+                                <span>Get meal-by-meal feedback and smart swap suggestions</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="ai-check">✓</span>
+                            <div class="ai-feature-text">
+                                <strong>Pattern Detection</strong>
+                                <span>Discovers your eating habits and provides preemptive nudges</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="ai-check">✓</span>
+                            <div class="ai-feature-text">
+                                <strong>Goal-Specific Plans</strong>
+                                <span>Weight loss, muscle gain, maintenance — AI adapts to your journey</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="ai-check">✓</span>
+                            <div class="ai-feature-text">
+                                <strong>Multi-Language Support</strong>
+                                <span>Available in English, Hindi, Tamil, Telugu, and 10+ more languages</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ai-visual reveal">
+                    <div class="ai-demo-card">
+                        <div class="ai-demo-header">
+                            <div class="ai-demo-icon">🤖</div>
+                            <div>
+                                <h4>AI Analysis</h4>
+                                <p>Just now</p>
+                            </div>
+                        </div>
+                        <div class="ai-demo-content">
+                            <p>I analyzed your <span class="highlight">Chicken Biryani</span> plate and here's the breakdown:</p>
+                            <div class="ai-demo-macros">
+                                <div class="ai-macro">
+                                    <div class="ai-macro-value protein">32g</div>
+                                    <div class="ai-macro-label">Protein</div>
+                                </div>
+                                <div class="ai-macro">
+                                    <div class="ai-macro-value carbs">65g</div>
+                                    <div class="ai-macro-label">Carbs</div>
+                                </div>
+                                <div class="ai-macro">
+                                    <div class="ai-macro-value fat">18g</div>
+                                    <div class="ai-macro-label">Fat</div>
+                                </div>
+                            </div>
+                            <p style="margin-top: 16px; font-size: 0.9rem;">
+                                💡 <span class="highlight">Smart Swap:</span> Try tandoori chicken with brown rice — same protein, 180 fewer calories!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PRICING SECTION ═══ -->
+    <section class="section pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">💎 Pricing</span>
+                <h2 class="heading-lg">Start Free.<br><span class="text-gradient">Upgrade When Ready.</span></h2>
+                <p>Generous free tier with powerful AI features. Upgrade for unlimited access and premium coaching.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card reveal">
+                    <div class="pricing-name">Free</div>
+                    <div class="pricing-price">$0<span>/mo</span></div>
+                    <div class="pricing-desc">Get started for free</div>
+                    <ul class="pricing-features">
+                        <li>3 AI scans per day</li>
+                        <li>Basic calorie tracking</li>
+                        <li>Food database access</li>
+                        <li>Daily macro goals</li>
+                        <li>3 AI chat messages/day</li>
+                    </ul>
+                    <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="btn btn-secondary" style="width:100%" target="_blank" rel="noopener">Get Started</a>
+                </div>
+                <div class="pricing-card reveal">
+                    <div class="pricing-name">Plus</div>
+                    <div class="pricing-price">$1.19<span>/mo</span></div>
+                    <div class="pricing-desc">For daily trackers</div>
+                    <ul class="pricing-features">
+                        <li>15 AI scans per day</li>
+                        <li>AI meal planner</li>
+                        <li>Weekly insights report</li>
+                        <li>Barcode scanning</li>
+                        <li>15 AI chat messages/day</li>
+                    </ul>
+                    <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="btn btn-secondary" style="width:100%" target="_blank" rel="noopener">Upgrade</a>
+                </div>
+                <div class="pricing-card popular reveal">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-name">Pro</div>
+                    <div class="pricing-price">$2.99<span>/mo</span></div>
+                    <div class="pricing-desc">For health enthusiasts</div>
+                    <ul class="pricing-features">
+                        <li>Unlimited AI scans</li>
+                        <li>AI nutrition coaching</li>
+                        <li>Advanced analytics</li>
+                        <li>Export reports</li>
+                        <li>50 AI chat messages/day</li>
+                    </ul>
+                    <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="btn btn-primary" style="width:100%" target="_blank" rel="noopener">Go Pro</a>
+                </div>
+                <div class="pricing-card reveal">
+                    <div class="pricing-name">Elite</div>
+                    <div class="pricing-price">$5.99<span>/mo</span></div>
+                    <div class="pricing-desc">Ultimate experience</div>
+                    <ul class="pricing-features">
+                        <li>Everything in Pro</li>
+                        <li>Family sharing (5 members)</li>
+                        <li>Priority AI processing</li>
+                        <li>Exclusive challenges</li>
+                        <li>Unlimited AI chat</li>
+                    </ul>
+                    <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="btn btn-secondary" style="width:100%" target="_blank" rel="noopener">Go Elite</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CTA SECTION ═══ -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="heading-lg reveal">Ready to Transform<br>Your Health Journey?</h2>
+            <p class="reveal">Join thousands of users who track smarter, eat better, and feel great — with the power of AI by their side.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="btn btn-lg cta-btn reveal" target="_blank" rel="noopener">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                Download Free on Google Play
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>
+                        <img src="assets/images/app-icon.png" alt="CalorieCalc" width="32" height="32">
+                        CalorieCalc
+                    </h3>
+                    <p>AI-powered calorie tracking and nutrition coaching. Eat smarter, live healthier.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>App</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" target="_blank" rel="noopener">Download</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="delete-account.html">Delete Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="support.html">Help Center</a></li>
+                        <li><a href="mailto:support@caloriecalcapp.com">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 CalorieCalc. All rights reserved.</span>
+                <a href="privacy-policy.html">Privacy &middot; Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══ SCRIPTS ═══ -->
+    <script src="js/main.js"></script>
+</body>
+</html>

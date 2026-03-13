@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — CalorieCalc</title>
+    <meta name="description" content="Get help with CalorieCalc. Contact our support team or find answers to common questions.">
+    <link rel="icon" type="image/png" href="assets/images/app-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .faq-item {
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 14px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover { border-color: rgba(16, 185, 129, 0.2); }
+        .faq-question {
+            padding: 20px 24px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-primary);
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-family: inherit;
+        }
+        .faq-question:hover { color: var(--emerald-dark); }
+        .faq-arrow {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            color: var(--text-muted);
+        }
+        .faq-item.open .faq-arrow { transform: rotate(180deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+            padding: 0 24px 20px;
+        }
+        .faq-answer p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 32px;
+        }
+        .contact-card {
+            background: var(--emerald-50);
+            border: 1px solid var(--emerald-100);
+            border-radius: 16px;
+            padding: 28px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .contact-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .contact-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        .contact-card a {
+            color: var(--emerald-dark);
+            font-weight: 600;
+        }
+        @media (max-width: 640px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand">
+                <img src="assets/images/app-icon.png" alt="CalorieCalc" width="36" height="36">
+                <span>CalorieCalc</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="privacy-policy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="legal-page">
+        <div class="container">
+            <div class="legal-card">
+                <h1 class="text-gradient">Help & Support</h1>
+                <span class="effective-date">We're here to help</span>
+
+                <p>Find answers to common questions below, or reach out to our support team directly.</p>
+
+                <h2>Contact Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <h3>Email Support</h3>
+                        <p><a href="mailto:support@caloriecalcapp.com">support@caloriecalcapp.com</a></p>
+                        <p>We respond within 24 hours</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📱</div>
+                        <h3>In-App Support</h3>
+                        <p>Go to <strong>Profile → Help & Support</strong> in the CalorieCalc app</p>
+                    </div>
+                </div>
+
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How accurate is the AI food scanner?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our AI scanner powered by Google Gemini provides estimates that are typically within 10-15% accuracy for most foods. For best results, place food on a plain surface with good lighting. You can always manually adjust the detected portions and nutritional values.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How do I cancel my subscription?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Subscriptions are managed through Google Play. Go to <strong>Google Play Store → Menu → Subscriptions</strong>, find CalorieCalc, and tap Cancel. Your premium features will remain active until the end of the current billing period.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How do I delete my account?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can delete your account from the app: <strong>Profile → Delete Account & Data</strong>. Alternatively, visit our <a href="delete-account.html">Account Deletion Page</a> or email us at support@caloriecalcapp.com. All data is permanently removed immediately.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Can I use CalorieCalc offline?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Basic calorie tracking, food logging from saved items, and viewing your history works offline. AI features (food scanning, coaching, meal planning) require an internet connection. Your data syncs automatically when you're back online.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Which languages does CalorieCalc support?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>CalorieCalc is available in 14+ languages including English, Hindi, Tamil, Telugu, Kannada, Malayalam, Bengali, Marathi, Gujarati, Punjabi, Urdu, Spanish, French, German, Turkish, Japanese, Korean, and more.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Is my health data shared or sold?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely not. We never sell your health data. Your data is only used to provide the app's core features and is stored securely with encryption. See our <a href="privacy-policy.html">Privacy Policy</a> for complete details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What's included in the free plan?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The free plan includes 3 AI food scans per day, basic calorie & macro tracking, access to the food database, daily goal setting, and 3 AI chat messages per day. Upgrade to Plus, Pro, or Elite for unlimited scans, AI coaching, meal planning, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <span>&copy; 2026 CalorieCalc. All rights reserved.</span>
+                <a href="privacy-policy.html">Privacy &middot; Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(button) {
+            const item = button.closest('.faq-item');
+            const wasOpen = item.classList.contains('open');
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            // Toggle current
+            if (!wasOpen) item.classList.add('open');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found — CalorieCalc</title>
+    <link rel="icon" type="image/png" href="assets/images/app-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+        .error-message {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+    </style>
+</head>
+<body>
+    <section class="error-page">
+        <div>
+            <div class="error-code text-gradient">404</div>
+            <p class="error-message">Oops! This page doesn't exist.</p>
+            <a href="/" class="btn btn-primary btn-lg">← Back to Home</a>
+        </div>
+    </section>
+</body>
+</html>
