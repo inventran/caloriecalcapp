@@ -3,28 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — CalorieCalc</title>
-    <meta name="description" content="CalorieCalc Privacy Policy. Learn how we collect, use, and protect your health data.">
+    <title>Privacy Policy — CalorieCalc | How We Protect Your Health Data</title>
+    <meta name="description" content="CalorieCalc Privacy Policy. Learn how we collect, use, and protect your health and nutrition data. We never sell your data. GDPR compliant.">
+    <meta name="keywords" content="CalorieCalc privacy policy, health data privacy, nutrition app privacy, calorie tracker data protection, GDPR">
+    <meta name="author" content="CalorieCalc">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#047857">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://caloriecalcapp.com/privacy-policy.html">
+    <meta property="og:title" content="Privacy Policy — CalorieCalc">
+    <meta property="og:description" content="Learn how CalorieCalc collects, uses, and protects your health and nutrition data. We never sell your data.">
+    <meta property="og:image" content="https://caloriecalcapp.com/assets/images/og-image.png">
+    <meta property="og:site_name" content="CalorieCalc">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Privacy Policy — CalorieCalc">
+    <meta name="twitter:description" content="Learn how CalorieCalc collects, uses, and protects your health and nutrition data.">
+
     <link rel="icon" type="image/png" href="assets/images/app-icon.png">
+    <link rel="apple-touch-icon" href="assets/images/app-icon.png">
+    <link rel="canonical" href="https://caloriecalcapp.com/privacy-policy.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://caloriecalcapp.com"},
+        {"@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://caloriecalcapp.com/privacy-policy.html"}
+      ]
+    }
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar scrolled" id="navbar">
+
+    <nav class="legal-nav">
         <div class="container">
-            <a href="/" class="nav-brand">
-                <img src="assets/images/app-icon.png" alt="CalorieCalc" width="36" height="36">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/app-icon.png" alt="CalorieCalc" width="32" height="32">
                 <span>CalorieCalc</span>
             </a>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="privacy-policy.html">Privacy</a></li>
-                <li><a href="terms.html">Terms</a></li>
-                <li><a href="support.html">Support</a></li>
-            </ul>
+            <div class="legal-nav-links">
+                <a href="index.html">Home</a>
+                <a href="privacy-policy.html" class="active">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="support.html">Support</a>
+            </div>
         </div>
     </nav>
 
@@ -59,7 +90,7 @@
                 <ul>
                     <li><strong>Supabase:</strong> Infrastructure and secure authentication.</li>
                     <li><strong>OneSignal:</strong> Secure delivery of push notifications.</li>
-                    <li><strong>Google Gemini AI:</strong> Advanced nutritional analysis (data is anonymized where possible).</li>
+                    <li><strong>Google Vertex AI:</strong> Advanced nutritional analysis (data is anonymized where possible).</li>
                     <li><strong>RevenueCat:</strong> Subscription management.</li>
                 </ul>
 
@@ -92,14 +123,15 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom" style="border-top: none; padding-top: 0;">
                 <span>&copy; 2026 CalorieCalc. All rights reserved.</span>
-                <a href="privacy-policy.html">Privacy &middot; Terms</a>
+                <span><a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refund-policy.html">Refunds</a></span>
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

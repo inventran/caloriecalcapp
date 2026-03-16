@@ -4,40 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found — CalorieCalc</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Return to CalorieCalc homepage.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#047857">
     <link rel="icon" type="image/png" href="assets/images/app-icon.png">
+    <link rel="apple-touch-icon" href="assets/images/app-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .error-page {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        .error-code {
-            font-size: 8rem;
-            font-weight: 800;
-            line-height: 1;
-            margin-bottom: 16px;
-        }
-        .error-message {
-            font-size: 1.3rem;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-        }
-    </style>
 </head>
 <body>
-    <section class="error-page">
-        <div>
-            <div class="error-code text-gradient">404</div>
-            <p class="error-message">Oops! This page doesn't exist.</p>
-            <a href="/" class="btn btn-primary btn-lg">← Back to Home</a>
+
+    <nav class="legal-nav">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/app-icon.png" alt="CalorieCalc" width="32" height="32">
+                <span>CalorieCalc</span>
+            </a>
+            <div class="legal-nav-links">
+                <a href="index.html">Home</a>
+                <a href="support.html">Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-404">
+        <div class="container">
+            <h1 class="gradient-text">404</h1>
+            <p>Oops! This page doesn't exist. Maybe it went on a diet. 🥗</p>
+            <a href="index.html" class="btn-glow">← Back to Home</a>
         </div>
     </section>
+
 </body>
 </html>

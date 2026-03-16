@@ -3,111 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support — CalorieCalc</title>
-    <meta name="description" content="Get help with CalorieCalc. Contact our support team or find answers to common questions.">
+    <title>Help & Support — CalorieCalc | FAQ, Contact & Troubleshooting</title>
+    <meta name="description" content="Get help with CalorieCalc. Contact our support team, find answers to common questions about AI food scanning, subscriptions, account management, and more.">
+    <meta name="keywords" content="CalorieCalc support, calorie tracker help, AI food scanner FAQ, nutrition app support, CalorieCalc FAQ, cancel subscription">
+    <meta name="author" content="CalorieCalc">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#047857">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://caloriecalcapp.com/support.html">
+    <meta property="og:title" content="Help & Support — CalorieCalc">
+    <meta property="og:description" content="Get help with CalorieCalc. Find answers about AI food scanning, subscriptions, accounts and more.">
+    <meta property="og:image" content="https://caloriecalcapp.com/assets/images/og-image.png">
+    <meta property="og:site_name" content="CalorieCalc">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Help & Support — CalorieCalc">
+    <meta name="twitter:description" content="Get help with CalorieCalc. FAQ, contact support, and troubleshooting.">
+
     <link rel="icon" type="image/png" href="assets/images/app-icon.png">
+    <link rel="apple-touch-icon" href="assets/images/app-icon.png">
+    <link rel="canonical" href="https://caloriecalcapp.com/support.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .faq-item {
-            border: 1px solid rgba(0,0,0,0.06);
-            border-radius: 14px;
-            margin-bottom: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://caloriecalcapp.com"},
+        {"@type": "ListItem", "position": 2, "name": "Help & Support", "item": "https://caloriecalcapp.com/support.html"}
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How accurate is the AI food scanner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our AI scanner powered by Google Vertex AI provides estimates that are typically within 10-15% accuracy for most foods. For best results, place food on a plain surface with good lighting. You can always manually adjust the detected portions and nutritional values."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What scanning methods are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CalorieCalc offers multiple scanning methods: AI Photo Scan (snap any meal), Barcode Scanner (scan packaged products), Nutrition Label OCR (scan nutrition labels), Restaurant Menu Scanner, and Voice Logging (speak what you ate). You can also search our database of 7M+ foods."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I cancel my subscription?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Subscriptions are managed through Google Play. Go to Google Play Store → Menu → Subscriptions, find CalorieCalc, and tap Cancel. Your premium features will remain active until the end of the current billing period."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I delete my account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can delete your account from the app: Profile → Delete Account & Data. Alternatively, visit our Account Deletion Page or email us at support@caloriecalcapp.com. All data is permanently removed immediately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use CalorieCalc offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Basic calorie tracking, food logging from saved items, and viewing your history works offline. AI features (food scanning, coaching, meal planning) require an internet connection. Your data syncs automatically when you're back online."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which languages does CalorieCalc support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CalorieCalc is available in 14+ languages including English, Hindi, Tamil, Telugu, Kannada, Malayalam, Bengali, Marathi, Gujarati, Punjabi, Urdu, Spanish, French, German, Turkish, Japanese, Korean, and more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my health data shared or sold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely not. We never sell your health data. Your data is only used to provide the app's core features and is stored securely with encryption."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's included in the free plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free plan includes 21 AI credits (one-time) that can be used across AI food scans, AI chat, meal suggestions, voice/text quick logs, and smart tips. You also get unlimited basic calorie tracking, food diary, water tracking, and 7M+ food database access — forever."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the gamification system work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CalorieCalc rewards healthy habits with XP (experience points). You earn XP by logging meals, hitting protein goals, drinking water, maintaining streaks, and completing daily missions. As you level up, you unlock badges and climb the community leaderboard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does CalorieCalc work with fitness trackers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! CalorieCalc integrates with Google Fit and Apple Health to sync your step count, heart rate, and exercise data. This allows the app to calculate your net calories more accurately."
+          }
         }
-        .faq-item:hover { border-color: rgba(16, 185, 129, 0.2); }
-        .faq-question {
-            padding: 20px 24px;
-            font-weight: 600;
-            font-size: 1.05rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--text-primary);
-            background: none;
-            border: none;
-            width: 100%;
-            text-align: left;
-            font-family: inherit;
-        }
-        .faq-question:hover { color: var(--emerald-dark); }
-        .faq-arrow {
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-            color: var(--text-muted);
-        }
-        .faq-item.open .faq-arrow { transform: rotate(180deg); }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-        .faq-item.open .faq-answer {
-            max-height: 300px;
-            padding: 0 24px 20px;
-        }
-        .faq-answer p {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 32px;
-        }
-        .contact-card {
-            background: var(--emerald-50);
-            border: 1px solid var(--emerald-100);
-            border-radius: 16px;
-            padding: 28px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .contact-card:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-sm);
-        }
-        .contact-icon {
-            font-size: 2rem;
-            margin-bottom: 12px;
-        }
-        .contact-card h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-        .contact-card p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-        .contact-card a {
-            color: var(--emerald-dark);
-            font-weight: 600;
-        }
-        @media (max-width: 640px) {
-            .contact-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+      ]
+    }
+    </script>
 </head>
 <body>
-    <nav class="navbar scrolled" id="navbar">
+
+    <!-- NAVIGATION -->
+    <nav class="legal-nav">
         <div class="container">
-            <a href="/" class="nav-brand">
-                <img src="assets/images/app-icon.png" alt="CalorieCalc" width="36" height="36">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/app-icon.png" alt="CalorieCalc" width="32" height="32">
                 <span>CalorieCalc</span>
             </a>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="privacy-policy.html">Privacy</a></li>
-                <li><a href="terms.html">Terms</a></li>
-                <li><a href="support.html">Support</a></li>
-            </ul>
+            <div class="legal-nav-links">
+                <a href="index.html">Home</a>
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="support.html" class="active">Support</a>
+            </div>
         </div>
     </nav>
 
@@ -115,9 +155,9 @@
         <div class="container">
             <div class="legal-card">
                 <h1 class="text-gradient">Help & Support</h1>
-                <span class="effective-date">We're here to help</span>
+                <span class="effective-date">We're here to help you succeed</span>
 
-                <p>Find answers to common questions below, or reach out to our support team directly.</p>
+                <p>Find answers to common questions below, or reach out to our support team directly. We respond to all inquiries within 24 hours.</p>
 
                 <h2>Contact Us</h2>
                 <div class="contact-grid">
@@ -130,24 +170,34 @@
                     <div class="contact-card">
                         <div class="contact-icon">📱</div>
                         <h3>In-App Support</h3>
-                        <p>Go to <strong>Profile → Help & Support</strong> in the CalorieCalc app</p>
+                        <p>Go to <strong>Profile → Help & Support</strong> in the CalorieCalc app for instant help</p>
                     </div>
                 </div>
 
                 <h2>Frequently Asked Questions</h2>
 
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question">
                         How accurate is the AI food scanner?
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Our AI scanner powered by Google Gemini provides estimates that are typically within 10-15% accuracy for most foods. For best results, place food on a plain surface with good lighting. You can always manually adjust the detected portions and nutritional values.</p>
+                        <p>Our AI scanner powered by Google Vertex AI provides estimates that are typically within 10-15% accuracy for most foods. For best results, place food on a plain surface with good lighting. You can always manually adjust the detected portions and nutritional values.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question">
+                        What scanning methods are available?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>CalorieCalc offers multiple scanning methods: <strong>AI Photo Scan</strong> (snap any meal), <strong>Barcode Scanner</strong> (scan packaged products), <strong>Nutrition Label OCR</strong> (scan nutrition labels), <strong>Restaurant Menu Scanner</strong>, and <strong>Voice Logging</strong> (speak what you ate). You can also search our database of 7M+ foods.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
                         How do I cancel my subscription?
                         <span class="faq-arrow">▼</span>
                     </button>
@@ -157,7 +207,7 @@
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question">
                         How do I delete my account?
                         <span class="faq-arrow">▼</span>
                     </button>
@@ -167,7 +217,7 @@
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question">
                         Can I use CalorieCalc offline?
                         <span class="faq-arrow">▼</span>
                     </button>
@@ -177,17 +227,17 @@
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question">
                         Which languages does CalorieCalc support?
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer">
-                        <p>CalorieCalc is available in 14+ languages including English, Hindi, Tamil, Telugu, Kannada, Malayalam, Bengali, Marathi, Gujarati, Punjabi, Urdu, Spanish, French, German, Turkish, Japanese, Korean, and more.</p>
+                        <p>CalorieCalc is available in 14+ languages including English, Hindi, Tamil, Telugu, Kannada, Malayalam, Bengali, Marathi, Gujarati, Punjabi, Urdu, Spanish, French, German, Turkish, Japanese, Korean, and more. Both the app interface and AI coaching work in all supported languages.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question">
                         Is my health data shared or sold?
                         <span class="faq-arrow">▼</span>
                     </button>
@@ -197,12 +247,32 @@
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question">
                         What's included in the free plan?
                         <span class="faq-arrow">▼</span>
                     </button>
                     <div class="faq-answer">
-                        <p>The free plan includes 3 AI food scans per day, basic calorie & macro tracking, access to the food database, daily goal setting, and 3 AI chat messages per day. Upgrade to Plus, Pro, or Elite for unlimited scans, AI coaching, meal planning, and more.</p>
+                        <p>The free plan includes 21 AI credits (one-time) that can be used across AI food scans, AI chat, meal suggestions, voice/text quick logs, and smart tips. You also get unlimited basic calorie tracking, food diary, water tracking, and 7M+ food database access — forever. Once your 21 AI credits are used, upgrade to Plus, Pro, or Elite for daily-resetting AI quotas, coaching, meal planning, and more.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How does the gamification system work?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>CalorieCalc rewards healthy habits with XP (experience points). You earn XP by logging meals, hitting protein goals, drinking water, maintaining streaks, and completing daily missions. As you level up, you unlock badges and climb the community leaderboard. It makes tracking fun and motivating!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Does CalorieCalc work with fitness trackers?
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! CalorieCalc integrates with Google Fit and Apple Health to sync your step count, heart rate, and exercise data. This allows the app to calculate your net calories more accurately by accounting for calories burned during activities.</p>
                     </div>
                 </div>
             </div>
@@ -213,20 +283,11 @@
         <div class="container">
             <div class="footer-bottom" style="border-top: none; padding-top: 0;">
                 <span>&copy; 2026 CalorieCalc. All rights reserved.</span>
-                <a href="privacy-policy.html">Privacy &middot; Terms</a>
+                <span><a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refund-policy.html">Refunds</a></span>
             </div>
         </div>
     </footer>
 
-    <script>
-        function toggleFaq(button) {
-            const item = button.closest('.faq-item');
-            const wasOpen = item.classList.contains('open');
-            // Close all
-            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-            // Toggle current
-            if (!wasOpen) item.classList.add('open');
-        }
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
