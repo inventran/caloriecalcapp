@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influencer Partner Program — CalorieCalc</title>
+    <meta name="description" content="Earn up to 30% commission with your own branded welcome page, dedicated coupon code, and real-time analytics dashboard.">
+    <link rel="icon" type="image/png" href="assets/images/app-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    body {background:#0a1628!important; color:#fff}
+    .pp-sec {padding:100px 0; background:#0a1628}
+    .pp-sec-alt {background:#080f1e}
+    .pp-container {max-width:1100px; margin:0 auto; padding:0 24px}
+    .pp-stag {text-align:center; color:#34d399; font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px}
+    .pp-stitle {text-align:center; font-size:clamp(32px, 5vw, 52px); font-weight:900; color:#fff; letter-spacing:-1.5px; margin-bottom:50px}
+    .green {color:#10B981}
+
+    /* ── HERO ── */
+    .pp-hero {position:relative; padding:160px 0 100px; text-align:center; overflow:hidden; background:linear-gradient(160deg, #0a1628 0%, #0f1f3d 50%, #091420 100%)}
+    .orb {position:absolute; border-radius:50%; filter:blur(100px); opacity:0.15; pointer-events:none}
+    .orb-1 {width:400px; height:400px; background:#10B981; top:-100px; right:-100px}
+    .orb-2 {width:300px; height:300px; background:#059669; bottom:100px; left:-80px}
+    .pp-hero-content {position:relative; z-index:2; max-width:850px; margin:0 auto; padding:0 24px}
+    .badge {background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.3); border-radius:50px; padding:12px 28px; display:inline-flex; align-items:center; gap:10px; margin-bottom:30px}
+    .badge-dot {width:8px; height:8px; border-radius:50%; background:#10B981; animation:pulse 2s infinite}
+    .badge span {color:#34d399; font-size:14px; font-weight:700; letter-spacing:1px; text-transform:uppercase}
+    .emoji-row {font-size:54px; margin-bottom:20px; letter-spacing:12px}
+    .pp-hero h1 {font-size:clamp(40px, 7vw, 72px); font-weight:900; line-height:1.1; letter-spacing:-2px; margin-bottom:24px}
+    .pp-hero p {font-size:22px; color:rgba(255,255,255,0.6); line-height:1.6; margin-bottom:40px; max-width:700px; margin-left:auto; margin-right:auto}
+    
+    .pills {display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-bottom:50px}
+    .pill {background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:40px; padding:12px 22px; display:flex; align-items:center; gap:10px}
+    .pill-text {color:rgba(255,255,255,0.85); font-size:15px; font-weight:600}
+
+    /* ── BENEFITS ── */
+    .b-cards {display:flex; flex-direction:column; gap:20px; max-width:850px; margin:0 auto}
+    .b-card {background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:24px; padding:32px; display:flex; gap:24px; align-items:flex-start; transition:all 0.3s}
+    .b-card:hover {background:rgba(16,185,129,0.06); border-color:rgba(16,185,129,0.2)}
+    .b-icon {width:68px; height:68px; border-radius:20px; display:flex; align-items:center; justify-content:center; font-size:32px; flex-shrink:0}
+    .b-c1 .b-icon {background:linear-gradient(135deg, rgba(16,185,129,0.2), rgba(5,150,105,0.1))}
+    .b-c2 .b-icon {background:linear-gradient(135deg, rgba(14,165,233,0.2), rgba(2,132,199,0.1))}
+    .b-c3 .b-icon {background:linear-gradient(135deg, rgba(139,92,246,0.2), rgba(124,58,237,0.1))}
+    .b-c4 .b-icon {background:linear-gradient(135deg, rgba(245,158,11,0.2), rgba(217,119,6,0.1))}
+    .b-c5 .b-icon {background:linear-gradient(135deg, rgba(239,68,68,0.2), rgba(220,38,38,0.1))}
+    .b-title {font-size:22px; font-weight:800; margin-bottom:6px}
+    .b-desc {font-size:15px; color:rgba(255,255,255,0.5); line-height:1.5}
+    .b-tag {display:inline-block; margin-top:12px; background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.25); border-radius:8px; padding:6px 14px; font-size:12px; color:#34d399; font-weight:700; letter-spacing:0.5px}
+
+    /* ── MOCKUPS ── */
+    .mock-row {display:flex; flex-wrap:wrap; gap:40px; align-items:center; justify-content:center; margin-bottom:100px}
+    .mock-text {flex:1; min-width:280px; max-width:400px}
+    .mock-text h3 {font-size:32px; font-weight:900; margin-bottom:16px}
+    .mock-text p {font-size:17px; color:rgba(255,255,255,0.5); line-height:1.6}
+    .phone-wrap {position:relative; display:flex; align-items:center; justify-content:center; margin:0 160px}
+    .phone {width:340px; background:#111827; border-radius:44px; border:3px solid rgba(255,255,255,0.1); padding:16px; box-shadow:0 30px 80px rgba(0,0,0,0.5)}
+    .phone-inner {background:#0f172a; border-radius:30px; overflow:hidden; position:relative; min-height:600px}
+    .phone-status {display:flex; justify-content:space-between; padding:12px 24px 6px; font-size:12px; color:rgba(255,255,255,0.4); font-weight:600}
+
+    /* Callouts */
+    .callout {position:absolute; display:flex; align-items:center; gap:12px; z-index:3}
+    .callout-left {flex-direction:row-reverse; right:calc(100% - 40px)}
+    .callout-right {left:calc(100% - 40px)}
+    .callout-line {width:20px; height:2px; background:linear-gradient(90deg, rgba(16,185,129,0.6), rgba(16,185,129,0.1))}
+    .callout-left .callout-line {background:linear-gradient(270deg, rgba(16,185,129,0.6), rgba(16,185,129,0.1))}
+    .callout-box {background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); border-radius:12px; padding:10px 16px; white-space:nowrap; backdrop-filter:blur(10px)}
+    .callout-box .label {color:#34d399; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:2px}
+    .callout-box .val {color:#fff; font-size:14px; font-weight:600}
+    
+    .phone-notch {width:80px; height:18px; background:#111827; border-radius:0 0 12px 12px; position:absolute; top:0; left:50%; transform:translateX(-50%); z-index:10}
+    
+    /* Screen 1: Welcome */
+    .welcome {padding:10px 24px; text-align:center}
+    .partner-badge {background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.3); border-radius:30px; padding:8px 18px; display:inline-flex; align-items:center; gap:8px; margin-bottom:16px}
+    .avatar-ring {width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg,#10B981,#059669); padding:4px; margin:0 auto 12px; display:flex; align-items:center; justify-content:center}
+    .avatar-inner {width:100%; height:100%; border-radius:50%; background:#1e293b; display:flex; align-items:center; justify-content:center; font-size:32px; color:#10B981; font-weight:900}
+    .welcome-name {font-size:22px; font-weight:800; margin-bottom:4px}
+    .welcome-msg {background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:14px 18px; margin:16px 0}
+    .welcome-msg p {font-size:12px; color:rgba(255,255,255,0.55); font-style:italic}
+    .offer-box {background:linear-gradient(135deg, rgba(16,185,129,0.15), rgba(5,150,105,0.08)); border:1px solid rgba(16,185,129,0.3); border-radius:16px; padding:16px; margin-bottom:16px}
+    .offer-title {font-size:10px; color:#34d399; font-weight:700; text-transform:uppercase; margin-bottom:10px}
+    .offer-row {display:flex; justify-content:center; gap:12px}
+    .offer-item {font-size:12px; font-weight:600; color:rgba(255,255,255,0.8)}
+    .dl-btn {width:100%; background:linear-gradient(135deg,#10B981,#059669); border:none; border-radius:14px; padding:16px; color:#fff; font-size:15px; font-weight:800; margin-bottom:12px}
+
+    /* Screen 2 & 3: Two Phones */
+    .two-phones {display:flex; gap:30px; align-items:center; justify-content:center; width:100%}
+    .phone-col {display:flex; flex-direction:column; align-items:center; gap:16px}
+    .phone-col .phone {width:290px; box-shadow:0 20px 50px rgba(0,0,0,0.5)}
+    .phone-col .phone-inner {min-height:500px}
+    .phone-label {color:rgba(255,255,255,0.5); font-size:13px; font-weight:700; text-transform:uppercase; display:flex; align-items:center; gap:8px}
+    .phone-label .num {width:24px; height:24px; border-radius:50%; background:rgba(16,185,129,0.2); color:#10B981; display:flex; align-items:center; justify-content:center}
+    .arrow-between {font-size:32px; color:#10B981}
+    
+    .screen-title {font-size:16px; font-weight:700; text-align:center; margin-bottom:16px}
+    .input-wrap {background:rgba(255,255,255,0.06); border:2px solid rgba(16,185,129,0.4); border-radius:14px; padding:14px; display:flex; justify-content:space-between; margin-bottom:16px}
+    .input-text {color:#10B981; font-size:16px; font-weight:700; letter-spacing:2px}
+    
+    .success-ring {width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg, rgba(16,185,129,0.2), rgba(5,150,105,0.1)); margin:0 auto 12px; display:flex; align-items:center; justify-content:center; font-size:30px}
+    .invited-by {font-size:20px; font-weight:800; margin-bottom:4px; text-align:center}
+    .reward-cards {display:flex; gap:8px; margin-bottom:16px}
+    .reward-card {flex:1; background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.2); border-radius:12px; padding:10px 4px; text-align:center}
+    .paywall-preview {background:rgba(255,255,255,0.04); border-radius:14px; padding:12px; margin-bottom:12px}
+    .paywall-promo {background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.25); border-radius:10px; padding:10px; text-align:center; color:#34d399; font-size:11px; font-weight:700}
+
+    /* Screen 4: Dashboard */
+    .dash {padding:16px}
+    .dash-header {display:flex; justify-content:space-between; align-items:center; margin-bottom:16px}
+    .stats {display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px}
+    .stat {background:rgba(255,255,255,0.04); border-radius:14px; padding:14px 12px; text-align:center}
+    .stat-val {font-size:24px; font-weight:900}
+    .wallet {background:linear-gradient(135deg, rgba(16,185,129,0.12), rgba(5,150,105,0.06)); border:1px solid rgba(16,185,129,0.2); border-radius:16px; padding:16px; margin-bottom:14px; display:flex; justify-content:space-between; align-items:center}
+    .funnel {background:rgba(255,255,255,0.03); border-radius:14px; padding:14px; margin-bottom:14px}
+    .funnel-row {display:flex; align-items:center; gap:10px; margin-bottom:6px}
+    .funnel-label {font-size:11px; color:rgba(255,255,255,0.4); width:60px; text-align:right}
+    .funnel-bar-bg {flex:1; height:18px; background:rgba(255,255,255,0.04); border-radius:6px; position:relative}
+    .funnel-bar {height:100%; border-radius:6px; display:flex; align-items:center; justify-content:flex-end; padding-right:8px; font-size:10px; font-weight:700; color:#fff}
+    .channels {background:rgba(255,255,255,0.03); border-radius:14px; padding:14px}
+    .channel-row {display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.04); font-size:12px}
+
+    /* ── TIERS ── */
+    .tiers {display:flex; flex-wrap:wrap; gap:24px; justify-content:center; margin-bottom:50px}
+    .tier {flex:1; min-width:280px; max-width:340px; border-radius:28px; padding:40px 28px; text-align:center; position:relative; overflow:hidden}
+    .tier-bronze {background:linear-gradient(160deg, rgba(180,130,80,0.12), rgba(180,130,80,0.03)); border:1px solid rgba(180,130,80,0.2)}
+    .tier-silver {background:linear-gradient(160deg, rgba(192,192,192,0.12), rgba(192,192,192,0.03)); border:1px solid rgba(192,192,192,0.2); transform:scale(1.05); z-index:2}
+    .tier-gold {background:linear-gradient(160deg, rgba(245,158,11,0.15), rgba(245,158,11,0.03)); border:2px solid rgba(245,158,11,0.35)}
+    .tier-gold::before {content:'⭐ BEST VALUE'; position:absolute; top:0; left:0; right:0; background:linear-gradient(135deg, #F59E0B, #D97706); padding:8px; font-size:11px; font-weight:800}
+    .tier-medal {font-size:56px; margin-bottom:12px}
+    .tier-gold .tier-medal {margin-top:20px}
+    .tier-name {font-size:26px; font-weight:800; margin-bottom:4px}
+    .tier-percent {font-size:64px; font-weight:900; line-height:1}
+    
+    .calc-box {background:rgba(16,185,129,0.06); border:1px solid rgba(16,185,129,0.15); border-radius:20px; padding:32px; text-align:center}
+    .calc-title {color:#34d399; font-size:14px; font-weight:700; margin-bottom:20px; text-transform:uppercase}
+    .calc-grid {display:flex; flex-wrap:wrap; justify-content:space-around; gap:20px}
+    .calc-amount {font-size:28px; font-weight:800; color:#10B981; margin:6px 0}
+
+    /* ── STEPS ── */
+    .pp-steps {display:flex; flex-direction:column; max-width:800px; margin:0 auto}
+    .pp-step {display:flex; gap:28px; align-items:flex-start}
+    .pp-step-line {display:flex; flex-direction:column; align-items:center}
+    .pp-step-circle {width:64px; height:64px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:800; flex-shrink:0}
+    .pp-step-1 .pp-step-circle {background:linear-gradient(135deg, #10B981, #059669)}
+    .pp-step-2 .pp-step-circle {background:linear-gradient(135deg, #0EA5E9, #0284C7)}
+    .pp-step-3 .pp-step-circle {background:linear-gradient(135deg, #8B5CF6, #7C3AED)}
+    .pp-step-4 .pp-step-circle {background:linear-gradient(135deg, #F59E0B, #D97706)}
+    .connector {width:3px; height:60px; background:rgba(255,255,255,0.1); margin:0 auto}
+    .pp-step-content {padding-top:16px}
+    .step-title {font-size:24px; font-weight:800; margin-bottom:8px}
+
+    /* ── CTA ── */
+    .join-summary {display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-bottom:40px}
+    .sum-pill {background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:16px 24px; display:flex; align-items:center; gap:12px; font-weight:600}
+    .cta-btn {background:linear-gradient(135deg,#10B981,#059669); border-radius:20px; padding:24px 50px; display:inline-flex; align-items:center; gap:12px; text-decoration:none; font-size:24px; font-weight:800; color:#fff; box-shadow:0 8px 32px rgba(16,185,129,0.3); transition:all 0.3s}
+    .cta-btn:hover {transform:translateY(-2px); box-shadow:0 12px 40px rgba(16,185,129,0.4)}
+    .cta-alt {background:rgba(255,255,255,0.06); border:2px solid rgba(255,255,255,0.15); border-radius:16px; padding:16px 36px; display:inline-flex; align-items:center; gap:12px; text-decoration:none; font-size:18px; font-weight:600; color:rgba(255,255,255,0.8); transition:all 0.3s; margin-top:20px}
+    .cta-alt:hover {border-color:rgba(16,185,129,0.4)}
+    
+    @keyframes pulse {0%,100%{opacity:1} 50%{opacity:0.5}}
+    @media(max-width:900px){
+        .callout {display:none}
+        .two-phones {flex-direction:column}
+        .arrow-between {transform:rotate(90deg)}
+        .tier-silver {transform:scale(1)}
+        .mock-row {gap:60px}
+        .phone-wrap {margin:0}
+    }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav"><div class="nav-inner">
+        <a href="index.html" class="logo"><img src="assets/images/app-icon.png" alt="CalorieCalc" width="36" height="36"><span>CalorieCalc</span></a>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a>
+            <a href="partner.html" style="color:#10B981">Partner Program</a><a href="support.html">Support</a>
+        </div>
+        <a href="mailto:partners@caloriecalcapp.com" class="nav-cta">🤝 Apply Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div></nav>
+
+    <!-- ── HERO ── -->
+    <section class="pp-hero">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="pp-hero-content">
+            <div class="badge"><div class="badge-dot"></div><span>Now Accepting Partners</span></div>
+            <div class="emoji-row">🤝 💰 📈</div>
+            <h1>Become a <span class="green">CalorieCalc</span> Partner</h1>
+            <p>Earn up to 30% commission with your own branded welcome page, dedicated coupon code & real-time analytics dashboard.</p>
+            <div class="pills">
+                <div class="pill">🏠 <span class="pill-text">Your Branded Page</span></div>
+                <div class="pill">🏷️ <span class="pill-text">Your Coupon Code</span></div>
+                <div class="pill">📊 <span class="pill-text">Live Dashboard</span></div>
+                <div class="pill">🎨 <span class="pill-text">Content Kit</span></div>
+                <div class="pill">💰 <span class="pill-text">Up to 30%</span></div>
+            </div>
+            <a href="mailto:partners@caloriecalcapp.com?subject=Influencer%20Partner%20Application" class="cta-btn" style="padding:18px 40px;font-size:20px">🤝 Apply to Join — Free</a>
+        </div>
+    </section>
+
+    <!-- ── BENEFITS ── -->
+    <section class="pp-sec">
+        <div class="pp-container">
+            <div class="pp-stag">What You Get</div>
+            <h2 class="pp-stitle">Partner <span class="green">Benefits</span></h2>
+            <div class="b-cards">
+                <div class="b-card b-c1"><div class="b-icon">🏠</div><div><div class="b-title">Your Branded Welcome Page</div><div class="b-desc">A personalized landing page with your name, profile & custom message. Your audience sees YOU — not a generic store page.</div><div class="b-tag">🔗 caloriecalcapp.com/partner/YOU</div></div></div>
+                <div class="b-card b-c2"><div class="b-icon">🏷️</div><div><div class="b-title">Dedicated Coupon Code</div><div class="b-desc">Your custom code displays "Invited by [YourName]" in the app. Your brand stays visible throughout onboarding & paywall.</div><div class="b-tag">✨ "Invited by Sarah" + 7 Free Pro Days</div></div></div>
+                <div class="b-card b-c3"><div class="b-icon">📊</div><div><div class="b-title">Real-Time Analytics Dashboard</div><div class="b-desc">Track installs, conversions, earnings & top channels — all from your phone. Full funnel visibility with leaderboard ranking.</div></div></div>
+                <div class="b-card b-c4"><div class="b-icon">🎨</div><div><div class="b-title">Done-For-You Content Kit</div><div class="b-desc">Instagram Stories, post graphics, pre-written captions & video clips — all with your code baked in. Just download & post.</div></div></div>
+                <div class="b-card b-c5"><div class="b-icon">💰</div><div><div class="b-title">Up to 30% Commission</div><div class="b-desc">Tiered commission structure that rewards growth. Start at 20% and climb to 30% as you hit milestones.</div><div class="b-tag">🥉 20% → 🥈 25% → 🥇 30%</div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── MOCKUP 1: WELCOME PAGE ── -->
+    <section class="pp-sec pp-sec-alt">
+        <div class="pp-container">
+            <div class="pp-stag">App Screen Preview</div>
+            <h2 class="pp-stitle">Your <span class="green">Welcome Page</span></h2>
+            
+            <div class="mock-row">
+                <div class="mock-text">
+                    <h3>When your audience clicks your link, they see YOUR name welcoming them.</h3>
+                    <p>Your custom link routes users to a personalized page that increases trust and conversion rates by displaying an exclusive offer.</p>
+                </div>
+                <div class="phone-wrap">
+                    <div class="callout callout-left" style="top:120px"><div class="callout-box"><div class="label">Your Profile</div><div class="val">🏠 Name + Avatar</div></div><div class="callout-line"></div></div>
+                    <div class="callout callout-right" style="top:220px"><div class="callout-line"></div><div class="callout-box"><div class="label">Partner Badge</div><div class="val">✨ Official Partner</div></div></div>
+                    <div class="callout callout-left" style="top:380px"><div class="callout-box"><div class="label">Exclusive Offer</div><div class="val">🎁 7 Pro Days + 20% Off</div></div><div class="callout-line"></div></div>
+                    
+                    <div class="phone"><div class="phone-inner">
+                        <div class="phone-notch"></div>
+                        <div class="phone-status"><span>9:41</span><span>●●● 🔋</span></div>
+                        <div class="welcome">
+                            <div class="partner-badge"><div class="partner-badge-dot"></div><span>Official Content Partner</span></div>
+                            <div class="avatar-ring"><div class="avatar-inner">S</div></div>
+                            <div class="welcome-name">Sarah Fitness</div>
+                            <div style="font-size:12px;color:#aaa">Invited you to try CalorieCalc</div>
+                            <div class="welcome-msg"><p>"Hey! I've been using CalorieCalc for months and the AI food scanner is incredible. Use my code for 7 free Pro days! 💚"</p></div>
+                            <div class="offer-box">
+                                <div class="offer-title">✨ Exclusive Partner Offer</div>
+                                <div class="offer-row"><div class="offer-item"><span style="color:#10B981">✓</span> 7 Pro Days Free</div><div class="offer-item"><span style="color:#10B981">✓</span> 20% Off</div></div>
+                            </div>
+                            <div class="dl-btn">📲 Download Free</div>
+                            <div style="display:flex;justify-content:center;gap:16px;font-size:11px;color:#666;margin-top:10px"><span>⭐ 4.8 Rating</span><span>📲 50K+ Downloads</span></div>
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── MOCKUP 2: CODE IN ACTION ── -->
+    <section class="pp-sec">
+        <div class="pp-container">
+            <div class="pp-stag">In-App Experience</div>
+            <h2 class="pp-stitle">Your <span class="green">Code</span> in Action</h2>
+            <p style="text-align:center;color:#aaa;margin-top:-30px;margin-bottom:50px;font-size:18px">When users enter your code, they see YOUR name throughout the app</p>
+            
+            <div class="two-phones">
+                <div class="phone-col">
+                    <div class="phone-label"><span class="num">1</span> User Enters Code</div>
+                    <div class="phone"><div class="phone-inner" style="padding:20px">
+                        <div class="phone-notch"></div>
+                        <div class="phone-status" style="margin-bottom:20px"><span>9:41</span><span>●●● 🔋</span></div>
+                        <div class="screen-title">Enter Promo Code</div>
+                        <div class="input-wrap"><span class="input-text">SARAH20</span><span style="width:2px;height:20px;background:#10B981"></span></div>
+                        <div class="dl-btn">✨ Apply Code</div>
+                        <div style="text-align:center;font-size:12px;color:#666">Enter a partner code for exclusive benefits</div>
+                    </div></div>
+                </div>
+                
+                <div class="arrow-between">→</div>
+                
+                <div class="phone-col">
+                    <div class="phone-label"><span class="num">2</span> Your Name Appears</div>
+                    <div class="phone"><div class="phone-inner" style="padding:20px;text-align:center">
+                        <div class="phone-notch"></div>
+                        <div class="phone-status" style="margin-bottom:10px"><span>9:41</span><span>●●● 🔋</span></div>
+                        <div class="success-ring">✅</div>
+                        <div class="invited-by">Invited by Sarah 💚</div>
+                        <div style="font-size:12px;color:#aaa;margin-bottom:16px">Welcome aboard! Here are your perks:</div>
+                        <div class="reward-cards">
+                            <div class="reward-card"><div style="font-size:20px">🎁</div><div style="font-size:10px;color:#34d399;font-weight:700">7 Pro Days</div></div>
+                            <div class="reward-card"><div style="font-size:20px">💰</div><div style="font-size:10px;color:#34d399;font-weight:700">20% Off</div></div>
+                            <div class="reward-card"><div style="font-size:20px">⭐</div><div style="font-size:10px;color:#34d399;font-weight:700">Pro Access</div></div>
+                        </div>
+                        <div class="paywall-preview">
+                            <div style="font-size:9px;color:#666;text-transform:uppercase;margin-bottom:6px">On Paywall Screen</div>
+                            <div class="paywall-promo">🏷️ Promo SARAH20 Applied — 20% Off!</div>
+                        </div>
+                        <div class="dl-btn" style="margin-top:10px">Continue to App →</div>
+                    </div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── MOCKUP 3: DASHBOARD ── -->
+    <section class="pp-sec pp-sec-alt">
+        <div class="pp-container">
+            <div class="pp-stag">Track Everything</div>
+            <h2 class="pp-stitle">Partner <span class="green">Dashboard</span></h2>
+            
+            <div class="mock-row" style="flex-direction:row-reverse">
+                <div class="mock-text">
+                    <h3>Real-time analytics at your fingertips — right in the app</h3>
+                    <p>Track installs, qualified leads, paid conversions, and withdraw your earnings instantly. Know exactly which social channel is performing best.</p>
+                </div>
+                <div class="phone-wrap">
+                    <div class="callout callout-right" style="top:100px"><div class="callout-line"></div><div class="callout-box"><div class="label">Live Stats</div><div class="val">📊 Updated in real-time</div></div></div>
+                    <div class="callout callout-left" style="top:220px"><div class="callout-box"><div class="label">Instant Withdrawal</div><div class="val">💰 Cash out anytime</div></div><div class="callout-line"></div></div>
+                    <div class="callout callout-right" style="top:400px"><div class="callout-line"></div><div class="callout-box"><div class="label">Conversion Funnel</div><div class="val">📈 Full visibility</div></div></div>
+                    
+                    <div class="phone"><div class="phone-inner">
+                        <div class="phone-notch"></div>
+                        <div class="phone-status"><span>9:41</span><span>●●● 🔋</span></div>
+                        <div class="dash">
+                            <div class="dash-header"><div style="font-size:18px;font-weight:800">🤝 Partner Hub</div><div style="background:rgba(192,192,192,0.15);border:1px solid rgba(192,192,192,0.3);padding:4px 10px;border-radius:6px;font-size:10px;color:#c0c0c0;font-weight:700">🥈 Silver</div></div>
+                            <div class="stats">
+                                <div class="stat"><div class="stat-val" style="color:#10B981">247</div><div style="font-size:10px;color:#aaa">Total Installs</div></div>
+                                <div class="stat"><div class="stat-val" style="color:#0EA5E9">84</div><div style="font-size:10px;color:#aaa">Paid Conversions</div></div>
+                                <div class="stat"><div class="stat-val" style="color:#F59E0B">34%</div><div style="font-size:10px;color:#aaa">Conversion Rate</div></div>
+                                <div class="stat"><div class="stat-val" style="color:#8B5CF6">#12</div><div style="font-size:10px;color:#aaa">Leaderboard</div></div>
+                            </div>
+                            <div class="wallet">
+                                <div><div style="font-size:10px;color:#aaa;margin-bottom:2px">Available Balance</div><div style="font-size:24px;font-weight:900;color:#10B981">$247.50</div></div>
+                                <div style="background:linear-gradient(135deg,#10B981,#059669);padding:8px 14px;border-radius:8px;font-size:11px;font-weight:700;color:#fff">Withdraw →</div>
+                            </div>
+                            <div class="funnel">
+                                <div style="font-size:10px;color:#aaa;font-weight:700;text-transform:uppercase;margin-bottom:8px">📊 Conversion Funnel</div>
+                                <div class="funnel-row"><div class="funnel-label">Installs</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:linear-gradient(90deg,#10B981,#059669)">247</div></div></div>
+                                <div class="funnel-row"><div class="funnel-label">Qualified</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:62%;background:linear-gradient(90deg,#0EA5E9,#0284C7)">153</div></div></div>
+                                <div class="funnel-row"><div class="funnel-label">Paid</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:34%;background:linear-gradient(90deg,#8B5CF6,#7C3AED)">84</div></div></div>
+                            </div>
+                            <div class="channels">
+                                <div style="font-size:10px;color:#aaa;font-weight:700;text-transform:uppercase;margin-bottom:8px">📱 Top Channels</div>
+                                <div class="channel-row"><span>📸 Instagram</span><span style="color:#10B981;font-weight:700">142 installs</span></div>
+                                <div class="channel-row"><span>▶️ YouTube</span><span style="color:#10B981;font-weight:700">61 installs</span></div>
+                                <div class="channel-row"><span>💬 WhatsApp</span><span style="color:#10B981;font-weight:700">28 installs</span></div>
+                                <div class="channel-row" style="border:none"><span>🐦 Twitter</span><span style="color:#10B981;font-weight:700">16 installs</span></div>
+                            </div>
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── TIERS ── -->
+    <section class="pp-sec">
+        <div class="pp-container">
+            <div class="pp-stag">Earn More As You Grow</div>
+            <h2 class="pp-stitle">Commission <span class="green">Tiers</span></h2>
+            <p style="text-align:center;color:#aaa;margin-top:-30px;margin-bottom:50px;font-size:18px">The more you refer, the higher your commission rate</p>
+            
+            <div class="tiers">
+                <div class="tier tier-bronze">
+                    <div class="tier-medal">🥉</div>
+                    <div class="tier-name">Bronze</div>
+                    <div style="font-size:13px;color:#aaa;margin-bottom:16px">0+ referrals</div>
+                    <div class="tier-percent" style="color:#B4826E">20%</div>
+                    <div style="font-size:14px;color:#aaa;font-weight:600;margin-top:8px">per conversion</div>
+                    <div style="width:60px;height:2px;background:rgba(255,255,255,0.08);margin:20px auto"></div>
+                    <div style="font-size:13px;color:rgba(255,255,255,0.4)">10 Pro subs @ $4.99<br><strong style="color:rgba(255,255,255,0.8)">= $9.98 earned</strong></div>
+                </div>
+                <div class="tier tier-silver">
+                    <div class="tier-medal">🥈</div>
+                    <div class="tier-name">Silver</div>
+                    <div style="font-size:13px;color:#aaa;margin-bottom:16px">50+ referrals</div>
+                    <div class="tier-percent" style="color:#C0C0C0">25%</div>
+                    <div style="font-size:14px;color:#aaa;font-weight:600;margin-top:8px">per conversion</div>
+                    <div style="width:60px;height:2px;background:rgba(255,255,255,0.08);margin:20px auto"></div>
+                    <div style="font-size:13px;color:rgba(255,255,255,0.4)">50 Pro subs @ $4.99<br><strong style="color:rgba(255,255,255,0.8)">= $62.38 earned</strong></div>
+                </div>
+                <div class="tier tier-gold">
+                    <div class="tier-medal">🥇</div>
+                    <div class="tier-name">Gold</div>
+                    <div style="font-size:13px;color:#aaa;margin-bottom:16px">200+ referrals</div>
+                    <div class="tier-percent" style="color:#F59E0B">30%</div>
+                    <div style="font-size:14px;color:#aaa;font-weight:600;margin-top:8px">per conversion</div>
+                    <div style="width:60px;height:2px;background:rgba(255,255,255,0.08);margin:20px auto"></div>
+                    <div style="font-size:13px;color:rgba(255,255,255,0.4)">200 Pro subs @ $4.99<br><strong style="color:rgba(255,255,255,0.8)">= $299.40 earned</strong></div>
+                </div>
+            </div>
+            
+            <div class="calc-box">
+                <div class="calc-title">💰 Example Earnings at Each Tier</div>
+                <div class="calc-grid">
+                    <div>
+                        <div style="font-size:13px;color:#aaa">10 conversions</div>
+                        <div class="calc-amount">$9.98</div>
+                        <div style="font-size:11px;color:#666">Bronze (20%)</div>
+                    </div>
+                    <div>
+                        <div style="font-size:13px;color:#aaa">50 conversions</div>
+                        <div class="calc-amount">$62.38</div>
+                        <div style="font-size:11px;color:#666">Silver (25%)</div>
+                    </div>
+                    <div>
+                        <div style="font-size:13px;color:#aaa">200 conversions</div>
+                        <div class="calc-amount">$299.40</div>
+                        <div style="font-size:11px;color:#666">Gold (30%)</div>
+                    </div>
+                    <div>
+                        <div style="font-size:13px;color:#aaa">500 Elite subs</div>
+                        <div class="calc-amount">$1,498.50</div>
+                        <div style="font-size:11px;color:#666">Gold (30% @ $9.99)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── STEPS ── -->
+    <section class="pp-sec pp-sec-alt">
+        <div class="pp-container">
+            <div class="pp-stag">Step by Step</div>
+            <h2 class="pp-stitle">How It <span class="green">Works</span></h2>
+            <p style="text-align:center;color:#aaa;margin-top:-30px;margin-bottom:50px;font-size:18px">From sign-up to earning — in 4 simple steps</p>
+            <div class="pp-steps">
+                <div class="pp-step pp-step-1">
+                    <div class="pp-step-line"><div class="pp-step-circle">1</div><div class="connector"></div></div>
+                    <div class="pp-step-content"><div class="b-title">📩 Apply to Join</div><div class="b-desc">DM us "PARTNER" or fill out our quick form. We'll review and set up your account in under 24 hours.</div></div>
+                </div>
+                <div class="pp-step pp-step-2">
+                    <div class="pp-step-line"><div class="pp-step-circle">2</div><div class="connector"></div></div>
+                    <div class="pp-step-content"><div class="b-title">🏠 Get Your Branded Page</div><div class="b-desc">We create a personalized welcome page with your name, avatar & message. Plus a unique coupon code.</div><div class="b-tag">🔗 caloriecalcapp.com/partner/YOURCODE</div></div>
+                </div>
+                <div class="pp-step pp-step-3">
+                    <div class="pp-step-line"><div class="pp-step-circle">3</div><div class="connector"></div></div>
+                    <div class="pp-step-content"><div class="b-title">📢 Share With Your Audience</div><div class="b-desc">Post your link, share your code, use our content kit. Every install is tracked in real-time on your dashboard.</div></div>
+                </div>
+                <div class="pp-step pp-step-4">
+                    <div class="pp-step-line"><div class="pp-step-circle">4</div></div>
+                    <div class="pp-step-content"><div class="b-title">💰 Earn Commission</div><div class="b-desc">When your referrals subscribe, you earn up to 30% commission. Track earnings & request withdrawals anytime.</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="pp-sec" style="text-align:center;padding-bottom:120px">
+        <div class="pp-container">
+            <div style="font-size:64px;margin-bottom:20px">🚀</div>
+            <h2 class="pp-stitle" style="font-size:56px;margin-bottom:20px">Ready to <span class="green">Join?</span></h2>
+            <p style="font-size:20px;color:#aaa;margin-bottom:40px">Get your branded partner page, dedicated coupon code, and start earning commission — all set up in under 24 hours.</p>
+            
+            <div class="join-summary">
+                <div class="sum-pill">✅ Free to Join</div>
+                <div class="sum-pill">⚡ Setup in 24hrs</div>
+                <div class="sum-pill">💰 Up to 30%</div>
+                <div class="sum-pill">🏠 Your Own Page</div>
+            </div>
+
+            <div>
+                <a href="mailto:partners@caloriecalcapp.com?subject=Partner%20Program%20Application" class="cta-btn">DM us "PARTNER" →</a>
+                <br>
+                <div style="margin:20px 0;color:#666;font-weight:600">— or —</div>
+                <a href="mailto:partners@caloriecalcapp.com" class="cta-alt">📧 partners@caloriecalcapp.com</a>
+            </div>
+
+            <div style="display:flex;justify-content:center;gap:16px;margin-top:40px;flex-wrap:wrap">
+                <div style="background:rgba(255,255,255,0.05);border-radius:10px;padding:10px 16px;font-size:14px;color:#aaa;font-weight:600">📸 @caloriecalc</div>
+                <div style="background:rgba(255,255,255,0.05);border-radius:10px;padding:10px 16px;font-size:14px;color:#aaa;font-weight:600">🐦 @caloriecalcapp</div>
+                <div style="background:rgba(255,255,255,0.05);border-radius:10px;padding:10px 16px;font-size:14px;color:#aaa;font-weight:600">🌐 caloriecalcapp.com</div>
+            </div>
+
+            <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);border-radius:12px;padding:14px 24px;margin-top:40px">
+                <div style="width:10px;height:10px;background:#F59E0B;border-radius:50%;animation:pulse 1.5s infinite"></div>
+                <span style="color:#FBBF24;font-weight:700">Limited spots for founding partners — apply today!</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="container"><div class="footer-top">
+        <div class="footer-brand"><div class="footer-logo"><img src="assets/images/app-icon.png" alt="" width="32" height="32"> CalorieCalc</div><p>AI-powered calorie tracking and nutrition coaching.</p></div>
+        <div class="footer-links">
+            <div class="fl-col"><h4>App</h4><a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a></div>
+            <div class="fl-col"><h4>Partners</h4><a href="partner.html">Partner Hub</a><a href="influencer-program.html" style="color:#10B981">Influencer Program</a><a href="user-affiliate.html">Refer & Earn</a></div>
+            <div class="fl-col"><h4>Legal</h4><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a></div>
+            <div class="fl-col"><h4>Support</h4><a href="support.html">Help Center</a><a href="mailto:support@caloriecalcapp.com">Email Us</a></div>
+        </div>
+    </div><div class="footer-bottom"><span>© 2026 CalorieCalc. All rights reserved.</span></div></div></footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
