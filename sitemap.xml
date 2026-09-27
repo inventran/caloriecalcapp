@@ -17,5 +17,13 @@
   <url><loc>https://caloriecalcapp.com/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://caloriecalcapp.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://caloriecalcapp.com/refund-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://caloriecalcapp.com/guides/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://caloriecalcapp.com/guides/how-to-calculate-calorie-deficit.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://caloriecalcapp.com/guides/intermittent-fasting-calorie-deficit-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://caloriecalcapp.com/guides/tracking-calories-eating-out-restaurants.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://caloriecalcapp.com/guides/how-to-count-calories-home-cooked-meals.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://caloriecalcapp.com/guides/why-am-i-not-losing-weight-in-calorie-deficit.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://caloriecalcapp.com/guides/low-calorie-food-swaps-for-weight-loss.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://caloriecalcapp.com/guides/high-protein-calorie-deficit-grocery-list.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://caloriecalcapp.com/delete-account.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>

@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Calculate and Track Your Daily Calorie Deficit (Step-by-Step) | CalorieCalc</title>
+    <meta name="description" content="Learn how to accurately calculate your daily calorie deficit for safe, sustainable fat loss using the Mifflin-St Jeor formula, macro balancing, and smart tracking.">
+    <meta name="keywords" content="how to calculate calorie deficit, calorie deficit for weight loss, daily calorie deficit formula, how to track calories, TDEE calculator guide, safe weight loss deficit">
+    <meta name="author" content="CalorieCalc Team">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="theme-color" content="#047857">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://caloriecalcapp.com/guides/how-to-calculate-calorie-deficit.html">
+    <meta property="og:title" content="How to Calculate and Track Your Daily Calorie Deficit for Safe Fat Loss">
+    <meta property="og:description" content="Calculate your TDEE, determine a safe 300–500 calorie deficit, and track daily meals accurately without burnout or hunger.">
+    <meta property="og:image" content="https://caloriecalcapp.com/assets/images/analytics.png">
+    <meta property="og:site_name" content="CalorieCalc">
+    <meta property="article:published_time" content="2026-09-27T00:00:00+00:00">
+    <meta property="article:author" content="CalorieCalc Nutrition Team">
+    <meta property="article:section" content="Nutrition & Weight Loss Guides">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Calculate & Track Your Daily Calorie Deficit">
+    <meta name="twitter:description" content="The definitive scientific guide to setting a sustainable calorie deficit and tracking your progress daily.">
+    <meta name="twitter:image" content="https://caloriecalcapp.com/assets/images/analytics.png">
+
+    <!-- Canonical & Favicons -->
+    <link rel="icon" type="image/png" href="../assets/images/app-icon.png">
+    <link rel="apple-touch-icon" href="../assets/images/app-icon.png">
+    <link rel="canonical" href="https://caloriecalcapp.com/guides/how-to-calculate-calorie-deficit.html">
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* Article-Specific Typography & Enhancements */
+        .article-page {
+            padding-top: 100px;
+            padding-bottom: 80px;
+            background: #fafaf9;
+            color: #1c1917;
+            line-height: 1.75;
+            font-size: 1.0625rem;
+        }
+        .article-container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .article-breadcrumbs {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            color: #78716c;
+            margin-bottom: 24px;
+        }
+        .article-breadcrumbs a {
+            color: #047857;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .article-breadcrumbs span {
+            color: #a8a29e;
+        }
+        .article-header {
+            margin-bottom: 36px;
+        }
+        .article-badge {
+            display: inline-block;
+            background: #ecfdf5;
+            color: #047857;
+            font-weight: 700;
+            font-size: 0.8125rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            border: 1px solid #a7f3d0;
+            margin-bottom: 16px;
+        }
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.25;
+            letter-spacing: -0.025em;
+            color: #0f172a;
+            margin-bottom: 16px;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.875rem;
+            color: #64748b;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .article-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Callout Boxes */
+        .callout-box {
+            background: #f0fdf4;
+            border-left: 4px solid #059669;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin: 28px 0;
+        }
+        .callout-box.takeaway {
+            background: #f8fafc;
+            border-left: 4px solid #3b82f6;
+        }
+        .callout-title {
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: #0f172a;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .callout-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .callout-box li {
+            margin-bottom: 8px;
+        }
+
+        /* Headings & Body */
+        .article-content h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-top: 48px;
+            margin-bottom: 18px;
+            letter-spacing: -0.02em;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-top: 28px;
+            margin-bottom: 12px;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .article-content ul, .article-content ol {
+            margin-bottom: 24px;
+            padding-left: 24px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+
+        /* Math & Formulas */
+        .formula-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .formula-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #047857;
+            margin-bottom: 8px;
+        }
+        .formula-code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            background: #f1f5f9;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: #0f172a;
+            display: block;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+
+        /* Data Tables */
+        .data-table-wrapper {
+            overflow-x: auto;
+            margin: 24px 0;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            text-align: left;
+            background: #fff;
+        }
+        .data-table th {
+            background: #f8fafc;
+            color: #334155;
+            font-weight: 700;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .data-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #f1f5f9;
+            color: #475569;
+        }
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Product In-Content Banner (App CTA) */
+        .app-cta-banner {
+            background: linear-gradient(135deg, #064e3b, #047857);
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 36px 32px;
+            margin: 48px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+            box-shadow: 0 10px 25px -5px rgba(4, 120, 87, 0.3);
+        }
+        .app-cta-text h3 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .app-cta-text p {
+            color: #a7f3d0;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        .app-cta-btn {
+            background: #ffffff;
+            color: #064e3b;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 14px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .app-cta-btn:hover {
+            background: #f0fdf4;
+            transform: translateY(-2px);
+        }
+
+        /* Image Mockup Callout */
+        .article-image-box {
+            margin: 32px 0;
+            text-align: center;
+        }
+        .article-image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+        }
+        .article-image-box figcaption {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* FAQ Section */
+        .faq-accordion {
+            margin: 32px 0;
+        }
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            padding: 20px 24px;
+        }
+        .faq-item h3 {
+            font-size: 1.1rem;
+            margin: 0 0 8px 0;
+            color: #0f172a;
+        }
+        .faq-item p {
+            margin: 0;
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        /* Medical Disclaimer */
+        .medical-disclaimer {
+            background: #fffbeb;
+            border: 1px solid #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 8px;
+            padding: 18px 22px;
+            margin-top: 48px;
+            font-size: 0.875rem;
+            color: #92400e;
+            line-height: 1.6;
+        }
+        .medical-disclaimer strong {
+            color: #78350f;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 2rem;
+            }
+            .app-cta-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px 20px;
+            }
+        }
+    </style>
+
+    <!-- Schema.org JSON-LD: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://caloriecalcapp.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://caloriecalcapp.com/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Calculate Calorie Deficit",
+          "item": "https://caloriecalcapp.com/guides/how-to-calculate-calorie-deficit.html"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD: Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Calculate and Track Your Daily Calorie Deficit for Safe Fat Loss",
+      "description": "Learn the scientific formulas, TDEE calculations, and daily food logging steps to establish a safe, sustainable calorie deficit.",
+      "image": "https://caloriecalcapp.com/assets/images/analytics.png",
+      "author": {
+        "@type": "Organization",
+        "name": "CalorieCalc Nutrition Team",
+        "url": "https://caloriecalcapp.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CalorieCalc",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://caloriecalcapp.com/assets/images/app-icon.png"
+        }
+      },
+      "datePublished": "2026-09-27T00:00:00+00:00",
+      "dateModified": "2026-09-27T00:00:00+00:00",
+      "mainEntityOfPage": "https://caloriecalcapp.com/guides/how-to-calculate-calorie-deficit.html"
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD: HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Calculate and Track Your Daily Calorie Deficit",
+      "description": "A 4-step method to calculate your metabolic baseline, set a healthy calorie deficit, and log food accurately.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Calculate Your Basal Metabolic Rate (BMR)",
+          "text": "Use the Mifflin-St Jeor formula based on your weight, height, age, and sex to find the calories your body burns at complete rest."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Determine Your Total Daily Energy Expenditure (TDEE)",
+          "text": "Multiply your BMR by your physical activity multiplier (1.2 to 1.9) to identify maintenance calories."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Subtract a Safe Caloric Deficit (300 to 500 kcal)",
+          "text": "Deduct 300 to 500 kcal from your TDEE to target steady, sustainable fat loss of approximately 0.5 to 1 lb per week."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Track Daily Meals Consistently",
+          "text": "Log all meals, cooking oils, snacks, and beverages using a validated digital diary like CalorieCalc to verify you hit your daily target."
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema.org JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is considered a safe calorie deficit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A safe and sustainable calorie deficit is generally between 300 and 500 calories below your Total Daily Energy Expenditure (TDEE). This enables steady fat loss of roughly 0.5 to 1 pound per week without triggering severe muscle loss, lethargy, or hormonal disruption."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the absolute minimum number of calories to eat daily?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "According to general nutritional consensus, daily intake should not drop below 1,200 calories per day for women or 1,500 calories per day for men unless under direct medical supervision by a physician or registered dietitian."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why am I in a calorie deficit but not losing weight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common reasons include uncounted liquid calories and cooking oils, temporary water retention from sodium or new exercise, inaccurate portion estimates, or a drop in non-exercise activity (NEAT). Tracking every ingredient with digital scales or barcode scanning resolves most tracking errors."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ═══ NAVIGATION ═══ -->
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/app-icon.png" alt="CalorieCalc" width="36" height="36">
+                <span>CalorieCalc</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html#features">Features</a>
+                <a href="../features/index.html">All Features</a>
+                <a href="../index.html#pricing">Pricing</a>
+                <a href="../support.html">Support</a>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                Download Free
+            </a>
+        </div>
+    </nav>
+
+    <!-- ═══ ARTICLE WRAPPER ═══ -->
+    <main class="article-page">
+        <article class="article-container">
+
+            <!-- Breadcrumbs -->
+            <nav class="article-breadcrumbs" aria-label="Breadcrumb">
+                <a href="../index.html">Home</a>
+                <span>/</span>
+                <a href="../features/index.html">Guides</a>
+                <span>/</span>
+                <span>Calorie Deficit Guide</span>
+            </nav>
+
+            <!-- Header -->
+            <header class="article-header">
+                <span class="article-badge">Nutrition & Weight Management</span>
+                <h1 class="article-title">How to Calculate and Track Your Daily Calorie Deficit for Safe, Sustainable Weight Loss</h1>
+                <div class="article-meta">
+                    <span>By CalorieCalc Nutrition Team</span>
+                    <span>•</span>
+                    <span>11 min read</span>
+                    <span>•</span>
+                    <span>Updated September 2026</span>
+                </div>
+            </header>
+
+            <!-- Quick Answer Hook -->
+            <p>
+                To lose body fat consistently, your body must expend more energy than it consumes from food and beverages. This biological state is known as a <strong>calorie deficit</strong>. While the core principle is simple, setting an unrealistic deficit often leads to hunger, metabolic fatigue, and muscle loss.
+            </p>
+            <p>
+                This complete guide outlines the validated clinical math behind <strong>Basal Metabolic Rate (BMR)</strong> and <strong>Total Daily Energy Expenditure (TDEE)</strong>, how to establish an optimal 300 to 500 kcal deficit, and how to track your meals accurately each day.
+            </p>
+
+            <!-- Key Takeaways Box -->
+            <div class="callout-box takeaway">
+                <div class="callout-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    Key Takeaways at a Glance
+                </div>
+                <ul>
+                    <li><strong>Target Deficit:</strong> A moderate reduction of 300 to 500 calories per day supports healthy, progressive fat loss of roughly 0.5 to 1.0 lb per week.</li>
+                    <li><strong>Safe Minimum Floor:</strong> Daily intake should generally remain above 1,200 kcal for women and 1,500 kcal for men to avoid nutritional deficiencies.</li>
+                    <li><strong>Protein Preservation:</strong> Consuming 1.6 to 2.2g of protein per kilogram of body weight protects lean muscle mass while operating in a deficit.</li>
+                    <li><strong>Accuracy Matters:</strong> Unmeasured cooking oils, sauces, and drinks account for the majority of unaccounted calories that derail progress.</li>
+                </ul>
+            </div>
+
+            <!-- Content Body -->
+            <div class="article-content">
+
+                <h2>Step 1: Calculate Your Basal Metabolic Rate (BMR)</h2>
+                <p>
+                    Your Basal Metabolic Rate represents the baseline quantity of energy your body burns over 24 hours just to perform vital autonomic functions—breathing, circulating blood, cell repair, and brain activity—assuming you stayed in bed all day.
+                </p>
+                <p>
+                    The most validated clinical equation for non-clinical populations is the <strong>Mifflin-St Jeor formula</strong>:
+                </p>
+
+                <div class="formula-card">
+                    <div class="formula-title">Mifflin-St Jeor Formula:</div>
+                    <div class="formula-code">
+                        Men:   BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) + 5<br>
+                        Women: BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age in years) - 161
+                    </div>
+                    <p style="margin-bottom: 0; font-size: 0.9rem; color: #64748b;">
+                        <em>Example:</em> A 32-year-old female weighing 70 kg and standing 168 cm tall has a BMR of:<br>
+                        <code>(10 × 70) + (6.25 × 168) - (5 × 32) - 161 = 700 + 1050 - 160 - 161 = 1,429 calories/day.</code>
+                    </p>
+                </div>
+
+                <h2>Step 2: Determine Your Total Daily Energy Expenditure (TDEE)</h2>
+                <p>
+                    Your BMR accounts for roughly 60–70% of total energy burned. To find your actual daily calorie burn (your <strong>maintenance calories</strong>), multiply your BMR by an activity factor representing your daily movement, workouts, and job routine:
+                </p>
+
+                <div class="data-table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Activity Level</th>
+                                <th>Description</th>
+                                <th>Multiplier</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Sedentary</strong></td>
+                                <td>Desk job, minimal purposeful exercise, under 5,000 steps/day</td>
+                                <td>1.2</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lightly Active</strong></td>
+                                <td>Light walking or workout sessions 1–3 times per week</td>
+                                <td>1.375</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Moderately Active</strong></td>
+                                <td>Moderate exercise/sports 3–5 days per week, 8,000+ daily steps</td>
+                                <td>1.55</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Very Active</strong></td>
+                                <td>Intense physical training 6–7 days per week or active labor job</td>
+                                <td>1.725</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    Continuing our example: If the woman with a 1,429 kcal BMR works a desk job but walks and trains 3 days per week (Moderately Active: 1.55), her TDEE is:
+                    <br>
+                    <strong>1,429 × 1.55 = 2,215 maintenance calories per day.</strong>
+                </p>
+
+                <!-- In-Article App CTA Banner -->
+                <div class="app-cta-banner">
+                    <div class="app-cta-text">
+                        <h3>Skip the Manual Math</h3>
+                        <p>CalorieCalc automatically computes your BMR, TDEE, and macro targets based on your exact profile and daily step count.</p>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="app-cta-btn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                        Get CalorieCalc Free
+                    </a>
+                </div>
+
+                <h2>Step 3: Establish a Safe Calorie Deficit Target</h2>
+                <p>
+                    A standard recommendation for steady fat loss is a deficit of <strong>300 to 500 kcal per day</strong> (or approximately a 15–20% reduction from your TDEE).
+                </p>
+                <ul>
+                    <li><strong>Conservative Deficit (300 kcal/day):</strong> Ideal for individuals with lower body fat, those with demanding physical jobs, or anyone prone to hunger cravings. Results in roughly 0.6 lb fat loss per week.</li>
+                    <li><strong>Moderate Deficit (500 kcal/day):</strong> The gold-standard balance of steady fat loss (approx. 1 lb/week) while maintaining high energy levels and workout capacity.</li>
+                </ul>
+
+                <div class="callout-box">
+                    <div class="callout-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        Why Crash Deficits (>750 kcal) Backfire
+                    </div>
+                    <p style="margin-bottom: 0;">
+                        Slashing calories dramatically triggers elevated cortisol (stress hormone), lowers thyroid output, causes sleep disruptions, and results in significant loss of metabolically active muscle tissue. Moderate deficits produce far superior long-term adherence and body composition outcomes.
+                    </p>
+                </div>
+
+                <h2>Step 4: Distribute Your Macronutrients</h2>
+                <p>
+                    While calorie balance dictates weight change, your <strong>macronutrient distribution</strong> determines whether weight lost comes from stored fat or lean muscle tissue:
+                </p>
+                <ol>
+                    <li>
+                        <strong>Protein (Priority #1):</strong> Set to <strong>1.6 to 2.2 grams per kilogram of body weight</strong> (0.7 to 1.0g per lb). Protein preserves muscle during energy deficits and exhibits the highest thermic effect of food (TEF), burning 20–30% of its calories just during digestion.
+                    </li>
+                    <li>
+                        <strong>Fats (Hormonal Balance):</strong> Keep healthy dietary fats at <strong>20% to 30% of total calories</strong> (roughly 0.7 to 1.0g per kg). Essential for hormone synthesis and nutrient absorption.
+                    </li>
+                    <li>
+                        <strong>Carbohydrates (Performance & Energy):</strong> Fill the remaining caloric allowance with high-fiber complex carbohydrates (whole grains, oats, potatoes, fruits, and vegetables) to maintain muscle glycogen and digestive satiety.
+                    </li>
+                </ol>
+
+                <figure class="article-image-box">
+                    <img src="../assets/images/analytics.png" alt="CalorieCalc macro distribution breakdown and calorie tracking analytics screen" width="700">
+                    <figcaption>Tracking protein, carbs, and fats in real-time provides actionable feedback to prevent energy crashes.</figcaption>
+                </figure>
+
+                <h2>Step 5: How to Track Daily Meals with CalorieCalc</h2>
+                <p>
+                    Calculating your target is only half the battle. Successful execution requires consistent, friction-free daily logging. Here is the operational workflow recommended in CalorieCalc:
+                </p>
+
+                <h3>1. Input Your Baseline in the Goal Setup Wizard</h3>
+                <p>
+                    Upon initial setup, CalorieCalc’s Goal Setup Wizard asks for your age, height, weight, activity profile, and target weekly rate of loss. The embedded difficulty engine ensures your daily target never dips below safe minimum thresholds.
+                </p>
+
+                <h3>2. Log Every Meal in Real-Time</h3>
+                <p>
+                    Avoid waiting until the end of the day to log from memory. Memory recall often misses up to 30% of consumed items. Use the <strong>AI Food Scanner</strong> to snap meals directly, scan barcodes on packaged snacks, or use quick text search for common kitchen staples.
+                </p>
+
+                <h3>3. Measure the "Hidden Calories"</h3>
+                <p>
+                    The three most common culprits behind unexpected plateaus are:
+                </p>
+                <ul>
+                    <li><strong>Cooking oils & butter:</strong> One tablespoon of olive oil contains 120 calories. Two unmeasured tablespoons added to a pan can wipe out half of your daily deficit.</li>
+                    <li><strong>Salad dressings & dips:</strong> Creamy dressings frequently add 150–250 calories per serving.</li>
+                    <li><strong>Liquid calories:</strong> Flavored coffee drinks, sodas, and juices provide energy without triggering fullness cues.</li>
+                </ul>
+
+                <figure class="article-image-box">
+                    <img src="../assets/images/hero-mockup.png" alt="CalorieCalc Daily Food Diary interface showcasing real-time calorie remaining rings" width="600">
+                    <figcaption>The CalorieCalc Daily Diary presents a live summary of calories consumed, burned, and remaining.</figcaption>
+                </figure>
+
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <h3>What is considered a safe calorie deficit for fat loss?</h3>
+                        <p>
+                            A deficit of 300 to 500 calories below your TDEE is considered safe and sustainable for most healthy adults. This supports steady fat loss of approximately 0.5 to 1.0 pound per week while maintaining lean muscle and energy levels.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What is the absolute minimum calorie intake I should never go below?</h3>
+                        <p>
+                            Standard dietary guidelines advise that daily caloric intake should not drop below 1,200 calories per day for women or 1,500 calories per day for men, unless under direct medical guidance from a healthcare professional.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Why has my weight loss stalled after two weeks in a deficit?</h3>
+                        <p>
+                            Weight fluctuations often result from transient water retention due to sodium, muscle inflammation from new workouts, or digestive transit delays. Track your weekly average weight rather than day-to-day numbers, and verify you are logging all cooking oils and snacks accurately.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Should I eat back the calories I burn from exercise?</h3>
+                        <p>
+                            Fitness trackers often overestimate exercise calories by 20–40%. A safe rule of thumb is to either eat back no more than 50% of logged workout calories or rely on your initial TDEE activity factor, which already accounts for your average training volume.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Final App Download Callout -->
+                <div class="app-cta-banner">
+                    <div class="app-cta-text">
+                        <h3>Ready to Put Your Plan into Practice?</h3>
+                        <p>Join thousands tracking their nutrition effortlessly with AI-powered logging, macro breakdowns, and smart insights.</p>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="app-cta-btn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                        Download on Google Play
+                    </a>
+                </div>
+
+                <!-- Mandatory Medical Disclaimer -->
+                <div class="medical-disclaimer">
+                    <strong>Medical & Nutritional Disclaimer:</strong>
+                    The information provided in this article is for educational and informational purposes only and does not constitute medical, nutritional, or healthcare advice. Always consult a qualified physician, registered dietitian, or certified healthcare provider before making significant modifications to your diet, caloric intake, or exercise regimen.
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/images/app-icon.png" alt="CalorieCalc" width="32" height="32">
+                    <span>CalorieCalc</span>
+                </a>
+                <p>AI-powered calorie tracking and nutrition coaching for sustainable healthy habits.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="../index.html#features">Features</a>
+                    <a href="../features/index.html">All Features</a>
+                    <a href="../index.html#pricing">Pricing</a>
+                    <a href="how-to-calculate-calorie-deficit.html">Guides</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="../support.html">Help Center</a>
+                    <a href="../privacy-policy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CalorieCalc. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
