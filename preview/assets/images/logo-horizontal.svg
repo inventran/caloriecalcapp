@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 160" width="720" height="160">
+  <defs>
+    <linearGradient id="hEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Logo Mark (Scale to fit 120x120 at x=20, y=20) -->
+  <g transform="translate(20, 20) scale(0.234375)">
+    <!-- Squircle base -->
+    <rect x="24" y="24" width="464" height="464" rx="106" fill="url(#hEmerald)" />
+    
+    <!-- White C & Negative Flame -->
+    <path fill="#FFFFFF" fill-rule="evenodd" d="
+      M 256 92
+      C 165.4 92 92 165.4 92 256
+      C 92 346.6 165.4 420 256 420
+      C 328.5 420 389.2 373 410.8 307
+      L 336.5 282
+      C 321.4 321.8 288.7 348 256 348
+      C 205.2 348 164 306.8 164 256
+      C 164 205.2 205.2 164 256 164
+      C 288.7 164 321.4 190.2 336.5 230
+      L 410.8 205
+      C 389.2 139 328.5 92 256 92 Z
+      
+      M 256 162
+      C 278 198 322 222 322 268
+      C 322 306 292 336 256 336
+      C 220 336 190 306 190 268
+      C 190 226 220 198 238 174
+      C 242 192 248 206 256 206
+      C 260 194 260 176 256 162 Z
+    " />
+    
+    <!-- Inner Rising Ember -->
+    <path fill="url(#hEmerald)" d="
+      M 256 238
+      C 266 256 280 272 280 288
+      C 280 302 269 314 256 314
+      C 243 314 232 302 232 288
+      C 232 272 246 256 252 246
+      C 254 252 256 256 258 256
+      C 260 252 258 244 256 238 Z
+    " />
+  </g>
+
+  <!-- Typography: CalorieCalc in Inter / Modern Geometric Sans -->
+  <text x="164" y="100" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="64" font-weight="800" fill="#064E3B" letter-spacing="-1.5">Calorie<tspan fill="#059669">Calc</tspan></text>
+</svg>

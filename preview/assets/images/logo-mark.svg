@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="markEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+  </defs>
+
+  <!-- Solid Emerald 'C' with negative space carved flame -->
+  <path fill="url(#markEmerald)" fill-rule="evenodd" d="
+    M 256 80
+    C 159 80 80 159 80 256
+    C 80 353 159 432 256 432
+    C 334 432 400 382 423 311
+    L 343 284
+    C 327 327 292 355 256 355
+    C 201.3 355 157 310.7 157 256
+    C 157 201.3 201.3 157 256 157
+    C 292 157 327 185 343 228
+    L 423 201
+    C 400 130 334 80 256 80 Z
+    
+    M 256 155
+    C 280 194 327 220 327 270
+    C 327 311 295 344 256 344
+    C 217 344 185 311 185 270
+    C 185 225 217 195 236 169
+    C 240 188 247 203 256 203
+    C 260 190 260 171 256 155 Z
+  " />
+
+  <!-- Inner Rising Ember Flame in Solid Emerald -->
+  <path fill="url(#markEmerald)" d="
+    M 256 238
+    C 266 256 280 272 280 288
+    C 280 302 269 314 256 314
+    C 243 314 232 302 232 288
+    C 232 272 246 256 252 246
+    C 254 252 256 256 258 256
+    C 260 252 258 244 256 238 Z
+  " />
+</svg>
