@@ -70,22 +70,34 @@
 </head>
 <body>
 
-    <nav class="nav scrolled" id="nav">
+        <nav class="nav scrolled" id="nav">
         <div class="nav-inner">
             <a href="../index.html" class="logo">
                 <img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="36" height="36">
                 <span>CalorieCalc</span>
             </a>
             <div class="nav-links" id="navLinks">
-                <a href="../index.html#features">Features</a>
-                <a href="../features/index.html">All Features</a>
-                <a href="index.html">Guides</a>
+                <a href="../features/index.html">Features (37+)</a>
+                <a href="../tools/tdee-calculator.html" style="color:var(--emerald-700);font-weight:700;">🧮 TDEE Calculator</a>
+                <a href="../quiz/index.html" style="color:#0284c7;font-weight:700;">📋 90-Day Quiz</a>
+                <a href="../guides/index.html" style="color:var(--emerald-700);font-weight:700">Guides</a>
+                <a href="../index.html#pricing">Pricing</a>
+                <a href="../partner.html">Partners</a>
                 <a href="../support.html">Support</a>
+                <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta-mobile" target="_blank" rel="noopener">
+                    Download Free on Google Play
+                </a>
             </div>
-            <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta" target="_blank" rel="noopener">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
-                Download Free
-            </a>
+            <div class="nav-actions">
+                <button type="button" class="nav-qr-btn" onclick="openCalorieCalcQR()">📲 Scan QR</button>
+                <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                    Download Free
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -180,27 +192,54 @@
         </article>
     </main>
 
-    <footer class="footer">
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <a href="../index.html" class="logo">
-                    <img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="32" height="32">
-                    <span>CalorieCalc</span>
-                </a>
-                <p>AI-powered calorie tracking and nutrition coaching for sustainable healthy habits.</p>
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-disclaimer">
+                <strong>Medical &amp; Nutritional Disclaimer:</strong> The information, calculators, and AI insights provided on CalorieCalcApp.com and within the CalorieCalc mobile application are for educational and informational purposes only and do not constitute medical advice, diagnosis, or treatment. Always consult a qualified physician or registered dietitian before making significant changes to your diet, fasting protocol, or caloric intake.
             </div>
-            <div class="footer-links">
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <a href="../index.html#features">Features</a>
-                    <a href="index.html">Guides</a>
-                    <a href="../support.html">Support</a>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo"><img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="32" height="32"> CalorieCalc</div>
+                    <p>AI-powered calorie tracking, 55+ micronutrient analytics, and 24/7 personal nutrition coaching.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="fl-col">
+                        <h4>Features</h4>
+                        <a href="../features/index.html">All 37+ Features</a>
+                        <a href="../features/ai-food-scanner.html">AI Food Scanner</a>
+                        <a href="../features/ai-nutrition-coach.html">AI Nutrition Coach</a>
+                        <a href="../features/meal-planner.html">AI Meal Planner</a>
+                        <a href="../features/home-screen-widgets.html">Home Screen Widgets</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Free Tools &amp; Guides</h4>
+                        <a href="../tools/tdee-calculator.html">TDEE &amp; Macro Calculator</a>
+                        <a href="../quiz/index.html">90-Day Blueprint Quiz</a>
+                        <a href="../guides/index.html">Nutrition Knowledge Hub</a>
+                        <a href="../guides/how-to-calculate-calorie-deficit.html">Calorie Deficit Guide</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Partners &amp; Support</h4>
+                        <a href="../partner.html">Partner Program</a>
+                        <a href="../influencer-program.html">Influencer Program</a>
+                        <a href="../user-affiliate.html">Refer &amp; Earn</a>
+                        <a href="../support.html">Help Center &amp; FAQ</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Legal</h4>
+                        <a href="../privacy-policy.html">Privacy Policy</a>
+                        <a href="../terms.html">Terms of Service</a>
+                        <a href="../refund-policy.html">Refund Policy</a>
+                        <a href="../delete-account.html">Delete Account</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 CalorieCalc. All rights reserved.</p>
+            <div class="footer-bottom">
+                <span>© 2026 CalorieCalc. All rights reserved.</span>
+                <span><a href="../privacy-policy.html">Privacy</a> · <a href="../terms.html">Terms</a> · <a href="../refund-policy.html">Refunds</a> · <a href="../sitemap.xml">Sitemap</a></span>
+            </div>
         </div>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 </html>

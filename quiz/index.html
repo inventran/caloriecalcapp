@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your Personalized 90-Day Nutrition Blueprint | CalorieCalc</title>
+    <meta name="description" content="Take the free 60-second CalorieCalc quiz to discover your personalized calorie targets, macro ratios, and projected weight transformation timeline.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#047857">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://caloriecalcapp.com/quiz/index.html">
+    <meta property="og:title" content="Get Your Personalized 90-Day Nutrition Blueprint | CalorieCalc">
+    <meta property="og:description" content="Take our 60-second metabolic quiz to generate your safe daily calorie target, protein goal, and 90-day timeline.">
+    <meta property="og:image" content="https://caloriecalcapp.com/assets/images/og-image.png">
+
+    <link rel="canonical" href="https://caloriecalcapp.com/quiz/index.html">
+    <link rel="icon" type="image/png" href="../assets/images/app-icon.png?v=2">
+    <link rel="apple-touch-icon" href="../assets/images/app-icon.png?v=2">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .quiz-page-wrap {
+            padding: 130px 24px 80px;
+            background: radial-gradient(circle at 50% 0%, rgba(4, 120, 87, 0.08), transparent 60%), linear-gradient(180deg, #f0fdf8 0%, #fafffe 100%);
+            min-height: 85vh;
+        }
+        .quiz-container {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        .quiz-card {
+            background: #ffffff;
+            border: 1.5px solid rgba(4, 120, 87, 0.14);
+            border-radius: 26px;
+            padding: 40px 36px;
+            box-shadow: 0 24px 60px rgba(4, 120, 87, 0.08);
+            position: relative;
+        }
+        .quiz-progress-bar {
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            margin-bottom: 28px;
+            overflow: hidden;
+        }
+        .quiz-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--emerald-700), var(--emerald-500));
+            transition: width 0.35s ease;
+        }
+        .step-pill {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--emerald-700);
+            background: var(--emerald-50);
+            border: 1px solid rgba(4, 120, 87, 0.2);
+            padding: 5px 12px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 12px;
+        }
+        .quiz-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.65rem, 3.5vw, 2.2rem);
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.18;
+        }
+        .quiz-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.96rem;
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+        .quiz-options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 28px;
+        }
+        @media (max-width: 640px) {
+            .quiz-options-grid { grid-template-columns: 1fr; }
+            .quiz-card { padding: 28px 20px; }
+        }
+        .quiz-option-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: left;
+        }
+        .quiz-option-card:hover {
+            border-color: var(--emerald-400);
+            background: #f0fdf8;
+        }
+        .quiz-option-card.selected {
+            border-color: var(--emerald-600);
+            background: var(--emerald-50);
+            box-shadow: 0 8px 24px rgba(4, 120, 87, 0.12);
+        }
+        .quiz-option-icon {
+            font-size: 1.85rem;
+            margin-bottom: 8px;
+        }
+        .quiz-option-label {
+            font-weight: 800;
+            color: var(--text-primary);
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        .quiz-option-desc {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+        .quiz-input-field {
+            width: 100%;
+            background: #f8fafc;
+            border: 1.5px solid #cbd5e1;
+            color: var(--text-primary);
+            padding: 13px 16px;
+            border-radius: 12px;
+            font-size: 1.02rem;
+            font-weight: 700;
+            outline: none;
+            font-family: inherit;
+        }
+        .quiz-input-field:focus {
+            border-color: var(--emerald-600);
+            background: #fff;
+        }
+        .quiz-btn-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+        .btn-quiz-next {
+            background: linear-gradient(135deg, var(--emerald-700), var(--emerald-500));
+            border: none;
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.96rem;
+            padding: 14px 28px;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(4, 120, 87, 0.25);
+            transition: transform 0.2s;
+            margin-left: auto;
+            font-family: inherit;
+        }
+        .btn-quiz-next:hover { transform: translateY(-2px); }
+        .btn-quiz-back {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            color: var(--text-secondary);
+            font-weight: 700;
+            padding: 14px 22px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .blueprint-result-box {
+            background: linear-gradient(150deg, #043927 0%, #064e3b 60%, #022c22 100%);
+            border: 1px solid rgba(52, 211, 153, 0.35);
+            border-radius: 22px;
+            padding: 28px;
+            color: #fff;
+            margin-top: 12px;
+        }
+        .projection-chart-box {
+            background: rgba(0, 0, 0, 0.24);
+            border-radius: 14px;
+            padding: 16px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .medical-disclaimer {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 24px;
+            line-height: 1.6;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ UNIFIED NAVIGATION ═══ -->
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="36" height="36">
+                <span>CalorieCalc</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="../features/index.html">Features (37+)</a>
+                <a href="../tools/tdee-calculator.html">🧮 TDEE Calculator</a>
+                <a href="index.html" style="color:var(--emerald-700);font-weight:700;">📋 90-Day Quiz</a>
+                <a href="../guides/index.html">Guides</a>
+                <a href="../index.html#pricing">Pricing</a>
+                <a href="../partner.html">Partners</a>
+                <a href="../support.html">Support</a>
+                <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta-mobile" target="_blank" rel="noopener">
+                    Download Free on Google Play
+                </a>
+            </div>
+            <div class="nav-actions">
+                <button type="button" class="nav-qr-btn" onclick="openCalorieCalcQR()">📲 Scan QR</button>
+                <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta" target="_blank" rel="noopener">
+                    Download Free
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══ QUIZ CONTAINER ═══ -->
+    <main class="quiz-page-wrap">
+        <div class="quiz-container">
+            <div class="quiz-card" id="quiz-card">
+                <div class="quiz-progress-bar">
+                    <div class="quiz-progress-fill" id="progress-fill" style="width: 25%;"></div>
+                </div>
+
+                <!-- STEP 1: GOAL -->
+                <div id="step-1" class="quiz-step">
+                    <span class="step-pill">Step 1 of 4 · Goal Selection</span>
+                    <h1 class="quiz-title">What is your primary wellness objective?</h1>
+                    <p class="quiz-subtitle">CalorieCalc builds a customized metabolic framework tailored to your specific goal.</p>
+
+                    <div class="quiz-options-grid">
+                        <div class="quiz-option-card selected" onclick="selectOption(this, 'cut')">
+                            <div class="quiz-option-icon">🔥</div>
+                            <div class="quiz-option-label">Sustainable Fat Loss</div>
+                            <div class="quiz-option-desc">Safe 300–500 kcal deficit with high protein retention</div>
+                        </div>
+                        <div class="quiz-option-card" onclick="selectOption(this, 'muscle')">
+                            <div class="quiz-option-icon">💪</div>
+                            <div class="quiz-option-label">Lean Muscle Gain</div>
+                            <div class="quiz-option-desc">Controlled surplus for strength without excess fat</div>
+                        </div>
+                        <div class="quiz-option-card" onclick="selectOption(this, 'maintain')">
+                            <div class="quiz-option-icon">⚖️</div>
+                            <div class="quiz-option-label">Body Recomposition / Maintain</div>
+                            <div class="quiz-option-desc">Metabolic consistency &amp; optimal daily energy</div>
+                        </div>
+                        <div class="quiz-option-card" onclick="selectOption(this, 'fasting')">
+                            <div class="quiz-option-icon">⏱️</div>
+                            <div class="quiz-option-label">Intermittent Fasting (16:8)</div>
+                            <div class="quiz-option-desc">Circadian meal timing with balanced macro nutrition</div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-btn-row">
+                        <button type="button" class="btn-quiz-next" onclick="goToStep(2)">Next: Body Stats ➔</button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: BODY STATS -->
+                <div id="step-2" class="quiz-step" style="display:none;">
+                    <span class="step-pill">Step 2 of 4 · Biometrics</span>
+                    <h2 class="quiz-title">Your Current Body Composition</h2>
+                    <p class="quiz-subtitle">Used to compute baseline metabolic burn and safe timeline forecasting.</p>
+
+                    <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:28px;">
+                        <div>
+                            <label style="color:var(--text-primary);font-size:0.82rem;font-weight:800;display:block;margin-bottom:6px;">CURRENT WEIGHT (KG)</label>
+                            <input type="number" id="quiz-cur-weight" value="78" class="quiz-input-field">
+                        </div>
+                        <div>
+                            <label style="color:var(--text-primary);font-size:0.82rem;font-weight:800;display:block;margin-bottom:6px;">GOAL TARGET WEIGHT (KG)</label>
+                            <input type="number" id="quiz-goal-weight" value="70" class="quiz-input-field">
+                        </div>
+                        <div>
+                            <label style="color:var(--text-primary);font-size:0.82rem;font-weight:800;display:block;margin-bottom:6px;">HEIGHT (CM)</label>
+                            <input type="number" id="quiz-height" value="176" class="quiz-input-field">
+                        </div>
+                    </div>
+
+                    <div class="quiz-btn-row">
+                        <button type="button" class="btn-quiz-back" onclick="goToStep(1)">← Back</button>
+                        <button type="button" class="btn-quiz-next" onclick="goToStep(3)">Next: Diet Style ➔</button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: DIET CULTURE -->
+                <div id="step-3" class="quiz-step" style="display:none;">
+                    <span class="step-pill">Step 3 of 4 · Cuisine Preference</span>
+                    <h2 class="quiz-title">What is your everyday dietary preference?</h2>
+                    <p class="quiz-subtitle">CalorieCalc adapts AI meal plans and household units (katori, bowl, slice) to your food culture.</p>
+
+                    <div class="quiz-options-grid">
+                        <div class="quiz-option-card selected" onclick="selectDiet(this, 'indian')">
+                            <div class="quiz-option-icon">🍛</div>
+                            <div class="quiz-option-label">South Asian / Indian</div>
+                            <div class="quiz-option-desc">Roti, Dal, Paneer, Dosa, Idli, Poha, Curries</div>
+                        </div>
+                        <div class="quiz-option-card" onclick="selectDiet(this, 'veg')">
+                            <div class="quiz-option-icon">🥗</div>
+                            <div class="quiz-option-label">Vegetarian / Plant-Based</div>
+                            <div class="quiz-option-desc">Plant protein, legumes, tofu, lentils, whole grains</div>
+                        </div>
+                        <div class="quiz-option-card" onclick="selectDiet(this, 'omni')">
+                            <div class="quiz-option-icon">🍗</div>
+                            <div class="quiz-option-label">High-Protein Omnivore</div>
+                            <div class="quiz-option-desc">Chicken, eggs, fish, Greek yogurt, lean meats</div>
+                        </div>
+                        <div class="quiz-option-card" onclick="selectDiet(this, 'keto')">
+                            <div class="quiz-option-icon">🥑</div>
+                            <div class="quiz-option-label">Low-Carb / Mediterranean</div>
+                            <div class="quiz-option-desc">Healthy fats, olive oil, greens, high satiety</div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-btn-row">
+                        <button type="button" class="btn-quiz-back" onclick="goToStep(2)">← Back</button>
+                        <button type="button" class="btn-quiz-next" onclick="goToStep(4)">Generate My Blueprint ➔</button>
+                    </div>
+                </div>
+
+                <!-- STEP 4: FINAL BLUEPRINT SUMMARY -->
+                <div id="step-4" class="quiz-step" style="display:none;">
+                    <span class="step-pill">✨ Your 90-Day Blueprint Ready</span>
+                    <h2 class="quiz-title">Your Personalized Transformation Roadmap</h2>
+                    <p class="quiz-subtitle">Based on your metabolic profile, here is your safe, sustainable projection:</p>
+
+                    <div class="blueprint-result-box">
+                        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+                            <div>
+                                <span style="font-size:0.72rem;color:#a7f3d0;text-transform:uppercase;font-weight:700;">Estimated Target Date</span>
+                                <div style="font-size:1.85rem;font-weight:900;color:#34d399;" id="blueprint-date">January 22, 2027</div>
+                                <div style="font-size:0.84rem;color:#ecfdf5;" id="blueprint-delta">Target: 70 kg (-8.0 kg) at 0.5 kg/week</div>
+                            </div>
+                            <div style="text-align:right;">
+                                <div style="font-size:0.72rem;color:#a7f3d0;text-transform:uppercase;font-weight:700;">Daily Calorie Budget</div>
+                                <div style="font-size:2.1rem;font-weight:900;color:#fff;" id="blueprint-cals">1,820 <span style="font-size:0.95rem;color:#34d399;">kcal</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Projection Chart SVG -->
+                        <div class="projection-chart-box">
+                            <svg width="100%" height="95" viewBox="0 0 320 95">
+                                <path d="M 24 24 Q 160 52, 296 76" fill="none" stroke="#34d399" stroke-width="3.5" />
+                                <circle cx="24" cy="24" r="5" fill="#38bdf8" />
+                                <circle cx="296" cy="76" r="6" fill="#34d399" />
+                                <text x="28" y="18" fill="#d1fae5" font-size="10" font-weight="bold">Start</text>
+                                <text x="215" y="68" fill="#34d399" font-size="10" font-weight="bold">Goal Target</text>
+                            </svg>
+                        </div>
+
+                        <div style="background:rgba(255,255,255,0.08);border-radius:12px;padding:12px;display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:center;font-size:0.85rem;margin-bottom:20px;">
+                            <div>Daily Protein Goal: <strong style="color:#fca5a5;" id="blueprint-protein">144g</strong></div>
+                            <div>Safe Pace: <strong style="color:#34d399;">300–500 kcal / day deficit</strong></div>
+                        </div>
+
+                        <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" target="_blank" rel="noopener" class="btn-glow" style="width:100%;justify-content:center;background:#fff;color:var(--emerald-800);animation:none">
+                            📲 Claim &amp; Track This Plan in CalorieCalc ➔
+                        </a>
+                    </div>
+
+                    <p class="medical-disclaimer">
+                        <strong>Disclaimer:</strong> The information provided in this article and quiz is for educational and informational purposes only and does not constitute medical or nutritional advice. Always consult a qualified physician or registered dietitian before making significant changes to your diet or caloric intake.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo"><img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="32" height="32"> CalorieCalc</div>
+                    <p>AI-powered calorie tracking and nutrition coaching. Eat smarter, live healthier.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="fl-col">
+                        <h4>Features</h4>
+                        <a href="../features/index.html">All 37+ Features</a>
+                        <a href="../features/ai-food-scanner.html">AI Food Scanner</a>
+                        <a href="../features/ai-nutrition-coach.html">AI Coach</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Tools &amp; Guides</h4>
+                        <a href="../tools/tdee-calculator.html">TDEE Calculator</a>
+                        <a href="index.html">90-Day Quiz</a>
+                        <a href="../guides/index.html">Nutrition Guides</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Legal &amp; Support</h4>
+                        <a href="../support.html">Help Center</a>
+                        <a href="../privacy-policy.html">Privacy Policy</a>
+                        <a href="../terms.html">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 CalorieCalc. All rights reserved.</span>
+                <span><a href="../privacy-policy.html">Privacy</a> · <a href="../terms.html">Terms</a> · <a href="../refund-policy.html">Refunds</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        let currentStep = 1;
+        let selectedGoal = 'cut';
+        let selectedDiet = 'indian';
+
+        function selectOption(el, goal) {
+            document.querySelectorAll('#step-1 .quiz-option-card').forEach(c => c.classList.remove('selected'));
+            el.classList.add('selected');
+            selectedGoal = goal;
+        }
+
+        function selectDiet(el, diet) {
+            document.querySelectorAll('#step-3 .quiz-option-card').forEach(c => c.classList.remove('selected'));
+            el.classList.add('selected');
+            selectedDiet = diet;
+        }
+
+        function goToStep(step) {
+            document.querySelectorAll('.quiz-step').forEach(s => s.style.display = 'none');
+            document.getElementById('step-' + step).style.display = 'block';
+            document.getElementById('progress-fill').style.width = (step * 25) + '%';
+            currentStep = step;
+
+            if (step === 4) {
+                calculateBlueprint();
+            }
+            window.scrollTo({ top: 60, behavior: 'smooth' });
+        }
+
+        function calculateBlueprint() {
+            const curWeight = parseFloat(document.getElementById('quiz-cur-weight').value) || 78;
+            const goalWeight = parseFloat(document.getElementById('quiz-goal-weight').value) || 70;
+            const height = parseFloat(document.getElementById('quiz-height').value) || 176;
+            const diff = curWeight - goalWeight;
+
+            const weeksNeeded = Math.max(2, Math.round(Math.abs(diff) / 0.5));
+            const targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + (weeksNeeded * 7));
+
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('blueprint-date').innerText = targetDate.toLocaleDateString('en-US', options);
+            document.getElementById('blueprint-delta').innerText = `Target: ${goalWeight} kg (${diff > 0 ? '-' : '+'}${Math.abs(diff).toFixed(1)} kg) at 0.5 kg/week`;
+
+            const protein = Math.round(curWeight * 1.85);
+            document.getElementById('blueprint-protein').innerText = protein + 'g';
+
+            const cals = Math.round((10 * curWeight + 6.25 * height - 5 * 28 + 5) * 1.375) - (selectedGoal === 'muscle' ? -300 : 450);
+            document.getElementById('blueprint-cals').innerHTML = `${Math.max(1350, cals).toLocaleString()} <span style="font-size:0.95rem;color:#34d399;">kcal</span>`;
+        }
+    </script>
+</body>
+</html>

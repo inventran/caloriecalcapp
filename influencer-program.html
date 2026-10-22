@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Influencer Partner Program — CalorieCalc</title>
     <meta name="description" content="Earn up to 30% commission with your own branded welcome page, dedicated coupon code, and real-time analytics dashboard.">
+        <link rel="canonical" href="https://caloriecalcapp.com/influencer-program.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://caloriecalcapp.com/influencer-program.html">
+    <meta property="og:title" content="Influencer Partner Program — CalorieCalc">
+    <meta property="og:description" content="Earn up to 30% commission with your own branded welcome page, dedicated coupon code, and real-time analytics dashboard.">
+    <meta property="og:image" content="https://caloriecalcapp.com/assets/images/og-image.png">
     <link rel="icon" type="image/png" href="assets/images/app-icon.png?v=2">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -168,16 +174,33 @@
     }
     </style>
 </head>
-<body>
-    <nav class="nav" id="nav"><div class="nav-inner">
-        <a href="index.html" class="logo"><img src="assets/images/app-icon.png?v=2" alt="CalorieCalc" width="36" height="36"><span>CalorieCalc</span></a>
-        <div class="nav-links" id="navLinks">
-            <a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a>
-            <a href="partner.html" style="color:#10B981">Partner Program</a><a href="support.html">Support</a>
+<body class="dark-page">
+        <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/images/app-icon.png?v=2" alt="CalorieCalc" width="36" height="36">
+                <span>CalorieCalc</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="features/index.html">Features (37+)</a>
+                <a href="tools/tdee-calculator.html" style="color:var(--emerald-700);font-weight:700;">🧮 TDEE Calculator</a>
+                <a href="quiz/index.html" style="color:#0284c7;font-weight:700;">📋 90-Day Quiz</a>
+                <a href="guides/index.html">Guides</a>
+                <a href="index.html#pricing">Pricing</a>
+                <a href="partner.html" style="color:#10B981;font-weight:700">Partners</a>
+                <a href="support.html">Support</a>
+                <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta-mobile" target="_blank" rel="noopener">
+                    Download Free on Google Play
+                </a>
+            </div>
+            <div class="nav-actions">
+                <a href="mailto:partners@caloriecalcapp.com" class="nav-cta">🤝 Apply Now</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
-        <a href="mailto:partners@caloriecalcapp.com" class="nav-cta">🤝 Apply Now</a>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-    </div></nav>
+    </nav>
 
     <!-- ── HERO ── -->
     <section class="pp-hero">
@@ -387,7 +410,36 @@
             </div>
             
             <div class="calc-box">
-                <div class="calc-title">💰 Example Earnings at Each Tier</div>
+                <div class="calc-title">💰 Interactive Creator Commission Calculator</div>
+                <div style="max-width:620px;margin:0 auto 28px;text-align:left;background:rgba(255,255,255,0.04);padding:24px;border-radius:16px;border:1px solid rgba(16,185,129,0.25)">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-weight:700;font-size:15px">
+                        <span>Active Referred Subscribers:</span>
+                        <span id="inf-subs-label" style="color:#34d399">200 Referrals (🥇 Gold 30% Tier)</span>
+                    </div>
+                    <input type="range" min="10" max="1000" step="10" value="200" style="width:100%;accent-color:#10B981;cursor:pointer;margin-bottom:16px" oninput="updateCreatorCalc(this.value)">
+                    <div style="display:flex;justify-content:space-around;text-align:center;padding-top:12px;border-top:1px solid rgba(255,255,255,0.08)">
+                        <div>
+                            <div style="font-size:12px;color:#aaa">Estimated Monthly Payout</div>
+                            <div id="inf-mo-val" style="font-size:28px;font-weight:900;color:#10B981">$599/mo</div>
+                        </div>
+                        <div>
+                            <div style="font-size:12px;color:#aaa">Estimated Annual Income</div>
+                            <div id="inf-yr-val" style="font-size:28px;font-weight:900;color:#34d399">$7,193/yr</div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                function updateCreatorCalc(v) {
+                    var s = parseInt(v);
+                    var r = s >= 200 ? 0.30 : (s >= 50 ? 0.25 : 0.20);
+                    var t = s >= 200 ? '🥇 Gold 30% Tier' : (s >= 50 ? '🥈 Silver 25% Tier' : '🥉 Bronze 20% Tier');
+                    var m = Math.round(s * 9.99 * r);
+                    var y = Math.round(s * 9.99 * r * 12);
+                    document.getElementById('inf-subs-label').innerText = s + ' Referrals (' + t + ')';
+                    document.getElementById('inf-mo-val').innerText = '$' + m.toLocaleString() + '/mo';
+                    document.getElementById('inf-yr-val').innerText = '$' + y.toLocaleString() + '/yr';
+                }
+                </script>
                 <div class="calc-grid">
                     <div>
                         <div style="font-size:13px;color:#aaa">10 conversions</div>
@@ -475,15 +527,54 @@
         </div>
     </section>
 
-    <footer class="footer"><div class="container"><div class="footer-top">
-        <div class="footer-brand"><div class="footer-logo"><img src="assets/images/app-icon.png?v=2" alt="" width="32" height="32"> CalorieCalc</div><p>AI-powered calorie tracking and nutrition coaching.</p></div>
-        <div class="footer-links">
-            <div class="fl-col"><h4>App</h4><a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a></div>
-            <div class="fl-col"><h4>Partners</h4><a href="partner.html">Partner Hub</a><a href="influencer-program.html" style="color:#10B981">Influencer Program</a><a href="user-affiliate.html">Refer & Earn</a></div>
-            <div class="fl-col"><h4>Legal</h4><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a></div>
-            <div class="fl-col"><h4>Support</h4><a href="support.html">Help Center</a><a href="mailto:support@caloriecalcapp.com">Email Us</a></div>
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-disclaimer">
+                <strong>Medical &amp; Nutritional Disclaimer:</strong> The information, calculators, and AI insights provided on CalorieCalcApp.com and within the CalorieCalc mobile application are for educational and informational purposes only and do not constitute medical advice, diagnosis, or treatment. Always consult a qualified physician or registered dietitian before making significant changes to your diet, fasting protocol, or caloric intake.
+            </div>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo"><img src="assets/images/app-icon.png?v=2" alt="CalorieCalc" width="32" height="32"> CalorieCalc</div>
+                    <p>AI-powered calorie tracking, 55+ micronutrient analytics, and 24/7 personal nutrition coaching.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="fl-col">
+                        <h4>Features</h4>
+                        <a href="features/index.html">All 37+ Features</a>
+                        <a href="features/ai-food-scanner.html">AI Food Scanner</a>
+                        <a href="features/ai-nutrition-coach.html">AI Nutrition Coach</a>
+                        <a href="features/meal-planner.html">AI Meal Planner</a>
+                        <a href="features/home-screen-widgets.html">Home Screen Widgets</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Free Tools &amp; Guides</h4>
+                        <a href="tools/tdee-calculator.html">TDEE &amp; Macro Calculator</a>
+                        <a href="quiz/index.html">90-Day Blueprint Quiz</a>
+                        <a href="guides/index.html">Nutrition Knowledge Hub</a>
+                        <a href="guides/how-to-calculate-calorie-deficit.html">Calorie Deficit Guide</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Partners &amp; Support</h4>
+                        <a href="partner.html">Partner Program</a>
+                        <a href="influencer-program.html">Influencer Program</a>
+                        <a href="user-affiliate.html">Refer &amp; Earn</a>
+                        <a href="support.html">Help Center &amp; FAQ</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Legal</h4>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="refund-policy.html">Refund Policy</a>
+                        <a href="delete-account.html">Delete Account</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 CalorieCalc. All rights reserved.</span>
+                <span><a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="refund-policy.html">Refunds</a> · <a href="sitemap.xml">Sitemap</a></span>
+            </div>
         </div>
-    </div><div class="footer-bottom"><span>© 2026 CalorieCalc. All rights reserved.</span></div></div></footer>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>
