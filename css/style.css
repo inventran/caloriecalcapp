@@ -54,17 +54,28 @@ a{text-decoration:none;color:inherit;transition:all .3s cubic-bezier(.4,0,.2,1)}
 /* ═══════ NAVIGATION ═══════ */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;transition:all .4s cubic-bezier(.4,0,.2,1)}
 .nav.scrolled{background:rgba(255,255,255,.88);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid rgba(4,120,87,.08);padding:12px 0;box-shadow:0 2px 24px rgba(0,0,0,.04)}
-.nav-inner{max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;color:var(--emerald-800);flex-shrink:0}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:nowrap}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;color:var(--emerald-800);flex-shrink:0;white-space:nowrap}
 .logo img{width:36px;height:36px;border-radius:10px;box-shadow:0 2px 12px rgba(4,120,87,.12)}
-.nav-links{display:flex;gap:22px;align-items:center}
-.nav-links a{font-size:.86rem;font-weight:600;color:var(--text-secondary);position:relative;padding:4px 0;transition:.3s;white-space:nowrap}
+.nav-links{display:flex;gap:20px;align-items:center;flex-shrink:1}
+.nav-links a{font-size:.85rem;font-weight:600;color:var(--text-secondary);position:relative;padding:4px 0;transition:.3s;white-space:nowrap}
 .nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--emerald-600),var(--emerald-400));border-radius:2px;transition:width .3s ease}
 .nav-links a:hover{color:var(--emerald-700)}
 .nav-links a:hover::after{width:100%}
-.nav-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.nav-qr-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 15px;background:rgba(4,120,87,.07);border:1px solid rgba(4,120,87,.18);color:var(--emerald-800);font-weight:700;font-size:.8rem;border-radius:var(--radius-pill);cursor:pointer;font-family:inherit;transition:.25s}
+.nav-actions{display:flex;align-items:center;gap:10px;flex-shrink:0;white-space:nowrap;flex-wrap:nowrap}
+.nav-qr-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 15px;background:rgba(4,120,87,.07);border:1px solid rgba(4,120,87,.18);color:var(--emerald-800);font-weight:700;font-size:.8rem;border-radius:var(--radius-pill);cursor:pointer;font-family:inherit;transition:.25s;white-space:nowrap;flex-shrink:0}
 .nav-qr-btn:hover{background:rgba(4,120,87,.14);transform:translateY(-1px)}
+
+@media(max-width:1160px){
+  .nav-qr-btn{display:none}
+  .nav-links{gap:14px}
+  .nav-links a{font-size:.82rem}
+}
+@media(max-width:992px){
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .hamburger{display:block}
+}
 
 /* Dark Page Navbar Overrides (Partner / Creator Pages) */
 body.dark-page .nav:not(.scrolled) .logo{color:#fff}
@@ -327,13 +338,13 @@ body.dark-page .nav.scrolled .hamburger span{background:#fff}
 .cc-mobile-sticky{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-top:1px solid rgba(4,120,87,.15);padding:10px 16px;z-index:990;align-items:center;justify-content:space-between;box-shadow:0 -4px 20px rgba(0,0,0,.06)}
 
 @media(max-width:980px){
+  .hero{min-height:auto;padding:120px 20px 60px}
   .hero-split{grid-template-columns:1fr;text-align:center}
   .hero-split .hero-sub{margin:0 auto 32px}
   .hero-split .hero-btns,.hero-micro-badges{justify-content:center}
   .ai-sim-tabs{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:768px){
-  .nav-qr-btn{display:none}
   .cc-mobile-sticky{display:flex}
   body{padding-bottom:64px}
 }
@@ -426,9 +437,6 @@ body.dark-page .nav.scrolled .hamburger span{background:#fff}
   .step-arrow{transform:rotate(90deg)}
 }
 @media(max-width:768px){
-  .nav-links{display:none}
-  .nav-cta{display:none}
-  .hamburger{display:block}
   .hero h1{font-size:clamp(2.2rem,9vw,3.4rem)}
   .macro-pill{display:none}
   .phone-container{width:220px}
