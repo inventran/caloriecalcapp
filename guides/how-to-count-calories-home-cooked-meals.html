@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Count Calories in Home-Cooked Meals & Batch Recipes | CalorieCalc</title>
-    <meta name="description" content="Learn how to accurately calculate calories for home-cooked meals, casseroles, and meal prep batches. Raw vs cooked weights, per-serving formulas, and tips.">
-    <meta name="keywords" content="how to count calories in home cooked meals, recipe calorie calculator, raw vs cooked weight calories, meal prep calorie calculation, macro calculator for recipes">
-    <meta name="author" content="CalorieCalc Team">
+    <title>How to Count Calories in Home-Cooked Meals (Raw vs. Cooked Weight Chart) | CalorieCalc</title>
+    <meta name="description" content="Calculate exact per-serving calories in home-cooked meals and batch recipes. Includes an interactive Raw vs. Cooked weight converter (oz & grams) and USDA yield chart.">
+    <meta name="keywords" content="how to count calories in home cooked meals, raw vs cooked weight conversion chart, 100g raw chicken breast to cooked weight, 4 oz cooked chicken in raw weight, recipe calorie calculator">
+    <meta name="author" content="CalorieCalc Product & Nutrition Research Team">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta name="theme-color" content="#047857">
 
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://caloriecalcapp.com/guides/how-to-count-calories-home-cooked-meals.html">
-    <meta property="og:title" content="How to Accurately Count Calories in Home-Cooked Meals & Batch Recipes">
-    <meta property="og:description" content="Stop guessing on homemade meals. The complete guide to calculating recipe calories and portion macros.">
+    <meta property="og:title" content="How to Count Calories in Home-Cooked Meals (Plus Raw vs. Cooked Weight Calculator)">
+    <meta property="og:description" content="Stop guessing on homemade meals. Convert raw and cooked weights in ounces or grams and calculate per-serving batch recipe macros.">
     <meta property="og:image" content="https://caloriecalcapp.com/assets/images/analytics.png">
     <meta property="og:site_name" content="CalorieCalc">
 
@@ -32,8 +32,8 @@
         .article-breadcrumbs span { color: #a8a29e; }
         .article-header { margin-bottom: 36px; }
         .article-badge { display: inline-block; background: #ecfdf5; color: #047857; font-weight: 700; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 14px; border-radius: 9999px; border: 1px solid #a7f3d0; margin-bottom: 16px; }
-        .article-title { font-size: 2.5rem; font-weight: 800; line-height: 1.25; letter-spacing: -0.025em; color: #0f172a; margin-bottom: 16px; }
-        .article-meta { display: flex; align-items: center; gap: 16px; font-size: 0.875rem; color: #64748b; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0; }
+        .article-title { font-size: 2.4rem; font-weight: 800; line-height: 1.24; letter-spacing: -0.025em; color: #0f172a; margin-bottom: 16px; }
+        .article-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; font-size: 0.875rem; color: #64748b; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0; }
         .callout-box { background: #f0fdf4; border-left: 4px solid #059669; border-radius: 8px; padding: 20px 24px; margin: 28px 0; }
         .callout-box.takeaway { background: #f8fafc; border-left: 4px solid #3b82f6; }
         .callout-title { font-weight: 700; font-size: 1.125rem; color: #0f172a; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
@@ -44,46 +44,97 @@
         .article-content li { margin-bottom: 10px; }
         .formula-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; margin: 24px 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
         .formula-code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; background: #f1f5f9; padding: 12px 16px; border-radius: 8px; font-size: 0.95rem; color: #0f172a; display: block; margin: 10px 0; }
-        .app-cta-banner { background: linear-gradient(135deg, #064e3b, #047857); color: #ffffff; border-radius: 16px; padding: 36px 32px; margin: 48px 0; display: flex; align-items: center; justify-content: space-between; gap: 28px; box-shadow: 0 10px 25px -5px rgba(4, 120, 87, 0.3); }
-        .app-cta-text h3 { color: #ffffff; font-size: 1.5rem; font-weight: 800; margin: 0 0 8px 0; }
-        .app-cta-text p { color: #a7f3d0; font-size: 0.95rem; margin: 0; }
-        .app-cta-btn { background: #ffffff; color: #064e3b; font-weight: 700; font-size: 0.95rem; padding: 14px 24px; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; transition: transform 0.2s, background-color 0.2s; }
-        .app-cta-btn:hover { background: #f0fdf4; transform: translateY(-2px); }
+        /* Interactive Calculator Widget */
+        .inline-calc-box { background: #ffffff; border: 2px solid #059669; border-radius: 16px; padding: 26px; margin: 32px 0; box-shadow: 0 12px 28px -6px rgba(5, 150, 105, 0.14); }
+        .ic-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid #e2e8f0; }
+        .ic-title { font-size: 1.2rem; font-weight: 800; color: #0f172a; margin: 0; }
+        .unit-toggle { display: inline-flex; background: #f1f5f9; padding: 3px; border-radius: 8px; border: 1px solid #cbd5e1; }
+        .unit-toggle button { border: none; background: transparent; padding: 5px 12px; border-radius: 6px; font-size: 0.78rem; font-weight: 700; color: #475569; cursor: pointer; }
+        .unit-toggle button.active { background: #ffffff; color: #047857; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+        .ic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 18px; }
+        .ic-field label { display: block; font-size: 0.8rem; font-weight: 700; color: #334155; margin-bottom: 6px; }
+        .ic-field select, .ic-field input { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; font-family: inherit; color: #0f172a; background: #f8fafc; }
+        .ic-results { background: #f0fdf4; border: 1px solid #a7f3d0; border-radius: 12px; padding: 16px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; text-align: center; }
+        .ic-res-val { font-size: 1.35rem; font-weight: 800; color: #047857; }
+        .ic-res-lbl { font-size: 0.75rem; color: #475569; font-weight: 600; }
+        /* Mid-Article & Bottom CTA Boxes */
+        .mid-cta-box { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2px solid #10b981; border-radius: 14px; padding: 24px; margin: 32px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+        .mid-cta-badge { display: inline-block; background: #047857; color: #fff; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; padding: 3px 9px; border-radius: 999px; margin-bottom: 6px; }
+        .mid-cta-btn { background: #047857; color: #fff; font-weight: 700; font-size: 0.92rem; padding: 12px 20px; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+        .app-cta-banner { background: linear-gradient(135deg, #064e3b, #047857); color: #ffffff; border-radius: 16px; padding: 32px; margin: 48px 0; display: grid; grid-template-columns: 1.6fr 1fr; gap: 24px; align-items: center; box-shadow: 0 10px 25px -5px rgba(4, 120, 87, 0.3); }
+        .app-cta-text h3 { color: #ffffff; font-size: 1.45rem; font-weight: 800; margin: 0 0 8px 0; }
+        .app-cta-text p { color: #a7f3d0; font-size: 0.95rem; margin: 0 0 16px 0; }
+        .app-cta-btn { background: #ffffff; color: #064e3b; font-weight: 700; font-size: 0.95rem; padding: 13px 22px; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; }
+        .qr-card-box { background: #ffffff; color: #0f172a; border-radius: 12px; padding: 14px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px; max-width: 190px; margin-left: auto; }
+        .data-table-wrapper { overflow-x: auto; margin: 24px 0; border-radius: 10px; border: 1px solid #e2e8f0; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left; background: #fff; }
+        .data-table th { background: #f8fafc; color: #0f172a; font-weight: 700; padding: 12px 14px; border-bottom: 1px solid #cbd5e1; }
+        .data-table td { padding: 11px 14px; border-bottom: 1px solid #f1f5f9; color: #334155; }
         .faq-item { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 12px; padding: 20px 24px; }
         .faq-item h3 { font-size: 1.1rem; margin: 0 0 8px 0; color: #0f172a; }
         .faq-item p { margin: 0; color: #475569; font-size: 0.95rem; }
         .medical-disclaimer { background: #fffbeb; border: 1px solid #fef3c7; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 18px 22px; margin-top: 48px; font-size: 0.875rem; color: #92400e; }
         .medical-disclaimer strong { color: #78350f; display: block; margin-bottom: 4px; }
-        @media (max-width: 768px) { .article-title { font-size: 2rem; } .app-cta-banner { flex-direction: column; text-align: center; padding: 24px 20px; } }
+        @media (max-width: 768px) {
+            .article-title { font-size: 1.95rem; }
+            .ic-results { grid-template-columns: repeat(2, 1fr); }
+            .app-cta-banner { grid-template-columns: 1fr; text-align: center; }
+            .qr-card-box { margin: 0 auto; }
+        }
     </style>
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "How to Count Calories in Home-Cooked Meals & Batch Recipes",
-      "description": "Learn the exact mathematical formulas to calculate per-serving calories and macros for complex home-cooked recipes and meal prep.",
-      "image": "https://caloriecalcapp.com/assets/images/analytics.png",
-      "author": { "@type": "Organization", "name": "CalorieCalc Nutrition Team", "url": "https://caloriecalcapp.com" },
-      "publisher": { "@type": "Organization", "name": "CalorieCalc", "logo": { "@type": "ImageObject", "url": "https://caloriecalcapp.com/assets/images/app-icon.png?v=2" } },
-      "datePublished": "2026-09-27T00:00:00+00:00"
-    }
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Count Calories in Home-Cooked Meals & Raw vs. Cooked Weight Chart",
+        "description": "Learn the exact mathematical formulas to calculate per-serving calories and macros for home-cooked recipes, plus an interactive Raw vs. Cooked weight converter in ounces and grams.",
+        "image": "https://caloriecalcapp.com/assets/images/analytics.png",
+        "author": { "@type": "Organization", "name": "CalorieCalc Product & Nutrition Research Team", "url": "https://caloriecalcapp.com" },
+        "publisher": { "@type": "Organization", "name": "CalorieCalc", "logo": { "@type": "ImageObject", "url": "https://caloriecalcapp.com/assets/images/app-icon.png?v=2" } },
+        "datePublished": "2026-09-27T00:00:00+00:00",
+        "dateModified": "2026-10-26T00:00:00+00:00"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much raw chicken breast is 4 oz (113g) or 150g cooked?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Boneless, skinless chicken breast loses approximately 25% of its weight as water during cooking. Therefore, 4 oz (113g) of cooked chicken breast equals roughly 5.3 oz (151g) of raw chicken breast (about 181 calories and 34g protein), and 150g of cooked chicken equals 200g raw (240 calories and 45g protein)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to weigh non-starchy vegetables like lettuce or cucumbers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Leafy greens and watery vegetables (cucumbers, celery, zucchini) have very low caloric density (10–20 calories per cup / 100g). While weighing cooking oils, meats, and starches is important, estimating leafy greens rarely affects your weekly deficit."
+            }
+          }
+        ]
+      }
+    ]
     </script>
 </head>
 <body>
 
-        <nav class="nav scrolled" id="nav">
+    <nav class="nav scrolled" id="nav">
         <div class="nav-inner">
-            <a href="../index.html" class="logo">
+            <a href="../" class="logo">
                 <img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="36" height="36">
                 <span>CalorieCalc</span>
             </a>
             <div class="nav-links" id="navLinks">
-                <a href="../features/index.html">Features (37+)</a>
+                <a href="../features/">Features (37+)</a>
                 <a href="../tools/tdee-calculator.html" style="color:var(--emerald-700);font-weight:700;">🧮 TDEE Calculator</a>
-                <a href="../quiz/index.html" style="color:#0284c7;font-weight:700;">📋 90-Day Quiz</a>
-                <a href="../guides/index.html" style="color:var(--emerald-700);font-weight:700">Guides</a>
-                <a href="../index.html#pricing">Pricing</a>
+                <a href="../quiz/" style="color:#0284c7;font-weight:700;">📋 90-Day Quiz</a>
+                <a href="../guides/" style="color:var(--emerald-700);font-weight:700">Guides</a>
+                <a href="../#pricing">Pricing</a>
                 <a href="../partner.html">Partners</a>
                 <a href="../support.html">Support</a>
                 <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta-mobile" target="_blank" rel="noopener">
@@ -106,94 +157,246 @@
     <main class="article-page">
         <article class="article-container">
             <nav class="article-breadcrumbs" aria-label="Breadcrumb">
-                <a href="../index.html">Home</a>
+                <a href="../">Home</a>
                 <span>/</span>
-                <a href="index.html">Guides</a>
+                <a href="./">Guides</a>
                 <span>/</span>
-                <span>Home-Cooked Calories</span>
+                <span>Home-Cooked Calories &amp; Raw vs. Cooked Weights</span>
             </nav>
 
             <header class="article-header">
-                <span class="article-badge">Culinary Tracking</span>
-                <h1 class="article-title">How to Accurately Count Calories in Home-Cooked Meals & Batch Prep</h1>
+                <span class="article-badge">Kitchen Scale Math &amp; Meal Prep</span>
+                <h1 class="article-title">How to Count Calories in Home-Cooked Meals (Plus Raw vs. Cooked Weight Conversion Chart)</h1>
                 <div class="article-meta">
-                    <span>By CalorieCalc Nutrition Team</span>
+                    <span>By CalorieCalc Product &amp; Nutrition Research Team</span>
                     <span>•</span>
-                    <span>10 min read</span>
+                    <span>11 min read</span>
                     <span>•</span>
-                    <span>Updated September 2026</span>
+                    <span>Data: USDA FoodData Central</span>
+                    <span>•</span>
+                    <span>Updated October 2026</span>
                 </div>
             </header>
 
             <p>
-                Cooking at home is undoubtedly the healthiest way to eat in a calorie deficit. However, many dieters struggle to calculate nutritional values when cooking multi-ingredient dishes like stews, pasta bakes, or stir-fries.
+                Weighing <strong>6 oz (170g) of cooked chicken breast</strong> and logging it under a standard "raw chicken breast" entry undercounts your meal by <strong>68 calories and 13 grams of protein</strong>. Conversely, logging <strong>200g (7 oz) of steamed white rice</strong> using a dry/uncooked entry overestimates your intake by nearly <strong>460 calories</strong>.
             </p>
             <p>
-                Trying to guess what a ladle of chili contains is inaccurate and stressful. Fortunately, calculating the exact calories and macros per serving of any homemade meal requires just one basic formula and a kitchen scale.
+                Whether you are portioning out a single plate from a family casserole or batch-prepping 5 lunch containers for the workweek, accurate home-cooked logging comes down to two things: matching your weighed state (raw vs. cooked) and dividing by the total cooked pot weight.
             </p>
 
-            <div class="callout-box takeaway">
-                <div class="callout-title">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                    Core Rules for Homemade Food Logging
+            <!-- INTERACTIVE RAW <-> COOKED WEIGHT CONVERTER -->
+            <div class="inline-calc-box" id="converter">
+                <div class="ic-header">
+                    <h2 class="ic-title">⚖️ Instant Raw ↔ Cooked Weight &amp; Calorie Converter</h2>
+                    <div class="unit-toggle">
+                        <button type="button" id="btnUnitOz" class="active" onclick="setConvUnit('oz')">US Ounces (oz)</button>
+                        <button type="button" id="btnUnitG" onclick="setConvUnit('g')">Metric Grams (g)</button>
+                    </div>
                 </div>
-                <ul>
-                    <li><strong>Always Weigh Raw Ingredients:</strong> Raw weight is the gold standard because moisture loss during cooking varies drastically.</li>
-                    <li><strong>Weigh the Final Finished Pot:</strong> The finished dish weight divided by the total recipe calories gives you your exact calorie-per-gram ratio.</li>
-                    <li><strong>Save Your Custom Recipes:</strong> Creating a recipe once in your tracker allows you to log a bowl in seconds anytime you cook it.</li>
-                </ul>
+                <div class="ic-grid">
+                    <div class="ic-field">
+                        <label for="convFood">1. Select Food Item (USDA Standard)</label>
+                        <select id="convFood" onchange="runRawCookedConv()">
+                            <option value="chicken">Chicken Breast (Boneless, Skinless)</option>
+                            <option value="beef93">Lean Ground Beef / Turkey (93% Lean)</option>
+                            <option value="sirloin">Top Sirloin Steak (Trimmed)</option>
+                            <option value="salmon">Atlantic Salmon Fillet</option>
+                            <option value="rice">White / Basmati Rice</option>
+                            <option value="pasta">Durum Wheat Pasta (Penne / Spaghetti)</option>
+                            <option value="oats">Rolled Oats (Simmered in Water)</option>
+                            <option value="potato">Russet / Yukon Gold Potato (Baked/Roasted)</option>
+                            <option value="lentils">Dry Lentils (Boiled)</option>
+                        </select>
+                    </div>
+                    <div class="ic-field">
+                        <label for="convState">2. How Did You Weigh It?</label>
+                        <select id="convState" onchange="runRawCookedConv()">
+                            <option value="cooked">Weighed AFTER Cooking (Cooked Weight)</option>
+                            <option value="raw">Weighed BEFORE Cooking (Raw / Dry Weight)</option>
+                        </select>
+                    </div>
+                    <div class="ic-field">
+                        <label for="convAmount" id="convAmountLabel">3. Weight on Scale (oz)</label>
+                        <input type="number" id="convAmount" value="6" min="0.5" max="2000" step="0.5" oninput="runRawCookedConv()">
+                    </div>
+                </div>
+                <div class="ic-results">
+                    <div>
+                        <div class="ic-res-val" id="outRawWt">8.0 oz</div>
+                        <div class="ic-res-lbl">Raw / Dry Weight</div>
+                    </div>
+                    <div>
+                        <div class="ic-res-val" id="outCookedWt">6.0 oz</div>
+                        <div class="ic-res-lbl">Cooked Weight</div>
+                    </div>
+                    <div>
+                        <div class="ic-res-val" id="outTrueKcal">272 kcal</div>
+                        <div class="ic-res-lbl">True Calories</div>
+                    </div>
+                    <div>
+                        <div class="ic-res-val" id="outTrueProt">51.0g</div>
+                        <div class="ic-res-lbl">True Protein</div>
+                    </div>
+                </div>
+                <p id="outPhysicsNote" style="font-size:0.82rem; color:#475569; margin:12px 0 0 0; text-align:center;">
+                    Formula: Chicken breast retains ~75% of its raw weight when pan-seared or baked (Cooked Weight ÷ 0.75 = Raw Equivalent). <a href="../tools/raw-cooked-weight-converter.html" style="color:#047857;font-weight:700;">Open full-screen converter tool →</a>
+                </p>
+            </div>
+
+            <!-- MID-ARTICLE APP DOWNLOAD CTA BOX -->
+            <div class="mid-cta-box">
+                <div style="max-width:500px;">
+                    <span class="mid-cta-badge">Free Food Diary &amp; Barcode Scanner</span>
+                    <h3 style="font-size:1.22rem; font-weight:800; color:#064e3b; margin:0 0 6px 0;">
+                        Save Your Home Recipes Once—Log Portions in 1 Tap
+                    </h3>
+                    <p style="font-size:0.9rem; color:#1e293b; margin:0;">
+                        CalorieCalc's free <a href="../features/food-diary.html" style="color:#047857;font-weight:700;">Food Diary</a> and built-in Recipe Builder let you scan ingredient barcodes for free, enter the cooked pot weight, and log exact gram or ounce portions anytime.
+                    </p>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app&referrer=utm_source%3Dwebsite%26utm_medium%3Dguide%26utm_campaign%3Dhome_cooked_meals%26utm_content%3Dmid_cta" class="mid-cta-btn" target="_blank" rel="noopener">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                    Download Free on Google Play
+                </a>
             </div>
 
             <div class="article-content">
-                <h2>The 3-Step Recipe Math Formula</h2>
-                <div class="formula-card">
-                    <div class="formula-code">
-                        Step 1: Total Recipe Calories = Sum of all raw ingredient calories<br>
-                        Step 2: Calorie Per Gram = Total Recipe Calories ÷ Total Weight of Cooked Dish in Grams<br>
-                        Step 3: Your Portion Calories = Portion Weight in Grams × Calorie Per Gram
-                    </div>
+                <h2>1. Master Raw vs. Cooked Weight Conversion Chart (US oz &amp; Metric g)</h2>
+                <p>
+                    During cooking, meats, poultry, and fish lose <strong>20% to 28% of their weight</strong> as water evaporates, concentrating calories into a smaller mass. Conversely, dry grains, pasta, and legumes absorb water and expand <strong>2.3x to 3.5x</strong> by weight.
+                </p>
+
+                <div class="data-table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Food Item (USDA Standard)</th>
+                                <th>Raw / Dry Weight</th>
+                                <th>Cooked Weight Yield</th>
+                                <th>Cooked → Raw Multiplier</th>
+                                <th>Calories &amp; Protein</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Chicken Breast (Skinless)</strong></td>
+                                <td>4 oz (113g) / 100g</td>
+                                <td>~3.0 oz (85g) / 75g</td>
+                                <td><code>Cooked × 1.33</code></td>
+                                <td>136 kcal (25.5g P) per 4 oz raw</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lean Ground Beef / Turkey (93/7)</strong></td>
+                                <td>4 oz (113g) / 100g</td>
+                                <td>~2.9 oz (81g) / 72g</td>
+                                <td><code>Cooked × 1.39</code></td>
+                                <td>170 kcal (24.0g P) per 4 oz raw</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Top Sirloin Steak</strong></td>
+                                <td>4 oz (113g) / 100g</td>
+                                <td>~3.0 oz (85g) / 75g</td>
+                                <td><code>Cooked × 1.33</code></td>
+                                <td>158 kcal (25.0g P) per 4 oz raw</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Atlantic Salmon Fillet</strong></td>
+                                <td>4 oz (113g) / 100g</td>
+                                <td>~3.2 oz (90g) / 80g</td>
+                                <td><code>Cooked × 1.25</code></td>
+                                <td>235 kcal (23.0g P) per 4 oz raw</td>
+                            </tr>
+                            <tr>
+                                <td><strong>White / Basmati Rice</strong></td>
+                                <td>2 oz (57g) / 100g dry</td>
+                                <td>~5.6 oz (160g) / 280g</td>
+                                <td><code>Cooked × 0.36</code></td>
+                                <td>202 kcal (4.0g P) per 2 oz dry</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Durum Wheat Pasta</strong></td>
+                                <td>2 oz (57g) / 100g dry</td>
+                                <td>~4.7 oz (134g) / 235g</td>
+                                <td><code>Cooked × 0.42</code></td>
+                                <td>200 kcal (7.0g P) per 2 oz dry</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rolled Oats (Porridge)</strong></td>
+                                <td>1.5 oz (43g) / 100g dry</td>
+                                <td>~5.2 oz (150g) / 350g</td>
+                                <td><code>Cooked × 0.29</code></td>
+                                <td>163 kcal (5.7g P) per 1.5 oz dry</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Potatoes (Baked / Air-Fried)</strong></td>
+                                <td>6 oz (170g) / 100g raw</td>
+                                <td>~4.8 oz (136g) / 80g</td>
+                                <td><code>Cooked × 1.25</code></td>
+                                <td>131 kcal (3.5g P) per 6 oz raw</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
+                <h2>2. The 3-Step Multi-Serving Batch Recipe Formula</h2>
                 <p>
-                    <em>Practical Example:</em> You cook a beef stew with 2,400 total raw calories. The completed stew in the pot weighs 1,200 grams. Each gram contains <code>2 calories</code> (2,400 ÷ 1,200). If you ladle a 300g bowl for lunch, your meal is exactly <strong>600 calories</strong>.
+                    When cooking a multi-ingredient dish like turkey chili, lasagna, or chicken curry for multiple days, never guess what "one ladle" equals. Use the <strong>Calorie-Per-Gram (or Ounce) Method</strong>:
+                </p>
+                <div class="formula-card">
+                    <div class="formula-code">
+                        Step 1: Total Recipe Calories = Sum of all raw ingredients + cooking oil<br>
+                        Step 2: Calorie Density = Total Recipe Calories ÷ Final Cooked Dish Weight (in g or oz)<br>
+                        Step 3: Your Bowl Calories = Weight of Your Serving × Calorie Density
+                    </div>
+                </div>
+                <p>
+                    <em>Practical Example:</em> You cook a batch of turkey chili totaling <strong>2,400 calories</strong> of raw ingredients. After simmering, the entire pot of chili (minus the empty pot's weight) weighs <strong>1,200 grams (42.3 oz)</strong>. That equals exactly <strong>2.0 calories per gram (56.7 kcal per oz)</strong>. When you scoop a <strong>350g (12.3 oz) bowl</strong> for dinner, your serving is <strong>700 calories</strong>.
                 </p>
 
-                <h2>Raw vs. Cooked Weights: Why Moisture Misleads</h2>
-                <p>
-                    A 100g raw chicken breast yields about 75g after cooking because water evaporates. Conversely, 100g of dry pasta or raw rice absorbs water and weighs about 225–250g cooked. 
-                    If you log 200g of cooked pasta using the "dry pasta" entry in your tracker, you will record nearly triple the actual calories! Always ensure the database item matches your weighed state (dry/raw vs. cooked/boiled).
-                </p>
-
+                <!-- END-OF-ARTICLE HERO CTA BANNER WITH QR CODE -->
                 <div class="app-cta-banner">
                     <div class="app-cta-text">
-                        <h3>Built-in Recipe Builder</h3>
-                        <p>CalorieCalc’s recipe builder adds up ingredients, scales servings automatically, and lets you log portions with a single tap.</p>
+                        <h3>Automate Your Kitchen &amp; Macro Math</h3>
+                        <p>Use CalorieCalc's free Barcode Scanner, Custom Recipe Builder, and 4 Android Home Screen Widgets—plus try our AI Photo Food Scanner free on Google Play.</p>
+                        <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center;">
+                            <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app&referrer=utm_source%3Dwebsite%26utm_medium%3Dguide%26utm_campaign%3Dhome_cooked_meals%26utm_content%3Dend_cta" class="app-cta-btn" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                                Get CalorieCalc on Google Play
+                            </a>
+                            <a href="../tools/tdee-calculator.html" style="color:#a7f3d0; font-weight:700; font-size:0.9rem; text-decoration:underline;">Calculate your daily TDEE target →</a>
+                        </div>
                     </div>
-                    <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="app-cta-btn" target="_blank" rel="noopener">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
-                        Try Recipe Builder in CalorieCalc
-                    </a>
+                    <div class="qr-card-box">
+                        <img src="../assets/images/playstore-qr.png" alt="Scan QR Code to install CalorieCalc on Android" width="110" height="110" style="border-radius:8px; border:2px solid #047857;">
+                        <strong style="font-size:0.78rem; color:#064e3b;">Scan for Android App</strong>
+                        <span style="font-size:0.68rem; color:#475569;">Free Barcode &amp; Diary</span>
+                    </div>
                 </div>
 
                 <h2>Frequently Asked Questions</h2>
                 <div class="faq-item">
-                    <h3>Do I need to weigh non-starchy vegetables like lettuce or cucumbers?</h3>
-                    <p>Leafy greens and watery vegetables (cucumbers, celery) have very low caloric density (10–15 calories per cup). While precision is good, estimating greens will rarely affect your weight loss trajectory.</p>
+                    <h3>How much raw chicken breast is 4 oz (113g) or 150g cooked?</h3>
+                    <p>Boneless, skinless chicken breast loses roughly 25% of its weight as water during cooking. Therefore, 4 oz (113g) of cooked chicken breast equals 5.3 oz (151g) of raw chicken (181 kcal, 34g protein), and 150g of cooked chicken equals 200g raw (240 kcal, 45g protein).</p>
                 </div>
                 <div class="faq-item">
-                    <h3>What if someone else in the family cooked the meal?</h3>
-                    <p>Ask for the primary protein source and cooking fat used. Log the estimated meat portion and add 1–2 tablespoons of oil to account for butter or cooking oils used in the pan.</p>
+                    <h3>Do I need to weigh non-starchy vegetables like lettuce or cucumbers?</h3>
+                    <p>Leafy greens and watery vegetables (cucumbers, celery, spinach) have very low caloric density (10–20 calories per cup / 100g). While weighing cooking oils, meats, and starches is important, estimating leafy greens rarely affects your weight loss trajectory.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What if someone else cooked the meal and I couldn't weigh the ingredients?</h3>
+                    <p>Weigh your cooked portion using our converter above, or read our guide on <a href="how-to-track-calories-without-food-scale.html" style="color:#047857;font-weight:600;">tracking calories without a food scale using hand portions and AI photo scanning</a>.</p>
                 </div>
 
                 <div class="medical-disclaimer">
-                    <strong>Medical & Nutritional Disclaimer:</strong>
-                    This educational content is not a substitute for clinical dietary advice. Caloric intake targets should remain safe and balanced. Consult a doctor or registered dietitian for specialized nutritional plans.
+                    <strong>Disclaimer:</strong>
+                    The information provided in this article is for educational and informational purposes only and does not constitute medical or nutritional advice. Always consult a qualified physician or registered dietitian before making significant changes to your diet or caloric intake.
                 </div>
             </div>
         </article>
     </main>
 
-        <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-disclaimer">
                 <strong>Medical &amp; Nutritional Disclaimer:</strong> The information, calculators, and AI insights provided on CalorieCalcApp.com and within the CalorieCalc mobile application are for educational and informational purposes only and do not constitute medical advice, diagnosis, or treatment. Always consult a qualified physician or registered dietitian before making significant changes to your diet, fasting protocol, or caloric intake.
@@ -201,12 +404,12 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <div class="footer-logo"><img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="32" height="32"> CalorieCalc</div>
-                    <p>AI-powered calorie tracking, 55+ micronutrient analytics, and 24/7 personal nutrition coaching.</p>
+                    <p>Free barcode &amp; food diary logging, AI photo scanning, and smart nutrition tools.</p>
                 </div>
                 <div class="footer-links">
                     <div class="fl-col">
                         <h4>Features</h4>
-                        <a href="../features/index.html">All 37+ Features</a>
+                        <a href="../features/">All 37+ Features</a>
                         <a href="../features/ai-food-scanner.html">AI Food Scanner</a>
                         <a href="../features/ai-nutrition-coach.html">AI Nutrition Coach</a>
                         <a href="../features/meal-planner.html">AI Meal Planner</a>
@@ -215,9 +418,9 @@
                     <div class="fl-col">
                         <h4>Free Tools &amp; Guides</h4>
                         <a href="../tools/tdee-calculator.html">TDEE &amp; Macro Calculator</a>
-                        <a href="../quiz/index.html">90-Day Blueprint Quiz</a>
-                        <a href="../guides/index.html">Nutrition Knowledge Hub</a>
-                        <a href="../guides/how-to-calculate-calorie-deficit.html">Calorie Deficit Guide</a>
+                        <a href="../tools/raw-cooked-weight-converter.html">Raw vs. Cooked Converter</a>
+                        <a href="../quiz/">90-Day Blueprint Quiz</a>
+                        <a href="../guides/">Nutrition Knowledge Hub</a>
                     </div>
                     <div class="fl-col">
                         <h4>Partners &amp; Support</h4>
@@ -242,5 +445,62 @@
         </div>
     </footer>
     <script src="../js/main.js"></script>
+    <script>
+        let currentConvUnit = 'oz';
+        const usdaYields = {
+            chicken: { yield: 0.75, kcal100g: 120, prot100g: 22.5, note: 'Chicken breast loses ~25% moisture when baked, grilled, or pan-seared (Cooked ÷ 0.75 = Raw).' },
+            beef93:  { yield: 0.72, kcal100g: 152, prot100g: 21.2, note: '93% lean ground beef or turkey loses ~28% moisture during browning (Cooked ÷ 0.72 = Raw).' },
+            sirloin: { yield: 0.75, kcal100g: 140, prot100g: 22.1, note: 'Trimmed top sirloin steak retains ~75% of its raw weight cooked medium (Cooked ÷ 0.75 = Raw).' },
+            salmon:  { yield: 0.80, kcal100g: 208, prot100g: 20.4, note: 'Atlantic salmon fillet retains ~80% of its raw weight when baked or air-fried (Cooked ÷ 0.80 = Raw).' },
+            rice:    { yield: 2.80, kcal100g: 355, prot100g: 7.1,  note: 'Dry white or basmati rice absorbs water and expands ~2.8x when steamed (Cooked × 0.36 = Dry).' },
+            pasta:   { yield: 2.35, kcal100g: 350, prot100g: 12.0, note: 'Dry durum wheat pasta absorbs water and expands ~2.35x when boiled al dente (Cooked × 0.42 = Dry).' },
+            oats:    { yield: 3.50, kcal100g: 379, prot100g: 13.2, note: 'Dry rolled oats simmered in water expand ~3.5x by weight (Cooked × 0.29 = Dry).' },
+            potato:  { yield: 0.80, kcal100g: 77,  prot100g: 2.0,  note: 'Raw potato loses ~20% moisture when baked or roasted in an oven/air-fryer (Cooked ÷ 0.80 = Raw).' },
+            lentils: { yield: 2.90, kcal100g: 352, prot100g: 24.6, note: 'Dry lentils expand ~2.9x by weight when boiled and drained (Cooked × 0.34 = Dry).' }
+        };
+
+        function setConvUnit(u) {
+            const amtEl = document.getElementById('convAmount');
+            const val = parseFloat(amtEl.value) || 0;
+            if (u === 'g' && currentConvUnit === 'oz') {
+                amtEl.value = Math.round(val * 28.3495);
+                amtEl.step = '10';
+            } else if (u === 'oz' && currentConvUnit === 'g') {
+                amtEl.value = (val / 28.3495).toFixed(1);
+                amtEl.step = '0.5';
+            }
+            currentConvUnit = u;
+            document.getElementById('btnUnitOz').classList.toggle('active', u === 'oz');
+            document.getElementById('btnUnitG').classList.toggle('active', u === 'g');
+            document.getElementById('convAmountLabel').textContent = u === 'oz' ? '3. Weight on Scale (oz)' : '3. Weight on Scale (g)';
+            runRawCookedConv();
+        }
+
+        function runRawCookedConv() {
+            const key = document.getElementById('convFood').value;
+            const state = document.getElementById('convState').value;
+            const inputVal = parseFloat(document.getElementById('convAmount').value) || 0;
+            const item = usdaYields[key];
+
+            const inputGrams = currentConvUnit === 'oz' ? inputVal * 28.3495 : inputVal;
+            const rawGrams = state === 'cooked' ? (inputGrams / item.yield) : inputGrams;
+            const cookedGrams = state === 'cooked' ? inputGrams : (inputGrams * item.yield);
+
+            const kcal = (rawGrams / 100) * item.kcal100g;
+            const prot = (rawGrams / 100) * item.prot100g;
+
+            if (currentConvUnit === 'oz') {
+                document.getElementById('outRawWt').textContent = (rawGrams / 28.3495).toFixed(1) + ' oz';
+                document.getElementById('outCookedWt').textContent = (cookedGrams / 28.3495).toFixed(1) + ' oz';
+            } else {
+                document.getElementById('outRawWt').textContent = Math.round(rawGrams) + 'g';
+                document.getElementById('outCookedWt').textContent = Math.round(cookedGrams) + 'g';
+            }
+            document.getElementById('outTrueKcal').textContent = Math.round(kcal) + ' kcal';
+            document.getElementById('outTrueProt').textContent = prot.toFixed(1) + 'g';
+            document.getElementById('outPhysicsNote').innerHTML = 'Formula: ' + item.note + ' <a href="../tools/raw-cooked-weight-converter.html" style="color:#047857;font-weight:700;">Open standalone converter tool →</a>';
+        }
+        document.addEventListener('DOMContentLoaded', runRawCookedConv);
+    </script>
 </body>
 </html>

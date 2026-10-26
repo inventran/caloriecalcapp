@@ -3,252 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intermittent Fasting and Calorie Deficit: How to Combine Them Safely | CalorieCalc</title>
-    <meta name="description" content="Discover how to combine intermittent fasting (16/8, 14/10) with a safe calorie deficit. Learn meal timing, macro splits, and how to avoid muscle loss.">
-    <meta name="keywords" content="intermittent fasting calorie deficit, 16 8 fasting weight loss, how to combine fasting and calorie counting, intermittent fasting tracking app, safe fasting deficit">
-    <meta name="author" content="CalorieCalc Team">
+    <title>Intermittent Fasting & Calorie Deficit Guide: 16:8 Meal Timing & Break-Fast Calculator | CalorieCalc</title>
+    <meta name="description" content="How to combine intermittent fasting (16:8, 14:10, 18:6) with a safe calorie deficit without muscle loss or rebound overeating. Use our interactive Eating Window & Break-Fast Meal Macro Planner.">
+    <meta name="keywords" content="intermittent fasting and calorie deficit, what to eat to break 16 8 fast without overeating, 16 8 fasting meal schedule for fat loss, intermittent fasting protein distribution, fasting window macro calculator">
+    <meta name="author" content="CalorieCalc Nutrition Team">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta name="theme-color" content="#047857">
 
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://caloriecalcapp.com/guides/intermittent-fasting-calorie-deficit-guide.html">
-    <meta property="og:title" content="Intermittent Fasting and Calorie Deficit: How to Combine Them Safely">
-    <meta property="og:description" content="Master meal timing and energy balance together without energy crashes or muscle catabolism.">
-    <meta property="og:image" content="https://caloriecalcapp.com/assets/images/analytics.png">
+    <meta property="og:title" content="Intermittent Fasting & Calorie Deficit: 16:8 Meal Planner & Break-Fast Guide">
+    <meta property="og:description" content="Calculate your exact 16:8 eating window macros and learn what to eat for your first meal so you don't bloat or overeat.">
+    <meta property="og:image" content="https://caloriecalcapp.com/assets/images/meal-plan.png">
     <meta property="og:site_name" content="CalorieCalc">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Intermittent Fasting & Calorie Deficit: The Safe Complete Guide">
-    <meta name="twitter:description" content="Learn how to pair intermittent fasting protocols with a moderate calorie deficit for sustainable results.">
-    <meta name="twitter:image" content="https://caloriecalcapp.com/assets/images/analytics.png">
+    <meta name="twitter:title" content="Intermittent Fasting & Calorie Deficit: 16:8 Meal Timing & Calculator">
+    <meta name="twitter:description" content="Interactive 16:8 fasting window macro planner and evidence-based rules for breaking your fast without rebound hunger.">
+    <meta name="twitter:image" content="https://caloriecalcapp.com/assets/images/meal-plan.png">
 
-    <!-- Canonical & Favicons -->
     <link rel="icon" type="image/png" href="../assets/images/app-icon.png?v=2">
-    <link rel="apple-touch-icon" href="../assets/images/app-icon.png?v=2">
     <link rel="canonical" href="https://caloriecalcapp.com/guides/intermittent-fasting-calorie-deficit-guide.html">
-
-    <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 
     <style>
-        .article-page {
-            padding-top: 100px;
-            padding-bottom: 80px;
-            background: #fafaf9;
-            color: #1c1917;
-            line-height: 1.75;
-            font-size: 1.0625rem;
-        }
-        .article-container {
-            max-width: 820px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .article-breadcrumbs {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.875rem;
-            color: #78716c;
-            margin-bottom: 24px;
-        }
-        .article-breadcrumbs a {
-            color: #047857;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .article-breadcrumbs span {
-            color: #a8a29e;
-        }
-        .article-header {
-            margin-bottom: 36px;
-        }
-        .article-badge {
-            display: inline-block;
-            background: #ecfdf5;
-            color: #047857;
-            font-weight: 700;
-            font-size: 0.8125rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 6px 14px;
-            border-radius: 9999px;
-            border: 1px solid #a7f3d0;
-            margin-bottom: 16px;
-        }
-        .article-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1.25;
-            letter-spacing: -0.025em;
-            color: #0f172a;
-            margin-bottom: 16px;
-        }
-        .article-meta {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            font-size: 0.875rem;
-            color: #64748b;
-            padding-bottom: 24px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        .callout-box {
-            background: #f0fdf4;
-            border-left: 4px solid #059669;
-            border-radius: 8px;
-            padding: 20px 24px;
-            margin: 28px 0;
-        }
-        .callout-box.takeaway {
-            background: #f8fafc;
-            border-left: 4px solid #3b82f6;
-        }
-        .callout-title {
-            font-weight: 700;
-            font-size: 1.125rem;
-            color: #0f172a;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .article-content h2 {
-            font-size: 1.75rem;
-            font-weight: 800;
-            color: #0f172a;
-            margin-top: 48px;
-            margin-bottom: 18px;
-            letter-spacing: -0.02em;
-            border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 8px;
-        }
-        .article-content h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #1e293b;
-            margin-top: 28px;
-            margin-bottom: 12px;
-        }
+        .article-page { padding-top: 100px; padding-bottom: 80px; background: #fafaf9; color: #1c1917; line-height: 1.75; font-size: 1.0625rem; }
+        .article-container { max-width: 840px; margin: 0 auto; padding: 0 20px; }
+        .article-breadcrumbs { display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: #78716c; margin-bottom: 24px; flex-wrap: wrap; }
+        .article-breadcrumbs a { color: #047857; text-decoration: none; font-weight: 500; }
+        .article-breadcrumbs span { color: #a8a29e; }
+        .article-header { margin-bottom: 32px; }
+        .article-badge { display: inline-block; background: #ecfdf5; color: #047857; font-weight: 700; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 14px; border-radius: 9999px; border: 1px solid #a7f3d0; margin-bottom: 16px; }
+        .article-title { font-size: 2.45rem; font-weight: 800; line-height: 1.22; letter-spacing: -0.025em; color: #0f172a; margin-bottom: 16px; }
+        .article-meta { display: flex; align-items: center; gap: 12px; font-size: 0.875rem; color: #64748b; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; flex-wrap: wrap; }
+        .methodology-badge { display: inline-flex; align-items: center; gap: 6px; background: #f1f5f9; color: #334155; padding: 4px 10px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; }
+        .callout-box { background: #f0fdf4; border-left: 4px solid #059669; border-radius: 8px; padding: 20px 24px; margin: 28px 0; }
+        .callout-box.takeaway { background: #f8fafc; border-left: 4px solid #3b82f6; }
+        .callout-title { font-weight: 700; font-size: 1.125rem; color: #0f172a; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .article-content h2 { font-size: 1.75rem; font-weight: 800; color: #0f172a; margin-top: 48px; margin-bottom: 18px; letter-spacing: -0.02em; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 700; color: #1e293b; margin-top: 28px; margin-bottom: 12px; }
         .article-content p { margin-bottom: 20px; }
         .article-content ul, .article-content ol { margin-bottom: 24px; padding-left: 24px; }
         .article-content li { margin-bottom: 10px; }
-        .data-table-wrapper {
-            overflow-x: auto;
-            margin: 24px 0;
-            border-radius: 10px;
-            border: 1px solid #e2e8f0;
-        }
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.95rem;
-            text-align: left;
-            background: #fff;
-        }
-        .data-table th {
-            background: #f8fafc;
-            color: #334155;
-            font-weight: 700;
-            padding: 12px 16px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        .data-table td {
-            padding: 12px 16px;
-            border-bottom: 1px solid #f1f5f9;
-            color: #475569;
-        }
-        .app-cta-banner {
-            background: linear-gradient(135deg, #064e3b, #047857);
-            color: #ffffff;
-            border-radius: 16px;
-            padding: 36px 32px;
-            margin: 48px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 28px;
-            box-shadow: 0 10px 25px -5px rgba(4, 120, 87, 0.3);
-        }
-        .app-cta-text h3 { color: #ffffff; font-size: 1.5rem; font-weight: 800; margin: 0 0 8px 0; }
-        .app-cta-text p { color: #a7f3d0; font-size: 0.95rem; margin: 0; }
-        .app-cta-btn {
-            background: #ffffff;
-            color: #064e3b;
-            font-weight: 700;
-            font-size: 0.95rem;
-            padding: 14px 24px;
-            border-radius: 10px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            white-space: nowrap;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-        .app-cta-btn:hover { background: #f0fdf4; transform: translateY(-2px); }
+        .data-table-wrapper { overflow-x: auto; margin: 24px 0; border-radius: 10px; border: 1px solid #e2e8f0; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left; background: #fff; }
+        .data-table th { background: #f8fafc; color: #334155; font-weight: 700; padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+        .data-table td { padding: 12px 16px; border-bottom: 1px solid #f1f5f9; color: #475569; }
+        .data-table tr:hover td { background: #f8fafc; }
+
+        /* Interactive Fasting Planner Box */
+        .calc-widget { background: #ffffff; border: 2px solid #10b981; border-radius: 16px; padding: 28px; margin: 36px 0; box-shadow: 0 12px 30px -8px rgba(16, 185, 129, 0.15); }
+        .calc-widget-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+        .calc-widget-title { font-size: 1.35rem; font-weight: 800; color: #0f172a; margin: 0 0 4px 0; }
+        .calc-widget-sub { font-size: 0.9rem; color: #64748b; margin: 0; }
+        .unit-pill-group { display: inline-flex; background: #f1f5f9; border-radius: 8px; padding: 4px; border: 1px solid #cbd5e1; }
+        .unit-pill { border: none; background: transparent; padding: 6px 12px; font-size: 0.82rem; font-weight: 700; color: #475569; border-radius: 6px; cursor: pointer; transition: all 0.15s; }
+        .unit-pill.active { background: #047857; color: #ffffff; }
+        .calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; margin-bottom: 20px; }
+        .calc-field label { display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.03em; }
+        .calc-field select, .calc-field input { width: 100%; padding: 11px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; font-family: inherit; color: #0f172a; background: #f8fafc; font-weight: 600; }
+        .calc-field select:focus, .calc-field input:focus { outline: none; border-color: #059669; background: #fff; }
+        .calc-results { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+        .calc-stat { background: #ffffff; padding: 14px; border-radius: 8px; border: 1px solid #dcfce7; }
+        .calc-stat-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #64748b; display: block; margin-bottom: 4px; }
+        .calc-stat-val { font-size: 1.25rem; font-weight: 800; color: #065f46; }
+        .calc-stat-sub { font-size: 0.8rem; color: #475569; margin-top: 2px; }
+
+        /* Dual-Placement App CTA Boxes */
+        .app-cta-inline { background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%); color: #ffffff; border-radius: 16px; padding: 28px; margin: 36px 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; border: 1px solid #047857; }
+        .app-cta-inline-badge { display: inline-block; background: rgba(16, 185, 129, 0.2); color: #6ee7b7; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; margin-bottom: 8px; border: 1px solid rgba(110, 231, 183, 0.3); }
+        .app-cta-inline h3 { color: #ffffff; font-size: 1.3rem; font-weight: 800; margin: 0 0 8px 0; }
+        .app-cta-inline p { color: #cbd5e1; font-size: 0.92rem; margin: 0; line-height: 1.55; }
+        .app-cta-btn { background: #10b981; color: #052e16; font-weight: 800; font-size: 0.95rem; padding: 14px 22px; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; transition: transform 0.2s, background-color 0.2s; }
+        .app-cta-btn:hover { background: #34d399; transform: translateY(-2px); }
+
+        .app-cta-end { background: #ffffff; border: 2px solid #047857; border-radius: 18px; padding: 32px; margin: 48px 0 32px 0; display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; box-shadow: 0 15px 35px -10px rgba(4, 120, 87, 0.12); }
+        .app-cta-end h3 { font-size: 1.5rem; font-weight: 800; color: #0f172a; margin: 0 0 10px 0; }
+        .app-cta-end p { color: #475569; font-size: 0.95rem; margin: 0 0 16px 0; }
+        .app-cta-perks { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+        .app-cta-perk { background: #f0fdf4; color: #065f46; font-size: 0.8rem; font-weight: 700; padding: 5px 12px; border-radius: 6px; border: 1px solid #bbf7d0; }
+        .app-cta-qr-box { text-align: center; background: #f8fafc; padding: 14px; border-radius: 12px; border: 1px solid #e2e8f0; }
+        .app-cta-qr-box img { width: 110px; height: 110px; border-radius: 8px; display: block; margin: 0 auto 6px auto; }
+        .app-cta-qr-box span { font-size: 0.72rem; font-weight: 700; color: #475569; display: block; }
+
         .article-image-box { margin: 32px 0; text-align: center; }
         .article-image-box img { max-width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; }
         .article-image-box figcaption { font-size: 0.875rem; color: #64748b; margin-top: 10px; font-style: italic; }
-        .faq-item {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            margin-bottom: 12px;
-            padding: 20px 24px;
-        }
+        .faq-item { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 12px; padding: 20px 24px; }
         .faq-item h3 { font-size: 1.1rem; margin: 0 0 8px 0; color: #0f172a; }
         .faq-item p { margin: 0; color: #475569; font-size: 0.95rem; }
-        .medical-disclaimer {
-            background: #fffbeb;
-            border: 1px solid #fef3c7;
-            border-left: 4px solid #f59e0b;
-            border-radius: 8px;
-            padding: 18px 22px;
-            margin-top: 48px;
-            font-size: 0.875rem;
-            color: #92400e;
-        }
+        .medical-disclaimer { background: #fffbeb; border: 1px solid #fef3c7; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 18px 22px; margin-top: 48px; font-size: 0.875rem; color: #92400e; }
         .medical-disclaimer strong { color: #78350f; display: block; margin-bottom: 4px; }
         @media (max-width: 768px) {
-            .article-title { font-size: 2rem; }
-            .app-cta-banner { flex-direction: column; text-align: center; padding: 24px 20px; }
+            .article-title { font-size: 1.95rem; }
+            .app-cta-inline { flex-direction: column; text-align: center; }
+            .app-cta-end { grid-template-columns: 1fr; text-align: center; }
+            .app-cta-perks { justify-content: center; }
+            .app-cta-qr-box { display: none; }
         }
     </style>
 
-    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Intermittent Fasting and Calorie Deficit: How to Combine Them Safely",
-      "description": "Learn how to combine intermittent fasting schedules with an accurate calorie deficit without muscle loss or fatigue.",
-      "image": "https://caloriecalcapp.com/assets/images/analytics.png",
-      "author": { "@type": "Organization", "name": "CalorieCalc Nutrition Team", "url": "https://caloriecalcapp.com" },
-      "publisher": { "@type": "Organization", "name": "CalorieCalc", "logo": { "@type": "ImageObject", "url": "https://caloriecalcapp.com/assets/images/app-icon.png?v=2" } },
-      "datePublished": "2026-09-27T00:00:00+00:00"
+      "headline": "Intermittent Fasting & Calorie Deficit Guide: 16:8 Meal Timing & Break-Fast Calculator",
+      "description": "How to combine intermittent fasting (16:8, 14:10, 18:6) with a safe calorie deficit without muscle loss or rebound overeating.",
+      "image": "https://caloriecalcapp.com/assets/images/meal-plan.png",
+      "author": {
+        "@type": "Organization",
+        "name": "CalorieCalc Nutrition Team",
+        "url": "https://caloriecalcapp.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CalorieCalc",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://caloriecalcapp.com/assets/images/app-icon.png?v=2"
+        }
+      },
+      "datePublished": "2026-09-27T00:00:00+00:00",
+      "dateModified": "2026-10-26T00:00:00+00:00"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does black coffee or sparkling water break intermittent fasting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Plain black coffee, unsweetened green or herbal tea, and plain sparkling water contain virtually zero calories and do not break an energy-balance fast. Avoid adding sugar, milk, creamers, collagen powder, or MCT oil during the fasting window."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I eat to break a 16:8 fast without bloating or overeating?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open your eating window with 35 to 45 grams of lean protein, moderate soluble fiber, and low-to-moderate fat—such as 6 oz (170 g) grilled chicken breast or salmon with steamed rice and zucchini, or 1 cup (225 g) 0% Greek yogurt with berries and oats. Avoid breaking your fast with deep-fried foods or high-sugar pastries, which trigger rapid post-meal fatigue and rebound hunger."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why am I doing 16:8 intermittent fasting but not losing weight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Intermittent fasting restricts when you eat, not how many calories you absorb. If you consume 2,400 kcal during an 8-hour eating window while your Total Daily Energy Expenditure (TDEE) is 2,100 kcal, you will remain in a calorie surplus. Pairing your fasting schedule with a 300 to 500 kcal daily deficit is required for steady fat loss."
+          }
+        }
+      ]
     }
     </script>
 </head>
 <body>
 
-        <nav class="nav scrolled" id="nav">
+    <nav class="nav scrolled" id="nav">
         <div class="nav-inner">
-            <a href="../index.html" class="logo">
+            <a href="../" class="logo">
                 <img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="36" height="36">
                 <span>CalorieCalc</span>
             </a>
             <div class="nav-links" id="navLinks">
-                <a href="../features/index.html">Features (37+)</a>
+                <a href="../features/">Features (37+)</a>
                 <a href="../tools/tdee-calculator.html" style="color:var(--emerald-700);font-weight:700;">🧮 TDEE Calculator</a>
-                <a href="../quiz/index.html" style="color:#0284c7;font-weight:700;">📋 90-Day Quiz</a>
-                <a href="../guides/index.html" style="color:var(--emerald-700);font-weight:700">Guides</a>
-                <a href="../index.html#pricing">Pricing</a>
+                <a href="../quiz/" style="color:#0284c7;font-weight:700;">📋 90-Day Quiz</a>
+                <a href="../guides/" style="color:var(--emerald-700);font-weight:700">Guides</a>
+                <a href="../#pricing">Pricing</a>
                 <a href="../partner.html">Partners</a>
                 <a href="../support.html">Support</a>
                 <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta-mobile" target="_blank" rel="noopener">
@@ -271,49 +201,118 @@
     <main class="article-page">
         <article class="article-container">
             <nav class="article-breadcrumbs" aria-label="Breadcrumb">
-                <a href="../index.html">Home</a>
+                <a href="../">Home</a>
                 <span>/</span>
-                <a href="index.html">Guides</a>
+                <a href="./">Guides</a>
                 <span>/</span>
-                <span>Intermittent Fasting & Calorie Deficit</span>
+                <span>Intermittent Fasting &amp; Calorie Deficit</span>
             </nav>
 
             <header class="article-header">
-                <span class="article-badge">Timing & Energy Balance</span>
-                <h1 class="article-title">Intermittent Fasting and Calorie Deficit: How to Combine Them Safely</h1>
+                <span class="article-badge">Meal Timing &amp; Energy Balance</span>
+                <h1 class="article-title">Intermittent Fasting and Calorie Deficit: 16:8 Meal Timing, Protein Distribution &amp; How to Break Your Fast Without Overeating</h1>
                 <div class="article-meta">
                     <span>By CalorieCalc Nutrition Team</span>
                     <span>•</span>
-                    <span>10 min read</span>
+                    <span>Updated October 2026</span>
                     <span>•</span>
-                    <span>Updated September 2026</span>
+                    <span class="methodology-badge">📊 Protein Synthesis &amp; Energy Balance Models</span>
                 </div>
             </header>
 
             <p>
-                Intermittent fasting (IF) is one of the most popular dietary strategies in modern health, yet a common misconception remains: fasting alone does not circumvent the laws of thermodynamics. While compressing your eating window simplifies appetite control, body fat loss still requires an energy deficit.
+                Time-restricted feeding—most commonly the <strong>16:8 intermittent fasting protocol</strong>—simplifies daily eating by eliminating early-morning or late-night grazing. However, compressing your meals into an 8-hour window does not bypass energy balance. If your daily maintenance expenditure is 2,100 kcal and you consume 2,300 kcal between 12:00 PM and 8:00 PM, fat loss will stall completely.
             </p>
             <p>
-                When executed properly, pairing a structured fasting schedule with a moderate caloric deficit creates a sustainable routine that prevents constant grazing while preserving lean muscle mass and cognitive focus.
+                The second challenge dieters face is the <strong>12:00 PM "Fast-Breaker Trap"</strong>: arriving at noon overly hungry, eating a heavy, high-fat or refined-carbohydrate lunch, and spending the afternoon battling digestive bloating and rebound cravings. Below is an interactive eating-window planner and a practical guide to pairing intermittent fasting with a sustainable 300–500 kcal deficit.
             </p>
+
+            <!-- INTERACTIVE CALCULATOR: FASTING EATING WINDOW & BREAK-FAST PLANNER -->
+            <section class="calc-widget" id="fasting-window-planner" aria-label="Interactive Intermittent Fasting Eating Window and Macro Planner">
+                <div class="calc-widget-header">
+                    <div>
+                        <h2 class="calc-widget-title" style="border:none;margin:0;padding:0;">⏱️ Interactive Fasting Window &amp; Break-Fast Macro Planner</h2>
+                        <p class="calc-widget-sub">Calculate your exact eating window clock and split your daily calorie &amp; protein targets across 2 meals + 1 protein bridge.</p>
+                    </div>
+                    <div class="unit-pill-group" role="group" aria-label="Body weight unit selector">
+                        <button type="button" class="unit-pill active" id="ifBtnLbs" onclick="setIfUnit('lbs')">US (lbs / oz)</button>
+                        <button type="button" class="unit-pill" id="ifBtnKg" onclick="setIfUnit('kg')">EU/UK (kg / g)</button>
+                    </div>
+                </div>
+
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label for="ifProtocol">Fasting Protocol</label>
+                        <select id="ifProtocol" onchange="runIfPlanner()">
+                            <option value="16" selected>16:8 (16h Fast / 8h Eat)</option>
+                            <option value="14">14:10 (14h Fast / 10h Eat - Beginner)</option>
+                            <option value="18">18:6 (18h Fast / 6h Eat - Compact)</option>
+                        </select>
+                    </div>
+                    <div class="calc-field">
+                        <label for="ifStartHour">First Meal Time (Break-Fast)</label>
+                        <select id="ifStartHour" onchange="runIfPlanner()">
+                            <option value="8">8:00 AM (Early Time-Restricted)</option>
+                            <option value="10">10:00 AM</option>
+                            <option value="11">11:00 AM</option>
+                            <option value="12" selected>12:00 PM (Noon Standard)</option>
+                            <option value="13">1:00 PM</option>
+                            <option value="14">2:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="calc-field">
+                        <label for="ifCalories">Daily Deficit Target (kcal)</label>
+                        <input type="number" id="ifCalories" value="1750" min="1200" max="4000" step="50" oninput="runIfPlanner()">
+                    </div>
+                    <div class="calc-field">
+                        <label for="ifWeight" id="ifWeightLabel">Body Weight (lbs)</label>
+                        <input type="number" id="ifWeight" value="170" min="80" max="400" step="1" oninput="runIfPlanner()">
+                    </div>
+                </div>
+
+                <div class="calc-results">
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">Eating Window Clock</span>
+                        <div class="calc-stat-val" id="ifOutWindow">12:00 PM – 8:00 PM</div>
+                        <div class="calc-stat-sub" id="ifOutWindowSub">8h feeding / 16h fasting</div>
+                    </div>
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">Meal 1: Fast-Breaker (40%)</span>
+                        <div class="calc-stat-val" id="ifOutMeal1">700 kcal</div>
+                        <div class="calc-stat-sub" id="ifOutMeal1Sub">12:00 PM · 54 g protein</div>
+                    </div>
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">Snack: Satiety Bridge (15%)</span>
+                        <div class="calc-stat-val" id="ifOutSnack">263 kcal</div>
+                        <div class="calc-stat-sub" id="ifOutSnackSub">3:30 PM · 27 g protein</div>
+                    </div>
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">Meal 2: Dinner Close (45%)</span>
+                        <div class="calc-stat-val" id="ifOutMeal2">787 kcal</div>
+                        <div class="calc-stat-sub" id="ifOutMeal2Sub">7:30 PM · 55 g protein</div>
+                    </div>
+                </div>
+                <p id="ifSafetyWarning" style="display:none;margin:12px 0 0 0;font-size:0.82rem;color:#b45309;font-weight:600;">
+                    ⚠️ Note: Daily calorie targets below 1,200 kcal (women) or 1,500 kcal (men) are not recommended without medical supervision. Planner floored at 1,200 kcal.
+                </p>
+            </section>
 
             <div class="callout-box takeaway">
                 <div class="callout-title">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                    Key Protocol Rules
+                    Key Rules for Combining Fasting with a Calorie Deficit
                 </div>
                 <ul>
-                    <li><strong>Energy Balance Controls Weight:</strong> Fasting dictates <em>when</em> you eat; your calorie deficit dictates <em>how much</em> body weight you lose.</li>
-                    <li><strong>Avoid Binging in the Feeding Window:</strong> Cramming 2,500 calories into an 8-hour window will stall weight loss if your maintenance target is 2,000.</li>
-                    <li><strong>Prioritize Protein Distribution:</strong> Split your daily protein across 2–3 meals inside your window to optimize muscle protein synthesis.</li>
-                    <li><strong>Hydration & Electrolytes:</strong> Water, black coffee, and unsweetened green tea do not break a fast and help alleviate hunger signals during the final fasting hours.</li>
+                    <li><strong>Energy Balance Governs Fat Loss:</strong> Your fasting timer determines <em>when</em> you eat; your 300–500 kcal daily deficit determines <em>how much</em> body fat you lose.</li>
+                    <li><strong>3-Bolus Protein Distribution:</strong> Attempting to eat 140 g of protein in a single sitting is uncomfortable and suboptimal for muscle maintenance. Splitting protein across <strong>Meal 1 (40%) + High-Protein Bridge Snack (20%) + Meal 2 (40%)</strong> keeps muscle protein synthesis active across your window.</li>
+                    <li><strong>Sequence Your First Meal:</strong> Open your window with lean protein and fibrous vegetables for the first 10 minutes before eating starches or fats to prevent post-lunch sluggishness.</li>
                 </ul>
             </div>
 
             <div class="article-content">
-                <h2>1. Fasting Protocols Compared: Which Fits Your Lifestyle?</h2>
+                <h2>1. Fasting Protocols Compared: 14:10 vs. 16:8 vs. 18:6</h2>
                 <p>
-                    Selecting an intermittent fasting schedule should depend on your daily schedule, workout timings, and hunger patterns rather than internet trends:
+                    Choosing a fasting window should fit your work schedule, training time, and social dinners rather than rigid rules. If you train early in the morning or feel lightheaded waiting until noon, a 14:10 schedule delivers almost identical appetite control when daily calories and protein are matched:
                 </p>
 
                 <div class="data-table-wrapper">
@@ -322,101 +321,160 @@
                             <tr>
                                 <th>Protocol</th>
                                 <th>Fasting / Eating Split</th>
-                                <th>Best For</th>
-                                <th>Ease of Adherence</th>
+                                <th>Ideal Meal Structure</th>
+                                <th>Best Suited For</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>16/8 Method</strong></td>
-                                <td>16 hrs fast / 8 hrs eat (e.g., 12 PM - 8 PM)</td>
-                                <td>Most working professionals and gym-goers</td>
-                                <td>High</td>
+                                <td><strong>14:10 Method</strong></td>
+                                <td>14 hrs fast / 10 hrs eat (e.g., 9:00 AM – 7:00 PM)</td>
+                                <td>3 balanced meals (500–600 kcal each)</td>
+                                <td>Beginners, morning gym-goers, and individuals who prefer eating breakfast</td>
                             </tr>
                             <tr>
-                                <td><strong>14/10 Method</strong></td>
-                                <td>14 hrs fast / 10 hrs eat (e.g., 9 AM - 7 PM)</td>
-                                <td>Beginners, women sensitive to cortisol swings</td>
-                                <td>Very High</td>
+                                <td><strong>16:8 Method</strong></td>
+                                <td>16 hrs fast / 8 hrs eat (e.g., 12:00 PM – 8:00 PM)</td>
+                                <td>2 full meals (650–750 kcal) + 1 protein snack (250 kcal)</td>
+                                <td>Office professionals and social diners who prefer larger lunches and dinners</td>
                             </tr>
                             <tr>
-                                <td><strong>Early Time-Restricted</strong></td>
-                                <td>16 hrs fast / 8 hrs eat (e.g., 8 AM - 4 PM)</td>
-                                <td>Early risers with peak morning metabolism</td>
-                                <td>Moderate</td>
+                                <td><strong>18:6 Method</strong></td>
+                                <td>18 hrs fast / 6 hrs eat (e.g., 1:00 PM – 7:00 PM)</td>
+                                <td>2 dense meals (750–850 kcal each)</td>
+                                <td>Smaller calorie budgets (1,350–1,600 kcal) where 2 large meals feel much more satisfying than 4 tiny ones</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <h2>2. How Intermittent Fasting Enhances Calorie Deficit Compliance</h2>
-                <p>
-                    For many dieters, distributing 1,600 calories across 5 small meals throughout the day leaves them feeling perpetually unsatisfied. Intermittent fasting alters meal psychology in two critical ways:
-                </p>
-                <ol>
-                    <li><strong>Larger, More Satisfying Meals:</strong> By eliminating breakfast or late-night snacks, you can allocate your 1,600 calories into two robust 700-calorie meals and one 200-calorie snack.</li>
-                    <li><strong>Elimination of Unconscious Grazing:</strong> A definitive start and end time to your eating window creates psychological boundaries against late-night boredom snacking in front of the TV.</li>
-                </ol>
-
-                <div class="app-cta-banner">
-                    <div class="app-cta-text">
-                        <h3>Automatic Fasting Detection</h3>
-                        <p>CalorieCalc tracks your fasting windows automatically based on your first and last logged meal. No manual timers required.</p>
+                <!-- MID-ARTICLE CONTEXTUAL FEATURE CTA BOX -->
+                <div class="app-cta-inline">
+                    <div>
+                        <span class="app-cta-inline-badge">⏱️ Plus Fasting Timer + 100% Free Food Diary</span>
+                        <h3>Track Your Eating Window &amp; Calorie Deficit in One Dashboard</h3>
+                        <p>Log your break-fast meal and dinner in the <strong>Free Food Diary &amp; Barcode Scanner</strong>, or unlock the dedicated <a href="../features/fasting-tracker.html" style="color:#6ee7b7;text-decoration:underline;">Intermittent Fasting Timer</a> (Plus) and <a href="../features/meal-planner.html" style="color:#6ee7b7;text-decoration:underline;">AI Meal Planner</a> (Pro) to automate your 16:8 schedule.</p>
                     </div>
                     <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="app-cta-btn" target="_blank" rel="noopener">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
-                        Try Fasting in CalorieCalc
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                        Download on Google Play
                     </a>
                 </div>
 
-                <h2>3. Structuring Your Feeding Window for Lean Muscle Retention</h2>
+                <h2>2. What to Eat to Break a 16:8 Fast Without Bloating or Overeating</h2>
                 <p>
-                    When eating in a caloric deficit during an 8-hour window, hitting your protein target is non-negotiable. Aim for <strong>1.6 to 2.2 grams of protein per kilogram of body weight</strong>. Here is an optimal 16/8 meal structure:
+                    After 16 hours without food, stomach acid volume and digestive enzyme secretion are primed, while hunger hormones (ghrelin) are elevated. Breaking your fast with a high-fat, hyper-palatable restaurant meal (like a bacon cheeseburger, pastries, or heavy cream pasta) slows gastric emptying and makes it easy to consume 1,200+ calories in 15 minutes before fullness signals reach your brain.
+                </p>
+                <p>
+                    Use these <strong>US &amp; European supermarket break-fast meals</strong> that deliver 40–50 g of protein for under 650 kcal while keeping digestion light:
+                </p>
+
+                <div class="data-table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Break-Fast Option</th>
+                                <th>US Imperial Portion</th>
+                                <th>EU / UK Metric Portion</th>
+                                <th>Calories &amp; Protein</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Mediterranean Chicken &amp; Rice Bowl</strong></td>
+                                <td>5 oz cooked chicken breast + 3/4 cup cooked basmati rice + 1 cup cucumber/tomato salad + 1 tsp olive oil</td>
+                                <td>140 g cooked chicken breast + 135 g cooked basmati rice + 150 g cucumber/tomato + 5 ml olive oil</td>
+                                <td><strong>485 kcal</strong> · 48 g protein</td>
+                            </tr>
+                            <tr>
+                                <td><strong>High-Protein Skyr / Greek Yogurt Bowl</strong></td>
+                                <td>1 cup (8 oz) 0% Greek yogurt or Skyr + 1/2 scoop whey + 1/2 cup rolled oats + 1/2 cup berries</td>
+                                <td>225 g 0% Greek yogurt or Skyr + 15 g whey protein + 40 g rolled oats + 75 g berries</td>
+                                <td><strong>440 kcal</strong> · 44 g protein</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Egg White &amp; Smoked Salmon Rye Plate</strong></td>
+                                <td>2 whole eggs + 1/2 cup liquid egg whites + 2 oz smoked salmon + 2 slices wholegrain rye bread</td>
+                                <td>2 whole eggs + 120 ml liquid egg whites + 55 g smoked salmon + 2 slices dark rye bread (80 g)</td>
+                                <td><strong>490 kcal</strong> · 43 g protein</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tuna, White Bean &amp; Spinach Salad</strong></td>
+                                <td>1 can (5 oz drained) tuna in water + 1/2 cup cannellini beans + 2 cups baby spinach + lemon &amp; 1 tbsp olive oil</td>
+                                <td>140 g drained tuna in spring water + 90 g white beans + 60 g spinach + lemon &amp; 15 ml olive oil</td>
+                                <td><strong>435 kcal</strong> · 46 g protein</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>3. Protecting Lean Muscle in a Compressed Eating Window</h2>
+                <p>
+                    During a calorie deficit, your body looks for energy from both stored body fat and lean tissue. Combining resistance training with <strong>1.6 to 2.2 g of protein per kg of body weight</strong> (0.75 to 1.0 g per lb) preserves lean muscle mass.
                 </p>
                 <ul>
-                    <li><strong>Meal 1 (12:00 PM - The Fast Breaker):</strong> Break your fast with moderate carbohydrates, high protein, and dietary fiber (e.g., grilled chicken breast, quinoa, steamed vegetables, and avocado). Avoid opening your window with ultra-processed sugars, which spike insulin rapidly and cause midday fatigue.</li>
-                    <li><strong>Snack (3:30 PM - Satiety Bridge):</strong> High-protein Greek yogurt with a handful of berries, or a whey/plant protein shake with almonds.</li>
-                    <li><strong>Meal 2 (7:30 PM - Evening Sustenance):</strong> Salmon or lean beef with roasted sweet potato and mixed greens dressed in olive oil. Eating complex fiber and healthy fats in your final meal promotes overnight satiety.</li>
+                    <li><strong>Meal 1 (12:00 PM — The Anchor):</strong> Hit at least 40–50 g of complete protein to stimulate muscle protein synthesis after the overnight fast.</li>
+                    <li><strong>Afternoon Bridge (3:30 PM — The Craving Blocker):</strong> A 200–250 kcal snack with 25–30 g of protein (such as 200 g cottage cheese, a protein shake, or edamame) prevents you from arriving at 7:00 PM dinner ravenous.</li>
+                    <li><strong>Meal 2 (7:30 PM — Overnight Satiety):</strong> Pair 45–55 g of slower-digesting protein (salmon, lean beef steak, chicken thighs, or tofu stir-fry) with roasted root vegetables and fibrous greens so you stay full until bedtime.</li>
                 </ul>
 
                 <figure class="article-image-box">
-                    <img src="../assets/images/meal-plan.png" alt="CalorieCalc meal planning and fasting schedule dashboard" width="700">
-                    <figcaption>Visualizing meal plans inside your feeding window ensures you hit your macro goals effortlessly.</figcaption>
+                    <img src="../assets/images/meal-plan.png" alt="CalorieCalc meal planning and fasting schedule dashboard" width="700" loading="lazy">
+                    <figcaption>Mapping your 2 main meals and afternoon protein bridge inside your eating window eliminates evening guesswork.</figcaption>
                 </figure>
 
-                <h2>4. Common Fasting Mistakes That Stall Progress</h2>
-                <p>
-                    If you are fasting diligently but the scale refuses to move, inspect these three operational errors:
-                </p>
+                <h2>4. Three Hidden Mistakes That Erase Your Fasting Deficit</h2>
                 <ol>
-                    <li><strong>The "I Fasted So I Can Feast" Trap:</strong> Fasting for 16 hours does not burn enough bonus calories to offset a 1,200-calorie pizza or dessert platter. Calories still govern body weight changes.</li>
-                    <li><strong>Accidentally Breaking the Fast:</strong> Creamers in morning coffee, BCAAs, sweetened hydration powders, or chewing gum with sugar alcohols can break your fast. Stick to plain water, sparkling water, black coffee, and plain teas.</li>
-                    <li><strong>Neglecting Micronutrients:</strong> Compressing meals into a shorter timeframe makes it easy to rely on convenience foods. Ensure vegetables and whole fruits remain prominent in every plate.</li>
+                    <li><strong>"Calorie Creep" in Coffee and Hydration Drinks:</strong> Adding 2 tablespoons of heavy cream (100 kcal), 1 tablespoon of MCT or coconut oil (120 kcal), or sweetened electrolyte packets twice a morning adds 250–350 untracked calories before your window even opens. Stick to water, sparkling mineral water, plain black coffee, or unsweetened tea.</li>
+                    <li><strong>Weekend Window Drift:</strong> Shifting your eating window from 12:00 PM–8:00 PM on weekdays to 10:00 AM–11:00 PM on Friday and Saturday adds 4–5 extra eating hours per weekend day, often erasing Monday-through-Thursday's calorie deficit.</li>
+                    <li><strong>Compensating with Liquid Calories or Nuts at Night:</strong> Trying to "squeeze in" calories right before your window closes at 8:00 PM by eating handfuls of almonds or peanut butter directly from the jar can easily push you 400 kcal over target.</li>
                 </ol>
 
                 <h2>Frequently Asked Questions</h2>
                 <div class="faq-item">
-                    <h3>Does black coffee break intermittent fasting?</h3>
-                    <p>No. Plain black coffee contains practically zero calories and does not disrupt fasting biochemistry. Avoid adding sugar, milk, MCT oil, or sweetened creamers.</p>
+                    <h3>Does black coffee or sparkling water break intermittent fasting?</h3>
+                    <p>No. Plain black coffee (under 5 kcal per cup), unsweetened green or herbal tea, and unflavored sparkling water do not disrupt an energy-balance fast. Avoid adding sugar, milk, oat milk, collagen peptides, or butter/MCT oil during your fasting hours.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Can I work out during my fasted window?</h3>
-                    <p>Yes. Many individuals train in a fasted state in the morning without performance loss, especially for aerobic and moderate resistance training. Stay well hydrated with water and electrolytes.</p>
+                    <h3>Can I lift weights or do cardio during my fasted window?</h3>
+                    <p>Yes. Many people train comfortably in the morning after black coffee and water with electrolytes. If you train early in the morning (e.g., 7:00 AM), consider shifting your eating window earlier (e.g., 10:00 AM – 6:00 PM) so you can eat a high-protein post-workout meal within a few hours of lifting.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Who should NOT practice intermittent fasting?</h3>
-                    <p>Fasting is generally not advised for pregnant or nursing individuals, anyone with a personal history of eating disorders, or those with specific metabolic conditions requiring strict meal timing without consulting a medical doctor.</p>
+                    <h3>Who should avoid intermittent fasting?</h3>
+                    <p>Time-restricted eating is not advised for individuals who are pregnant or breastfeeding, adolescents still growing, anyone with a current or past history of disordered eating, or individuals managing diabetes or medications that require food at specific intervals without direct physician supervision.</p>
+                </div>
+
+                <!-- END-OF-ARTICLE QR + PLAY STORE CTA BOX -->
+                <div class="app-cta-end">
+                    <div>
+                        <h3>Sync Your Fasting Schedule &amp; Daily Macro Targets</h3>
+                        <p>Download CalorieCalc to log your eating-window meals with our 100% Free Food Diary, Barcode Scanner, and Android Home Screen Widgets—or upgrade to Plus/Pro for our automated Fasting Timer and AI Meal Planner.</p>
+                        <div class="app-cta-perks">
+                            <span class="app-cta-perk">✓ Free Food Diary &amp; Barcode</span>
+                            <span class="app-cta-perk">✓ Free Home Screen Widgets</span>
+                            <span class="app-cta-perk">✓ Plus: Fasting Tracker</span>
+                            <span class="app-cta-perk">✓ Pro: AI Meal Planner</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="app-cta-btn" target="_blank" rel="noopener">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                            Download Free on Google Play
+                        </a>
+                    </div>
+                    <div class="app-cta-qr-box">
+                        <img src="../assets/images/playstore-qr.png" alt="Scan QR Code to download CalorieCalc on Google Play" width="110" height="110" loading="lazy">
+                        <span>Scan with Android Camera</span>
+                    </div>
                 </div>
 
                 <div class="medical-disclaimer">
-                    <strong>Medical & Nutritional Disclaimer:</strong>
-                    The information provided in this article is for educational purposes only and is not medical advice. Fasting protocols should be approached prudently and under the guidance of a physician or licensed healthcare provider, especially if you have existing health conditions.
+                    <strong>Medical &amp; Nutritional Disclaimer:</strong>
+                    The information and interactive eating-window planner in this guide are for educational purposes only and do not constitute medical advice, diagnosis, or treatment. Always consult a qualified physician or registered dietitian before starting an intermittent fasting protocol or altering your caloric intake.
                 </div>
             </div>
         </article>
     </main>
 
-        <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-disclaimer">
                 <strong>Medical &amp; Nutritional Disclaimer:</strong> The information, calculators, and AI insights provided on CalorieCalcApp.com and within the CalorieCalc mobile application are for educational and informational purposes only and do not constitute medical advice, diagnosis, or treatment. Always consult a qualified physician or registered dietitian before making significant changes to your diet, fasting protocol, or caloric intake.
@@ -429,7 +487,7 @@
                 <div class="footer-links">
                     <div class="fl-col">
                         <h4>Features</h4>
-                        <a href="../features/index.html">All 37+ Features</a>
+                        <a href="../features/">All 37+ Features</a>
                         <a href="../features/ai-food-scanner.html">AI Food Scanner</a>
                         <a href="../features/ai-nutrition-coach.html">AI Nutrition Coach</a>
                         <a href="../features/meal-planner.html">AI Meal Planner</a>
@@ -438,9 +496,9 @@
                     <div class="fl-col">
                         <h4>Free Tools &amp; Guides</h4>
                         <a href="../tools/tdee-calculator.html">TDEE &amp; Macro Calculator</a>
-                        <a href="../quiz/index.html">90-Day Blueprint Quiz</a>
-                        <a href="../guides/index.html">Nutrition Knowledge Hub</a>
-                        <a href="../guides/how-to-calculate-calorie-deficit.html">Calorie Deficit Guide</a>
+                        <a href="../tools/raw-cooked-weight-converter.html">Raw vs. Cooked Converter</a>
+                        <a href="../quiz/">90-Day Blueprint Quiz</a>
+                        <a href="../guides/">Nutrition Knowledge Hub</a>
                     </div>
                     <div class="fl-col">
                         <h4>Partners &amp; Support</h4>
@@ -465,5 +523,71 @@
         </div>
     </footer>
     <script src="../js/main.js"></script>
+    <script>
+        let currentIfUnit = 'lbs';
+
+        function setIfUnit(unit) {
+            if (currentIfUnit === unit) return;
+            const weightInput = document.getElementById('ifWeight');
+            const currentVal = parseFloat(weightInput.value) || 0;
+            currentIfUnit = unit;
+            document.getElementById('ifBtnLbs').classList.toggle('active', unit === 'lbs');
+            document.getElementById('ifBtnKg').classList.toggle('active', unit === 'kg');
+            document.getElementById('ifWeightLabel').textContent = unit === 'lbs' ? 'Body Weight (lbs)' : 'Body Weight (kg)';
+            if (unit === 'kg') {
+                weightInput.value = Math.round(currentVal * 0.453592);
+            } else {
+                weightInput.value = Math.round(currentVal / 0.453592);
+            }
+            runIfPlanner();
+        }
+
+        function formatHour(h24) {
+            const h = ((h24 % 24) + 24) % 24;
+            const ampm = h >= 12 ? 'PM' : 'AM';
+            const h12 = h % 12 === 0 ? 12 : h % 12;
+            return h12 + ':00 ' + ampm;
+        }
+
+        function runIfPlanner() {
+            const fastHours = parseInt(document.getElementById('ifProtocol').value, 10) || 16;
+            const eatHours = 24 - fastHours;
+            const startHour = parseInt(document.getElementById('ifStartHour').value, 10) || 12;
+            const endHour = startHour + eatHours;
+            const snackHour = startHour + Math.floor(eatHours / 2);
+
+            let rawCals = parseFloat(document.getElementById('ifCalories').value) || 1750;
+            const warningEl = document.getElementById('ifSafetyWarning');
+            if (rawCals < 1200) {
+                warningEl.style.display = 'block';
+                rawCals = 1200;
+            } else {
+                warningEl.style.display = 'none';
+            }
+
+            const weightVal = parseFloat(document.getElementById('ifWeight').value) || 160;
+            const weightKg = currentIfUnit === 'lbs' ? weightVal * 0.453592 : weightVal;
+            const totalProtein = Math.round(weightKg * 1.8); // 1.8g/kg target
+
+            const meal1Kcal = Math.round(rawCals * 0.40);
+            const snackKcal = Math.round(rawCals * 0.15);
+            const meal2Kcal = rawCals - meal1Kcal - snackKcal;
+
+            const meal1Prot = Math.round(totalProtein * 0.40);
+            const snackProt = Math.round(totalProtein * 0.20);
+            const meal2Prot = totalProtein - meal1Prot - snackProt;
+
+            document.getElementById('ifOutWindow').textContent = formatHour(startHour) + ' – ' + formatHour(endHour);
+            document.getElementById('ifOutWindowSub').textContent = eatHours + 'h feeding / ' + fastHours + 'h fasting (' + totalProtein + 'g daily protein)';
+            document.getElementById('ifOutMeal1').textContent = meal1Kcal + ' kcal';
+            document.getElementById('ifOutMeal1Sub').textContent = formatHour(startHour) + ' · ' + meal1Prot + ' g protein';
+            document.getElementById('ifOutSnack').textContent = snackKcal + ' kcal';
+            document.getElementById('ifOutSnackSub').textContent = formatHour(snackHour) + ' · ' + snackProt + ' g protein';
+            document.getElementById('ifOutMeal2').textContent = meal2Kcal + ' kcal';
+            document.getElementById('ifOutMeal2Sub').textContent = formatHour(endHour - 1) + ' · ' + meal2Prot + ' g protein';
+        }
+
+        document.addEventListener('DOMContentLoaded', runIfPlanner);
+    </script>
 </body>
 </html>

@@ -220,10 +220,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ─── 11. Global QR Code Modal & Sticky Mobile Bar Injection ───
+  // ─── 11. Global QR Code Modal, Sticky Mobile Bar & Auto UTM Referrer ───
+  const pageSlug = (window.location.pathname.replace(/\/index\.html$/, '/').replace(/^\/+|\/+$/g, '') || 'home').replace(/[^a-zA-Z0-9_-]/g, '_');
+  const pageSection = window.location.pathname.includes('/guides/') ? 'guide' : (window.location.pathname.includes('/tools/') ? 'tool' : (window.location.pathname.includes('/features/') ? 'feature' : 'web'));
+  const assetPrefix = (window.location.pathname.includes('/guides/') || window.location.pathname.includes('/tools/') || window.location.pathname.includes('/features/') || window.location.pathname.includes('/quiz/')) ? '../' : '';
+
   window.openCalorieCalcQR = () => {
     let modal = document.getElementById('ccGlobalQrModal');
     if (!modal) {
+      const qrRef = encodeURIComponent(`utm_source=website&utm_medium=${pageSection}_qr&utm_campaign=${pageSlug}`);
       modal = document.createElement('div');
       modal.id = 'ccGlobalQrModal';
       modal.className = 'cc-qr-backdrop';
@@ -231,11 +236,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="cc-qr-modal">
           <div style="font-size:.72rem;font-weight:800;color:#047857;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px">Instant Phone Handoff</div>
           <h3 style="font-size:1.45rem;font-weight:900;margin-bottom:8px;color:#0c1b2a">Scan to Install CalorieCalc</h3>
-          <p style="font-size:.86rem;color:#475569;margin-bottom:20px;line-height:1.55">Point your phone camera at the QR code to get CalorieCalc free on Google Play.</p>
+          <p style="font-size:.86rem;color:#475569;margin-bottom:20px;line-height:1.55">Point your phone camera at the QR code to get CalorieCalc on Google Play.</p>
           <div style="width:168px;height:168px;margin:0 auto 20px;padding:12px;border:2px solid #059669;border-radius:18px;background:#fff;display:flex;align-items:center;justify-content:center">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&color=064e3b&data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.caloriecalc.calorie_tracker_app" alt="Scan QR Code to Download CalorieCalc" width="144" height="144" style="border-radius:8px">
+            <img src="${assetPrefix}assets/images/playstore-qr.png" alt="Scan QR Code to Download CalorieCalc" width="144" height="144" style="border-radius:8px">
           </div>
-          <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" target="_blank" rel="noopener" class="btn-glow" style="width:100%;justify-content:center;padding:14px 20px;font-size:.92rem;margin-bottom:12px">
+          <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app&referrer=${qrRef}" target="_blank" rel="noopener" class="btn-glow" style="width:100%;justify-content:center;padding:14px 20px;font-size:.92rem;margin-bottom:12px">
             Open Google Play Store ↗
           </a>
           <button type="button" onclick="document.getElementById('ccGlobalQrModal').classList.remove('open')" style="background:none;border:none;color:#64748b;font-weight:700;font-size:.82rem;cursor:pointer;font-family:inherit">Close Window</button>
@@ -251,6 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Inject mobile sticky install bar on all pages
   if (!document.querySelector('.cc-mobile-sticky')) {
+    const stickyRef = encodeURIComponent(`utm_source=website&utm_medium=${pageSection}_sticky&utm_campaign=${pageSlug}`);
     const stickyBar = document.createElement('div');
     stickyBar.className = 'cc-mobile-sticky';
     stickyBar.innerHTML = `
@@ -258,12 +264,22 @@ document.addEventListener('DOMContentLoaded', () => {
         <div style="width:36px;height:36px;border-radius:9px;background:#047857;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1rem">🥗</div>
         <div>
           <strong style="display:block;font-size:.84rem;color:#0c1b2a;line-height:1.2">CalorieCalc AI</strong>
-          <span style="font-size:.7rem;color:#059669;font-weight:700">★ 4.8 · Free on Google Play</span>
+          <span style="font-size:.7rem;color:#059669;font-weight:700">Free Barcode, Diary &amp; Widgets</span>
         </div>
       </div>
-      <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#047857,#10b981);color:#fff;font-weight:700;font-size:.8rem;padding:9px 18px;border-radius:100px;box-shadow:0 4px 12px rgba(4,120,87,.25)">Install Free</a>
+      <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app&referrer=${stickyRef}" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#047857,#10b981);color:#fff;font-weight:700;font-size:.8rem;padding:9px 18px;border-radius:100px;box-shadow:0 4px 12px rgba(4,120,87,.25)">Get on Google Play</a>
     `;
     document.body.appendChild(stickyBar);
   }
+
+  // Automatically tag all Google Play links with Install Referrer UTM parameters
+  document.querySelectorAll('a[href*="play.google.com/store/apps/details"]').forEach((link, idx) => {
+    const href = link.getAttribute('href');
+    if (href && !href.includes('referrer=')) {
+      const ctaPos = link.closest('nav') ? 'nav_cta' : (link.closest('.app-cta-banner, .cta-box-a, .cta-box-b') ? `article_cta_${idx + 1}` : `page_cta_${idx + 1}`);
+      const refParam = encodeURIComponent(`utm_source=website&utm_medium=${pageSection}&utm_campaign=${pageSlug}&utm_content=${ctaPos}`);
+      link.setAttribute('href', `${href}${href.includes('?') ? '&' : '?'}referrer=${refParam}`);
+    }
+  });
 
 });

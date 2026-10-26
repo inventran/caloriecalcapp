@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Track Calories Without a Food Scale: Hand Portions (oz & g) & Home Screen Widgets | CalorieCalc</title>
+    <meta name="description" content="Burned out from weighing every gram on a digital scale? Use our interactive Hand-Portion to Ounces/Grams & Calorie Translator, plus learn how 1-tap Android Home Screen Widgets stop logging burnout.">
+    <meta name="keywords" content="how to track calories without a food scale, hand portion calorie calculator oz grams, calorie tracking burnout tips, android calorie counter home screen widget, estimate food weight without scale">
+    <meta name="author" content="CalorieCalc Nutrition Team">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="theme-color" content="#047857">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://caloriecalcapp.com/guides/how-to-track-calories-without-food-scale.html">
+    <meta property="og:title" content="How to Track Calories Without a Food Scale: Hand Portions (oz & g) & 1-Tap Widgets">
+    <meta property="og:description" content="Translate Palms, Fists, Cupped Hands, and Thumbs into exact ounces, grams, and macros—and log in 5 seconds from your Android home screen.">
+    <meta property="og:image" content="https://caloriecalcapp.com/assets/images/widgets-showcase.png">
+    <meta property="og:site_name" content="CalorieCalc">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Track Calories Without a Food Scale (Hand Portion Calculator)">
+    <meta name="twitter:description" content="Interactive Hand-Portion to oz/g & macro translator plus 5-second Android Home Screen Widget logging.">
+    <meta name="twitter:image" content="https://caloriecalcapp.com/assets/images/widgets-showcase.png">
+
+    <link rel="icon" type="image/png" href="../assets/images/app-icon.png?v=2">
+    <link rel="canonical" href="https://caloriecalcapp.com/guides/how-to-track-calories-without-food-scale.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .article-page { padding-top: 100px; padding-bottom: 80px; background: #fafaf9; color: #1c1917; line-height: 1.75; font-size: 1.0625rem; }
+        .article-container { max-width: 840px; margin: 0 auto; padding: 0 20px; }
+        .article-breadcrumbs { display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: #78716c; margin-bottom: 24px; flex-wrap: wrap; }
+        .article-breadcrumbs a { color: #047857; text-decoration: none; font-weight: 500; }
+        .article-breadcrumbs span { color: #a8a29e; }
+        .article-header { margin-bottom: 32px; }
+        .article-badge { display: inline-block; background: #ecfdf5; color: #047857; font-weight: 700; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 14px; border-radius: 9999px; border: 1px solid #a7f3d0; margin-bottom: 16px; }
+        .article-title { font-size: 2.45rem; font-weight: 800; line-height: 1.22; letter-spacing: -0.025em; color: #0f172a; margin-bottom: 16px; }
+        .article-meta { display: flex; align-items: center; gap: 12px; font-size: 0.875rem; color: #64748b; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; flex-wrap: wrap; }
+        .methodology-badge { display: inline-flex; align-items: center; gap: 6px; background: #f1f5f9; color: #334155; padding: 4px 10px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; }
+        .callout-box { background: #f0fdf4; border-left: 4px solid #059669; border-radius: 8px; padding: 20px 24px; margin: 28px 0; }
+        .callout-box.takeaway { background: #f8fafc; border-left: 4px solid #3b82f6; }
+        .callout-title { font-weight: 700; font-size: 1.125rem; color: #0f172a; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .article-content h2 { font-size: 1.75rem; font-weight: 800; color: #0f172a; margin-top: 48px; margin-bottom: 18px; letter-spacing: -0.02em; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 700; color: #1e293b; margin-top: 28px; margin-bottom: 12px; }
+        .article-content p { margin-bottom: 20px; }
+        .article-content ul, .article-content ol { margin-bottom: 24px; padding-left: 24px; }
+        .article-content li { margin-bottom: 10px; }
+        .data-table-wrapper { overflow-x: auto; margin: 24px 0; border-radius: 10px; border: 1px solid #e2e8f0; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left; background: #fff; }
+        .data-table th { background: #f8fafc; color: #334155; font-weight: 700; padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+        .data-table td { padding: 12px 16px; border-bottom: 1px solid #f1f5f9; color: #475569; }
+        .data-table tr:hover td { background: #f8fafc; }
+
+        /* Interactive Hand Portion Calculator */
+        .calc-widget { background: #ffffff; border: 2px solid #10b981; border-radius: 16px; padding: 28px; margin: 36px 0; box-shadow: 0 12px 30px -8px rgba(16, 185, 129, 0.15); }
+        .calc-widget-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+        .calc-widget-title { font-size: 1.35rem; font-weight: 800; color: #0f172a; margin: 0 0 4px 0; }
+        .calc-widget-sub { font-size: 0.9rem; color: #64748b; margin: 0; }
+        .calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 16px; margin-bottom: 20px; }
+        .calc-field label { display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.03em; }
+        .calc-field select, .calc-field input { width: 100%; padding: 11px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; font-family: inherit; color: #0f172a; background: #f8fafc; font-weight: 600; }
+        .calc-field select:focus, .calc-field input:focus { outline: none; border-color: #059669; background: #fff; }
+        .calc-results { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+        .calc-stat { background: #ffffff; padding: 14px; border-radius: 8px; border: 1px solid #dcfce7; }
+        .calc-stat-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #64748b; display: block; margin-bottom: 4px; }
+        .calc-stat-val { font-size: 1.3rem; font-weight: 800; color: #065f46; }
+        .calc-stat-sub { font-size: 0.8rem; color: #475569; margin-top: 2px; }
+
+        /* Dual-Placement App CTA Boxes */
+        .app-cta-inline { background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%); color: #ffffff; border-radius: 16px; padding: 28px; margin: 36px 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; border: 1px solid #047857; }
+        .app-cta-inline-badge { display: inline-block; background: rgba(16, 185, 129, 0.2); color: #6ee7b7; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; margin-bottom: 8px; border: 1px solid rgba(110, 231, 183, 0.3); }
+        .app-cta-inline h3 { color: #ffffff; font-size: 1.3rem; font-weight: 800; margin: 0 0 8px 0; }
+        .app-cta-inline p { color: #cbd5e1; font-size: 0.92rem; margin: 0; line-height: 1.55; }
+        .app-cta-btn { background: #10b981; color: #052e16; font-weight: 800; font-size: 0.95rem; padding: 14px 22px; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; transition: transform 0.2s, background-color 0.2s; }
+        .app-cta-btn:hover { background: #34d399; transform: translateY(-2px); }
+
+        .app-cta-end { background: #ffffff; border: 2px solid #047857; border-radius: 18px; padding: 32px; margin: 48px 0 32px 0; display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; box-shadow: 0 15px 35px -10px rgba(4, 120, 87, 0.12); }
+        .app-cta-end h3 { font-size: 1.5rem; font-weight: 800; color: #0f172a; margin: 0 0 10px 0; }
+        .app-cta-end p { color: #475569; font-size: 0.95rem; margin: 0 0 16px 0; }
+        .app-cta-perks { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+        .app-cta-perk { background: #f0fdf4; color: #065f46; font-size: 0.8rem; font-weight: 700; padding: 5px 12px; border-radius: 6px; border: 1px solid #bbf7d0; }
+        .app-cta-qr-box { text-align: center; background: #f8fafc; padding: 14px; border-radius: 12px; border: 1px solid #e2e8f0; }
+        .app-cta-qr-box img { width: 110px; height: 110px; border-radius: 8px; display: block; margin: 0 auto 6px auto; }
+        .app-cta-qr-box span { font-size: 0.72rem; font-weight: 700; color: #475569; display: block; }
+
+        .faq-item { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 12px; padding: 20px 24px; }
+        .faq-item h3 { font-size: 1.1rem; margin: 0 0 8px 0; color: #0f172a; }
+        .faq-item p { margin: 0; color: #475569; font-size: 0.95rem; }
+        .medical-disclaimer { background: #fffbeb; border: 1px solid #fef3c7; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 18px 22px; margin-top: 48px; font-size: 0.875rem; color: #92400e; }
+        .medical-disclaimer strong { color: #78350f; display: block; margin-bottom: 4px; }
+        @media (max-width: 768px) {
+            .article-title { font-size: 1.95rem; }
+            .app-cta-inline { flex-direction: column; text-align: center; }
+            .app-cta-end { grid-template-columns: 1fr; text-align: center; }
+            .app-cta-perks { justify-content: center; }
+            .app-cta-qr-box { display: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Track Calories Without a Food Scale: Hand Portions (oz & g), Voice Logging & Android Home Screen Widgets",
+      "description": "Learn how to translate visual hand portions (Palms, Fists, Cupped Hands, Thumbs) into exact ounces, grams, and calories—and reduce tracking friction with 1-tap Android widgets.",
+      "image": "https://caloriecalcapp.com/assets/images/widgets-showcase.png",
+      "author": { "@type": "Organization", "name": "CalorieCalc Nutrition Team", "url": "https://caloriecalcapp.com" },
+      "publisher": { "@type": "Organization", "name": "CalorieCalc", "logo": { "@type": "ImageObject", "url": "https://caloriecalcapp.com/assets/images/app-icon.png?v=2" } },
+      "datePublished": "2026-10-26T00:00:00+00:00",
+      "dateModified": "2026-10-26T00:00:00+00:00"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you lose weight tracking calories without a food scale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. While a digital kitchen scale is helpful for the first 2 weeks to calibrate your eyes—and for calorie-dense foods like oils, nuts, and peanut butter—using standardized hand portions (Palms of protein, Cupped Hands of carbs, Fists of vegetables, and Thumbs of fats) plus pre-portioned supermarket packages keeps daily logging within 10–15% accuracy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many ounces or grams of cooked meat is one palm?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One adult palm (excluding fingers and thumb, roughly the thickness of a deck of cards) equals 3.5 to 4.0 oz (100 to 115 g) of cooked meat, poultry, or firm fish, providing approximately 26 to 32 grams of protein."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-inner">
+            <a href="../" class="logo">
+                <img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="36" height="36">
+                <span>CalorieCalc</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="../features/">Features (37+)</a>
+                <a href="../tools/tdee-calculator.html" style="color:var(--emerald-700);font-weight:700;">🧮 TDEE Calculator</a>
+                <a href="../quiz/" style="color:#0284c7;font-weight:700;">📋 90-Day Quiz</a>
+                <a href="../guides/" style="color:var(--emerald-700);font-weight:700">Guides</a>
+                <a href="../#pricing">Pricing</a>
+                <a href="../partner.html">Partners</a>
+                <a href="../support.html">Support</a>
+                <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta-mobile" target="_blank" rel="noopener">
+                    Download Free on Google Play
+                </a>
+            </div>
+            <div class="nav-actions">
+                <button type="button" class="nav-qr-btn" onclick="openCalorieCalcQR()">📲 Scan QR</button>
+                <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                    Download Free
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="article-page">
+        <article class="article-container">
+            <nav class="article-breadcrumbs" aria-label="Breadcrumb">
+                <a href="../">Home</a>
+                <span>/</span>
+                <a href="./">Guides</a>
+                <span>/</span>
+                <span>Track Calories Without a Food Scale</span>
+            </nav>
+
+            <header class="article-header">
+                <span class="article-badge">Low-Friction Habits</span>
+                <h1 class="article-title">How to Track Calories Without a Food Scale: Hand Portions (oz &amp; g), Voice Logging &amp; Android Home Screen Widgets</h1>
+                <div class="article-meta">
+                    <span>By CalorieCalc Nutrition Team</span>
+                    <span>•</span>
+                    <span>Updated October 2026</span>
+                    <span>•</span>
+                    <span class="methodology-badge">✋ Visual Portion Anthropometry (US oz &amp; EU g)</span>
+                </div>
+            </header>
+
+            <p>
+                The #1 reason people quit calorie tracking after 14 days is not hunger—it is <strong>logging friction</strong>. Pulling out a digital kitchen scale to weigh cucumber slices at 7:00 AM, unlocking your phone, waiting for an app to load, and typing 6 ingredients per meal takes 10–12 minutes every day. When you travel, eat at a workplace cafeteria, or visit family, the scale stays at home and logging stops altogether.
+            </p>
+            <p>
+                Consistent 85%-accurate tracking for 90 days beats 100%-accurate food-scale perfection that you abandon after two weeks. Use the interactive <strong>Hand-Portion to Ounces/Grams &amp; Macro Translator</strong> below to convert visual plate portions into exact numbers you can log in seconds.
+            </p>
+
+            <!-- INTERACTIVE CALCULATOR: HAND PORTION TRANSLATOR -->
+            <section class="calc-widget" id="hand-portion-calculator" aria-label="Interactive Hand Portion to Ounces Grams and Calorie Plate Builder">
+                <div class="calc-widget-header">
+                    <div>
+                        <h2 class="calc-widget-title" style="border:none;margin:0;padding:0;">✋ Interactive Hand-Portion to `oz` / `g` Plate Translator</h2>
+                        <p class="calc-widget-sub">Build any meal using your Palms, Cupped Hands, Fists, and Thumbs to see its equivalent weight in US `oz` and EU `g` plus total calories &amp; macros.</p>
+                    </div>
+                </div>
+
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label for="hpPalms">✋ Palms of Lean Protein</label>
+                        <select id="hpPalms" onchange="runHandCalc()">
+                            <option value="0">0 Palms (No meat/fish/tofu)</option>
+                            <option value="1">1 Palm (~3.7 oz / 105 g cooked)</option>
+                            <option value="1.5" selected>1.5 Palms (~5.5 oz / 155 g cooked)</option>
+                            <option value="2">2 Palms (~7.4 oz / 210 g cooked)</option>
+                        </select>
+                    </div>
+                    <div class="calc-field">
+                        <label for="hpCupped">🤲 Cupped Hands of Carbs</label>
+                        <select id="hpCupped" onchange="runHandCalc()">
+                            <option value="0">0 Cupped Hands (Low-carb plate)</option>
+                            <option value="1" selected>1 Cupped Hand (~3.5 oz / 100 g cooked)</option>
+                            <option value="1.5">1.5 Cupped Hands (~5.3 oz / 150 g cooked)</option>
+                            <option value="2">2 Cupped Hands (~7.0 oz / 200 g cooked)</option>
+                        </select>
+                    </div>
+                    <div class="calc-field">
+                        <label for="hpFists">✊ Fists of Vegetables</label>
+                        <select id="hpFists" onchange="runHandCalc()">
+                            <option value="0">0 Fists</option>
+                            <option value="1">1 Fist (~1 cup / 120 g veg)</option>
+                            <option value="2" selected>2 Fists (~2 cups / 240 g veg)</option>
+                            <option value="3">3 Fists (~3 cups / 360 g veg)</option>
+                        </select>
+                    </div>
+                    <div class="calc-field">
+                        <label for="hpThumbs">👍 Thumbs of Fats / Oils</label>
+                        <select id="hpThumbs" onchange="runHandCalc()">
+                            <option value="0">0 Thumbs (Dry-cooked / oil-free)</option>
+                            <option value="1" selected>1 Thumb (~1 tbsp / 14 g fat/oil/nuts)</option>
+                            <option value="1.5">1.5 Thumbs (~1.5 tbsp / 21 g)</option>
+                            <option value="2">2 Thumbs (~2 tbsp / 28 g)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="calc-results">
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">Estimated Meal Calories</span>
+                        <div class="calc-stat-val" id="hpOutKcal">565 kcal</div>
+                        <div class="calc-stat-sub" id="hpOutMacros">51g P · 38g C · 21g F</div>
+                    </div>
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">Protein + Carb Weights</span>
+                        <div class="calc-stat-val" id="hpOutWeights">5.5 oz P / 3.5 oz C</div>
+                        <div class="calc-stat-sub" id="hpOutWeightsMetric">158 g protein food / 100 g starch</div>
+                    </div>
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">Veg + Fat Equivalents</span>
+                        <div class="calc-stat-val" id="hpOutVegFat">240 g Veg / 14 g Fat</div>
+                        <div class="calc-stat-sub">Log these exact gram/oz numbers</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="callout-box takeaway">
+                <div class="callout-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    The 80/20 Rule of Scale-Free Calorie Tracking
+                </div>
+                <ul>
+                    <li><strong>Never Waste Time Measuring Low-Calorie Vegetables:</strong> Whether you eat 100 g or 220 g of cucumber, lettuce, spinach, zucchini, or broccoli, the difference is less than 30 calories. Estimate vegetables by the fistful and move on.</li>
+                    <li><strong>Use Supermarket Package Weights as Your Built-In Scale:</strong> If a US or European supermarket tray of chicken breast weighs <strong>16 oz (454 g) or 500 g</strong> and you cut it into 4 equal fillets, each fillet is automatically <strong>4 oz (113 g) or 125 g raw</strong>—zero kitchen scale required.</li>
+                    <li><strong>Measure Cooking Oils &amp; Nut Butters with a Teaspoon/Tablespoon:</strong> Because fats pack 9 kcal per gram (120 kcal per tablespoon), using a standard kitchen spoon for olive oil, butter, and peanut butter prevents 250-kcal estimation errors.</li>
+                </ul>
+            </div>
+
+            <div class="article-content">
+                <h2>1. Complete Hand-to-Scale Conversion Chart (US oz &amp; EU g)</h2>
+                <p>
+                    Bookmark this conversion table whenever you are eating at a workplace canteen, hotel buffet, or family dinner table:
+                </p>
+
+                <div class="data-table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Visual Object / Hand Unit</th>
+                                <th>US Imperial Weight / Vol</th>
+                                <th>EU / UK Metric Weight</th>
+                                <th>Food Category &amp; Average Macros</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1 Adult Palm (Deck of Cards)</strong></td>
+                                <td>3.5 – 4.0 oz cooked</td>
+                                <td>100 – 115 g cooked</td>
+                                <td><strong>Cooked Chicken, Turkey, Lean Beef, Fish:</strong> ~185 kcal · 30g P · 6g F</td>
+                            </tr>
+                            <tr>
+                                <td><strong>1 Cupped Handful</strong></td>
+                                <td>1/2 cup (~3.5 oz cooked)</td>
+                                <td>~100 g cooked (35 g dry)</td>
+                                <td><strong>Cooked Rice, Pasta, Oats, Quinoa, Beans:</strong> ~135 kcal · 28g C · 3g P</td>
+                            </tr>
+                            <tr>
+                                <td><strong>1 Closed Fist (Baseball Size)</strong></td>
+                                <td>1 cup (~4–6 oz)</td>
+                                <td>120 – 160 g</td>
+                                <td><strong>Non-Starchy Veg (Broccoli, Greens):</strong> ~35 kcal · 6g C · 3g Fiber<br><strong>Whole Baked Potato / Apple:</strong> ~130 kcal · 30g C</td>
+                            </tr>
+                            <tr>
+                                <td><strong>1 Full Thumb (Tip to Base)</strong></td>
+                                <td>1 tablespoon (~0.5 oz)</td>
+                                <td>14 – 15 g (15 ml)</td>
+                                <td><strong>Peanut Butter, Cheese, Nuts:</strong> ~95 kcal · 8g F · 3g P<br><strong>Olive Oil / Butter:</strong> ~115 kcal · 13g F</td>
+                            </tr>
+                            <tr>
+                                <td><strong>1 Checkbook / Smartphone Size</strong></td>
+                                <td>5.0 – 5.5 oz cooked</td>
+                                <td>140 – 155 g cooked</td>
+                                <td><strong>Flat Fish Fillet (Salmon, Cod, Tilapia):</strong> ~160 kcal (white fish) to 280 kcal (salmon)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- MID-ARTICLE CONTEXTUAL FEATURE CTA BOX -->
+                <div class="app-cta-inline">
+                    <div>
+                        <span class="app-cta-inline-badge">📱 100% Free Android Home Screen Widgets + Voice Logging</span>
+                        <h3>Cut Daily Logging Time to 15 Seconds from Your Android Home Screen</h3>
+                        <p>CalorieCalc includes <strong>4 Free Android Home Screen Widgets</strong> (<a href="../features/home-screen-widgets.html" style="color:#6ee7b7;text-decoration:underline;">view widget showcase</a>)—check remaining calories and macros at a glance, log water in 1 tap, or launch Barcode, Voice, and AI Photo logging without opening menus.</p>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="app-cta-btn" target="_blank" rel="noopener">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                        Download on Google Play
+                    </a>
+                </div>
+
+                <h2>2. Four Habits That Eliminate Calorie Tracking Burnout</h2>
+                <ol>
+                    <li><strong>Put the Calorie Ring Widget on Your Primary Home Screen:</strong> When your remaining calories and protein bar sit right next to your messaging apps via CalorieCalc's free Android widget, you stay aware of your budget all afternoon without needing to open the app five times.</li>
+                    <li><strong>Standardize Breakfast &amp; Workday Lunches:</strong> Most people rotate the same 2–3 breakfasts (e.g., 2 eggs + toast + Skyr, or protein oats) and 2–3 weekday lunches. Once you save those meals in CalorieCalc's <strong>Free Food Diary</strong>, re-logging breakfast and lunch takes two taps (under 4 seconds).</li>
+                    <li><strong>Use Package Subdivision ("The Fractional Pack Method"):</strong> Buying a 500 g tub of 0% Greek yogurt? Eyeball half the tub (250 g) or a third of the tub (~165 g). Buying a 400 g pack of extra-lean 5% beef mince? Divide the pan into 2 equal halves (200 g each). You get digital-scale accuracy with zero dishes.</li>
+                    <li><strong>Speak or Snap Complex Meals:</strong> When you don't want to type, use Voice Logging (<em>"Two scrambled eggs, two slices of sourdough toast with a teaspoon of butter, and a black coffee"</em>) or snap a quick photo.</li>
+                </ol>
+
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>Which foods are the riskiest to eyeball without a spoon or scale?</h3>
+                    <p>Calorie-dense foods containing more than 400 kcal per 100 g: peanut butter and almond butter, olive and cooking oils, nuts and trail mix, mayo/ranch dressings, and granola. A "heaping" tablespoon of peanut butter often weighs 32–38 g (200–230 kcal)—more than double a level 16 g (95 kcal) tablespoon. Use a level measuring spoon for those five items.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are CalorieCalc's Android Home Screen Widgets free?</h3>
+                    <p>Yes. All 4 Android Home Screen Widgets—including the Daily Calorie &amp; Macro Ring, Water Intake Quick-Logger, Streak Counter, and 1-Tap Scanner Launcher—are 100% free for all CalorieCalc users.</p>
+                </div>
+
+                <!-- END-OF-ARTICLE QR + PLAY STORE CTA BOX -->
+                <div class="app-cta-end">
+                    <div>
+                        <h3>Track Faster with Free Android Widgets &amp; Barcode Scanning</h3>
+                        <p>Download CalorieCalc to add our <strong>4 Free Home Screen Widgets</strong> to your phone, scan US &amp; European barcodes for free, and try our AI Photo &amp; Voice food logging tools.</p>
+                        <div class="app-cta-perks">
+                            <span class="app-cta-perk">✓ 4 Free Home Screen Widgets</span>
+                            <span class="app-cta-perk">✓ Free Barcode &amp; Food Diary</span>
+                            <span class="app-cta-perk">✓ Voice &amp; AI Photo Logging</span>
+                            <span class="app-cta-perk">✓ Save 1-Tap Favorite Meals</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="app-cta-btn" target="_blank" rel="noopener">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                            Download Free on Google Play
+                        </a>
+                    </div>
+                    <div class="app-cta-qr-box">
+                        <img src="../assets/images/playstore-qr.png" alt="Scan QR Code to download CalorieCalc on Google Play" width="110" height="110" loading="lazy">
+                        <span>Scan with Android Camera</span>
+                    </div>
+                </div>
+
+                <div class="medical-disclaimer">
+                    <strong>Medical &amp; Nutritional Disclaimer:</strong>
+                    This guide and hand-portion estimator are for educational and informational purposes only and do not constitute medical advice. Always consult a physician or registered dietitian before making significant changes to your diet.
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-disclaimer">
+                <strong>Medical &amp; Nutritional Disclaimer:</strong> The information, calculators, and AI insights provided on CalorieCalcApp.com and within the CalorieCalc mobile application are for educational and informational purposes only and do not constitute medical advice, diagnosis, or treatment. Always consult a qualified physician or registered dietitian before making significant changes to your diet, fasting protocol, or caloric intake.
+            </div>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo"><img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="32" height="32"> CalorieCalc</div>
+                    <p>AI-powered calorie tracking, 55+ micronutrient analytics, and 24/7 personal nutrition coaching.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="fl-col">
+                        <h4>Features</h4>
+                        <a href="../features/">All 37+ Features</a>
+                        <a href="../features/ai-food-scanner.html">AI Food Scanner</a>
+                        <a href="../features/ai-nutrition-coach.html">AI Nutrition Coach</a>
+                        <a href="../features/meal-planner.html">AI Meal Planner</a>
+                        <a href="../features/home-screen-widgets.html">Home Screen Widgets</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Free Tools &amp; Guides</h4>
+                        <a href="../tools/tdee-calculator.html">TDEE &amp; Macro Calculator</a>
+                        <a href="../tools/raw-cooked-weight-converter.html">Raw vs. Cooked Converter</a>
+                        <a href="../quiz/">90-Day Blueprint Quiz</a>
+                        <a href="../guides/">Nutrition Knowledge Hub</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Partners &amp; Support</h4>
+                        <a href="../partner.html">Partner Program</a>
+                        <a href="../influencer-program.html">Influencer Program</a>
+                        <a href="../user-affiliate.html">Refer &amp; Earn</a>
+                        <a href="../support.html">Help Center &amp; FAQ</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Legal</h4>
+                        <a href="../privacy-policy.html">Privacy Policy</a>
+                        <a href="../terms.html">Terms of Service</a>
+                        <a href="../refund-policy.html">Refund Policy</a>
+                        <a href="../delete-account.html">Delete Account</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 CalorieCalc. All rights reserved.</span>
+                <span><a href="../privacy-policy.html">Privacy</a> · <a href="../terms.html">Terms</a> · <a href="../refund-policy.html">Refunds</a> · <a href="../sitemap.xml">Sitemap</a></span>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script>
+        function runHandCalc() {
+            const palms = parseFloat(document.getElementById('hpPalms').value) || 0;
+            const cupped = parseFloat(document.getElementById('hpCupped').value) || 0;
+            const fists = parseFloat(document.getElementById('hpFists').value) || 0;
+            const thumbs = parseFloat(document.getElementById('hpThumbs').value) || 0;
+
+            // Per unit constants:
+            // 1 Palm = 105g (3.7oz) cooked lean meat -> 185 kcal, 30g P, 0g C, 6g F
+            // 1 Cupped Hand = 100g (3.5oz) cooked starch -> 135 kcal, 3g P, 28g C, 1g F
+            // 1 Fist = 120g (4.2oz) fibrous veg -> 35 kcal, 2g P, 6g C, 0g F
+            // 1 Thumb = 14g (0.5oz) fat/oil/nut butter -> 110 kcal, 1g P, 1g C, 11g F
+
+            const totalKcal = Math.round(palms * 185 + cupped * 135 + fists * 35 + thumbs * 110);
+            const totalP = Math.round(palms * 30 + cupped * 3 + fists * 2 + thumbs * 1);
+            const totalC = Math.round(palms * 0 + cupped * 28 + fists * 6 + thumbs * 1);
+            const totalF = Math.round(palms * 6 + cupped * 1 + fists * 0 + thumbs * 11);
+
+            const protOz = (palms * 3.7).toFixed(1);
+            const carbOz = (cupped * 3.5).toFixed(1);
+            const protG = Math.round(palms * 105);
+            const carbG = Math.round(cupped * 100);
+            const vegG = Math.round(fists * 120);
+            const fatG = Math.round(thumbs * 14);
+
+            document.getElementById('hpOutKcal').textContent = totalKcal + ' kcal';
+            document.getElementById('hpOutMacros').textContent = totalP + 'g P · ' + totalC + 'g C · ' + totalF + 'g F';
+            document.getElementById('hpOutWeights').textContent = protOz + ' oz P / ' + carbOz + ' oz C';
+            document.getElementById('hpOutWeightsMetric').textContent = protG + ' g protein food / ' + carbG + ' g starch';
+            document.getElementById('hpOutVegFat').textContent = vegG + ' g Veg / ' + fatG + ' g Fat';
+        }
+
+        document.addEventListener('DOMContentLoaded', runHandCalc);
+    </script>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overate at Lunch? What to Eat for Dinner Without Ruining Your Deficit | CalorieCalc</title>
+    <meta name="description" content="Ate too many calories at lunch or an afternoon event? Use our interactive Rest-of-Day Dinner & 3-Day Rolling Buffer Calculator to rebalance dinner safely without skipping meals.">
+    <meta name="keywords" content="what to eat for dinner after overeating lunch, how to fix calorie deficit after heavy lunch, went over calories at lunch what to eat for dinner, 3 day rolling calorie deficit calculator, high volume 400 calorie dinners">
+    <meta name="author" content="CalorieCalc Nutrition Team">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="theme-color" content="#047857">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://caloriecalcapp.com/guides/what-to-eat-for-dinner-after-overeating-lunch.html">
+    <meta property="og:title" content="Overate at Lunch? How to Rebalance Dinner Without Skipping Meals">
+    <meta property="og:description" content="Calculate your safe high-protein dinner target and 3-day rolling calorie smoothing plan—plus 5 filling 350–450 kcal dinners.">
+    <meta property="og:image" content="https://caloriecalcapp.com/assets/images/meal-plan.png">
+    <meta property="og:site_name" content="CalorieCalc">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Overate at Lunch? What to Eat for Dinner (Rebalance Calculator)">
+    <meta name="twitter:description" content="Never skip dinner after a heavy lunch. Use our 3-day rolling buffer calculator and 400-kcal volume dinner templates.">
+    <meta name="twitter:image" content="https://caloriecalcapp.com/assets/images/meal-plan.png">
+
+    <link rel="icon" type="image/png" href="../assets/images/app-icon.png?v=2">
+    <link rel="canonical" href="https://caloriecalcapp.com/guides/what-to-eat-for-dinner-after-overeating-lunch.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .article-page { padding-top: 100px; padding-bottom: 80px; background: #fafaf9; color: #1c1917; line-height: 1.75; font-size: 1.0625rem; }
+        .article-container { max-width: 840px; margin: 0 auto; padding: 0 20px; }
+        .article-breadcrumbs { display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: #78716c; margin-bottom: 24px; flex-wrap: wrap; }
+        .article-breadcrumbs a { color: #047857; text-decoration: none; font-weight: 500; }
+        .article-breadcrumbs span { color: #a8a29e; }
+        .article-header { margin-bottom: 32px; }
+        .article-badge { display: inline-block; background: #ecfdf5; color: #047857; font-weight: 700; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 14px; border-radius: 9999px; border: 1px solid #a7f3d0; margin-bottom: 16px; }
+        .article-title { font-size: 2.45rem; font-weight: 800; line-height: 1.22; letter-spacing: -0.025em; color: #0f172a; margin-bottom: 16px; }
+        .article-meta { display: flex; align-items: center; gap: 12px; font-size: 0.875rem; color: #64748b; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; flex-wrap: wrap; }
+        .methodology-badge { display: inline-flex; align-items: center; gap: 6px; background: #f1f5f9; color: #334155; padding: 4px 10px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; }
+        .callout-box { background: #f0fdf4; border-left: 4px solid #059669; border-radius: 8px; padding: 20px 24px; margin: 28px 0; }
+        .callout-box.takeaway { background: #f8fafc; border-left: 4px solid #3b82f6; }
+        .callout-title { font-weight: 700; font-size: 1.125rem; color: #0f172a; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .article-content h2 { font-size: 1.75rem; font-weight: 800; color: #0f172a; margin-top: 48px; margin-bottom: 18px; letter-spacing: -0.02em; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 700; color: #1e293b; margin-top: 28px; margin-bottom: 12px; }
+        .article-content p { margin-bottom: 20px; }
+        .article-content ul, .article-content ol { margin-bottom: 24px; padding-left: 24px; }
+        .article-content li { margin-bottom: 10px; }
+        .data-table-wrapper { overflow-x: auto; margin: 24px 0; border-radius: 10px; border: 1px solid #e2e8f0; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left; background: #fff; }
+        .data-table th { background: #f8fafc; color: #334155; font-weight: 700; padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+        .data-table td { padding: 12px 16px; border-bottom: 1px solid #f1f5f9; color: #475569; }
+        .data-table tr:hover td { background: #f8fafc; }
+
+        /* Interactive Rebalance Calculator */
+        .calc-widget { background: #ffffff; border: 2px solid #10b981; border-radius: 16px; padding: 28px; margin: 36px 0; box-shadow: 0 12px 30px -8px rgba(16, 185, 129, 0.15); }
+        .calc-widget-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+        .calc-widget-title { font-size: 1.35rem; font-weight: 800; color: #0f172a; margin: 0 0 4px 0; }
+        .calc-widget-sub { font-size: 0.9rem; color: #64748b; margin: 0; }
+        .calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); gap: 16px; margin-bottom: 20px; }
+        .calc-field label { display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.03em; }
+        .calc-field select, .calc-field input { width: 100%; padding: 11px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; font-family: inherit; color: #0f172a; background: #f8fafc; font-weight: 600; }
+        .calc-field select:focus, .calc-field input:focus { outline: none; border-color: #059669; background: #fff; }
+        .calc-results { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+        .calc-stat { background: #ffffff; padding: 14px; border-radius: 8px; border: 1px solid #dcfce7; }
+        .calc-stat-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #64748b; display: block; margin-bottom: 4px; }
+        .calc-stat-val { font-size: 1.3rem; font-weight: 800; color: #065f46; }
+        .calc-stat-sub { font-size: 0.8rem; color: #475569; margin-top: 2px; }
+
+        /* Dual-Placement App CTA Boxes */
+        .app-cta-inline { background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%); color: #ffffff; border-radius: 16px; padding: 28px; margin: 36px 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; border: 1px solid #047857; }
+        .app-cta-inline-badge { display: inline-block; background: rgba(16, 185, 129, 0.2); color: #6ee7b7; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; margin-bottom: 8px; border: 1px solid rgba(110, 231, 183, 0.3); }
+        .app-cta-inline h3 { color: #ffffff; font-size: 1.3rem; font-weight: 800; margin: 0 0 8px 0; }
+        .app-cta-inline p { color: #cbd5e1; font-size: 0.92rem; margin: 0; line-height: 1.55; }
+        .app-cta-btn { background: #10b981; color: #052e16; font-weight: 800; font-size: 0.95rem; padding: 14px 22px; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; transition: transform 0.2s, background-color 0.2s; }
+        .app-cta-btn:hover { background: #34d399; transform: translateY(-2px); }
+
+        .app-cta-end { background: #ffffff; border: 2px solid #047857; border-radius: 18px; padding: 32px; margin: 48px 0 32px 0; display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; box-shadow: 0 15px 35px -10px rgba(4, 120, 87, 0.12); }
+        .app-cta-end h3 { font-size: 1.5rem; font-weight: 800; color: #0f172a; margin: 0 0 10px 0; }
+        .app-cta-end p { color: #475569; font-size: 0.95rem; margin: 0 0 16px 0; }
+        .app-cta-perks { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+        .app-cta-perk { background: #f0fdf4; color: #065f46; font-size: 0.8rem; font-weight: 700; padding: 5px 12px; border-radius: 6px; border: 1px solid #bbf7d0; }
+        .app-cta-qr-box { text-align: center; background: #f8fafc; padding: 14px; border-radius: 12px; border: 1px solid #e2e8f0; }
+        .app-cta-qr-box img { width: 110px; height: 110px; border-radius: 8px; display: block; margin: 0 auto 6px auto; }
+        .app-cta-qr-box span { font-size: 0.72rem; font-weight: 700; color: #475569; display: block; }
+
+        .faq-item { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 12px; padding: 20px 24px; }
+        .faq-item h3 { font-size: 1.1rem; margin: 0 0 8px 0; color: #0f172a; }
+        .faq-item p { margin: 0; color: #475569; font-size: 0.95rem; }
+        .medical-disclaimer { background: #fffbeb; border: 1px solid #fef3c7; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 18px 22px; margin-top: 48px; font-size: 0.875rem; color: #92400e; }
+        .medical-disclaimer strong { color: #78350f; display: block; margin-bottom: 4px; }
+        @media (max-width: 768px) {
+            .article-title { font-size: 1.95rem; }
+            .app-cta-inline { flex-direction: column; text-align: center; }
+            .app-cta-end { grid-template-columns: 1fr; text-align: center; }
+            .app-cta-perks { justify-content: center; }
+            .app-cta-qr-box { display: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Overate at Lunch? How to Rebalance Dinner Without Ruining Your Weekly Calorie Deficit",
+      "description": "What to eat for dinner after a heavy restaurant lunch or office celebration. Includes an interactive Rest-of-Day & 3-Day Rolling Buffer Calculator and 350–450 kcal volume dinner recipes.",
+      "image": "https://caloriecalcapp.com/assets/images/meal-plan.png",
+      "author": { "@type": "Organization", "name": "CalorieCalc Nutrition Team", "url": "https://caloriecalcapp.com" },
+      "publisher": { "@type": "Organization", "name": "CalorieCalc", "logo": { "@type": "ImageObject", "url": "https://caloriecalcapp.com/assets/images/app-icon.png?v=2" } },
+      "datePublished": "2026-10-26T00:00:00+00:00",
+      "dateModified": "2026-10-26T00:00:00+00:00"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Should I skip dinner if I went over my calories at lunch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Going to bed hungry after skipping dinner often leads to poor sleep and late-night or next-morning rebound snacking. Instead, eat a high-protein, high-volume 350 to 420 kcal dinner (with 35–40g of lean protein and fibrous vegetables) and spread any remaining calorie overage gently across the next 2 to 3 days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a 350 to 400 calorie dinner that actually keeps you full?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pair an ultra-lean protein source (6 oz / 170g chicken breast, cod, shrimp, or egg whites) with 250–300g (2–3 cups) of low-starch vegetables like zucchini noodles, broccoli, cauliflower rice, or cabbage soup. This creates a 450g+ plate of food for under 400 calories."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-inner">
+            <a href="../" class="logo">
+                <img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="36" height="36">
+                <span>CalorieCalc</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="../features/">Features (37+)</a>
+                <a href="../tools/tdee-calculator.html" style="color:var(--emerald-700);font-weight:700;">🧮 TDEE Calculator</a>
+                <a href="../quiz/" style="color:#0284c7;font-weight:700;">📋 90-Day Quiz</a>
+                <a href="../guides/" style="color:var(--emerald-700);font-weight:700">Guides</a>
+                <a href="../#pricing">Pricing</a>
+                <a href="../partner.html">Partners</a>
+                <a href="../support.html">Support</a>
+                <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta-mobile" target="_blank" rel="noopener">
+                    Download Free on Google Play
+                </a>
+            </div>
+            <div class="nav-actions">
+                <button type="button" class="nav-qr-btn" onclick="openCalorieCalcQR()">📲 Scan QR</button>
+                <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                    Download Free
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="article-page">
+        <article class="article-container">
+            <nav class="article-breadcrumbs" aria-label="Breadcrumb">
+                <a href="../">Home</a>
+                <span>/</span>
+                <a href="./">Guides</a>
+                <span>/</span>
+                <span>What to Eat for Dinner After Overeating Lunch</span>
+            </nav>
+
+            <header class="article-header">
+                <span class="article-badge">Weekly Deficit Recovery</span>
+                <h1 class="article-title">Overate at Lunch? How to Rebalance Dinner Without Ruining Your Weekly Calorie Deficit</h1>
+                <div class="article-meta">
+                    <span>By CalorieCalc Nutrition Team</span>
+                    <span>•</span>
+                    <span>Updated October 2026</span>
+                    <span>•</span>
+                    <span class="methodology-badge">⚖️ 7-Day Rolling Energy Balance Model</span>
+                </div>
+            </header>
+
+            <p>
+                Suppose your daily fat-loss target is 1,750 kcal. After a 350-kcal breakfast, an unplanned team lunch or birthday celebration adds 1,250 kcal by 2:00 PM—leaving you with only 150 kcal on paper for the rest of the day.
+            </p>
+            <p>
+                Most people react to this moment in one of two counterproductive ways: either they say <em>"today is ruined anyway"</em> and order a 1,400-calorie takeout dinner, or they force themselves to skip dinner completely, wake up at 11:30 PM ravenous, and raid the pantry. Below is the third, mathematically sound option: <strong>eat a 350–420 kcal high-protein volume dinner tonight</strong> and smooth any small overage across the next 3 days.
+            </p>
+
+            <!-- INTERACTIVE CALCULATOR: REST-OF-DAY & 3-DAY BUFFER CALCULATOR -->
+            <section class="calc-widget" id="fix-my-day-calculator" aria-label="Interactive Rest of Day Dinner and 3 Day Rolling Buffer Calculator">
+                <div class="calc-widget-header">
+                    <div>
+                        <h2 class="calc-widget-title" style="border:none;margin:0;padding:0;">⚖️ Interactive "Fix My Day" Dinner &amp; 3-Day Buffer Calculator</h2>
+                        <p class="calc-widget-sub">Never drop tonight's dinner below 350 kcal. Calculate your ideal protein-anchored dinner and 3-day rolling adjustment.</p>
+                    </div>
+                </div>
+
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label for="fmdTarget">Daily Calorie Goal (kcal)</label>
+                        <input type="number" id="fmdTarget" value="1750" min="1200" max="4000" step="50" oninput="runFmdCalc()">
+                    </div>
+                    <div class="calc-field">
+                        <label for="fmdEaten">Calories Eaten So Far Today</label>
+                        <input type="number" id="fmdEaten" value="1580" min="200" max="6000" step="50" oninput="runFmdCalc()">
+                    </div>
+                    <div class="calc-field">
+                        <label for="fmdProtGoal">Daily Protein Target (g)</label>
+                        <input type="number" id="fmdProtGoal" value="140" min="60" max="280" step="5" oninput="runFmdCalc()">
+                    </div>
+                    <div class="calc-field">
+                        <label for="fmdProtEaten">Protein Eaten So Far (g)</label>
+                        <input type="number" id="fmdProtEaten" value="85" min="0" max="280" step="5" oninput="runFmdCalc()">
+                    </div>
+                </div>
+
+                <div class="calc-results">
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">Tonight's Safe Dinner Target</span>
+                        <div class="calc-stat-val" id="fmdOutDinner">380 kcal</div>
+                        <div class="calc-stat-sub" id="fmdOutDinnerProt">Target 45 g lean protein + veg</div>
+                    </div>
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">Today's Net Variance</span>
+                        <div class="calc-stat-val" id="fmdOutVariance">+210 kcal</div>
+                        <div class="calc-stat-sub" id="fmdOutTotalToday">1,960 kcal total today (still near maintenance!)</div>
+                    </div>
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">3-Day Rolling Adjustment</span>
+                        <div class="calc-stat-val" id="fmdOutRoll">1,680 kcal/day</div>
+                        <div class="calc-stat-sub" id="fmdOutRollSub">-70 kcal/day for next 3 days + 20-min walk</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="callout-box takeaway">
+                <div class="callout-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    Why a Single 300-kcal Overage Never Causes Fat Gain
+                </div>
+                <ul>
+                    <li><strong>Maintenance Is Your Buffer:</strong> If your TDEE is 2,200 kcal and your deficit target is 1,700 kcal, finishing the day at 2,000 kcal after a heavy lunch means you are <em>still in a 200-kcal deficit</em> for the day.</li>
+                    <li><strong>Never Skip Dinner Entirely:</strong> Eating a 350–420 kcal plate of lean protein and high-volume vegetables stabilizes evening blood sugar and protects sleep quality.</li>
+                    <li><strong>Cap Next-Day Reductions at 150–200 kcal:</strong> Never slash tomorrow's calories below 1,200 kcal (women) or 1,500 kcal (men) to "pay back" a heavy meal. Smooth the difference gently over 3 days or add a 25-minute brisk walk (~110 kcal).</li>
+                </ul>
+            </div>
+
+            <div class="article-content">
+                <h2>1. Five Filling 350–420 Calorie "Recovery Dinners" (US &amp; EU Portions)</h2>
+                <p>
+                    Since a heavy restaurant or office lunch already supplied plenty of dietary fat and carbohydrates, your evening meal only needs to accomplish two things: <strong>deliver 40–48 g of lean protein</strong> and <strong>fill your stomach with warm, fibrous volume</strong>:
+                </p>
+
+                <div class="data-table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Dinner Option (15-Min Prep)</th>
+                                <th>US Imperial Portions</th>
+                                <th>EU / UK Metric Portions</th>
+                                <th>Macros &amp; Total Volume</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1. Garlic Lemon Shrimp &amp; Courgette/Zucchini Noodles</strong></td>
+                                <td>6 oz peeled shrimp + 2 medium spiralized zucchinis + 1 cup cherry tomatoes + 1 tsp olive oil</td>
+                                <td>170 g peeled king prawns + 300 g courgette noodles + 150 g cherry tomatoes + 5 ml olive oil</td>
+                                <td><strong>345 kcal</strong> · 42 g protein (620 g plate weight)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2. Chicken Breast &amp; Cauliflower Fried "Rice" Bowl</strong></td>
+                                <td>5.5 oz cooked chicken breast + 2 cups riced cauliflower + 1/2 cup peas/carrots + 1 whole egg + soy sauce</td>
+                                <td>155 g cooked chicken breast + 250 g cauliflower rice + 75 g peas/carrots + 1 egg + soy sauce</td>
+                                <td><strong>395 kcal</strong> · 49 g protein (530 g plate weight)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3. Baked White Fish (Cod/Haddock) &amp; Boiled Baby Potatoes</strong></td>
+                                <td>7 oz cod or haddock fillet + 5 oz boiled baby potatoes + 1.5 cups steamed broccoli with lemon</td>
+                                <td>200 g cod/haddock fillet + 140 g boiled new potatoes + 150 g steamed broccoli</td>
+                                <td><strong>360 kcal</strong> · 43 g protein (490 g plate weight)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4. High-Volume Egg White &amp; Smoked Turkey Frittata</strong></td>
+                                <td>1 cup liquid egg whites + 1 whole egg + 3 oz sliced turkey breast + 2 cups spinach &amp; mushrooms</td>
+                                <td>240 ml liquid egg whites + 1 whole egg + 85 g sliced turkey breast + 150 g spinach &amp; mushrooms</td>
+                                <td><strong>335 kcal</strong> · 46 g protein</td>
+                            </tr>
+                            <tr>
+                                <td><strong>5. Savoury Broth Soup with Shredded Chicken &amp; Beans</strong></td>
+                                <td>2 cups chicken bone broth + 4.5 oz shredded chicken breast + 1/3 cup white beans + diced celery &amp; kale</td>
+                                <td>500 ml chicken broth + 130 g shredded chicken breast + 60 g cannellini beans + celery &amp; kale</td>
+                                <td><strong>370 kcal</strong> · 45 g protein (750 g bowl weight)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- MID-ARTICLE CONTEXTUAL FEATURE CTA BOX -->
+                <div class="app-cta-inline">
+                    <div>
+                        <span class="app-cta-inline-badge">🛠️ Pro "Fix My Day" Rebalancer + 100% Free Food Diary</span>
+                        <h3>Tap "Fix My Day" in CalorieCalc to Rebalance Your Evening Automatically</h3>
+                        <p>Log your lunch in the <strong>Free Food Diary</strong>, or use CalorieCalc Pro's built-in <a href="../features/ai-nutrition-coach.html" style="color:#6ee7b7;text-decoration:underline;">Fix My Day &amp; AI Nutrition Coach</a>—which reads your remaining calories and protein at 3:00 PM and generates exact dinner options tailored to your pantry.</p>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="app-cta-btn" target="_blank" rel="noopener">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                        Download on Google Play
+                    </a>
+                </div>
+
+                <h2>2. Why Scale Weight Jumps the Morning After a Heavy Lunch (And Why It Is Not Fat)</h2>
+                <p>
+                    If you weigh yourself the morning after a restaurant lunch or pizza party and see the scale up by <strong>1.5 to 3.0 lbs (0.7 to 1.4 kg)</strong>, do not panic. Gaining 2 lbs of actual body fat requires consuming <strong>7,000 calories above your maintenance TDEE</strong> in a single afternoon.
+                </p>
+                <p>
+                    That overnight jump is temporary intracellular and extracellular water weight driven by three harmless mechanisms:
+                </p>
+                <ul>
+                    <li><strong>Glycogen Hydration (1g Carb Holds 3–4g Water):</strong> Every extra 100 g of carbohydrates stored as muscle and liver glycogen binds 300–400 g (0.7–0.9 lbs) of water.</li>
+                    <li><strong>Restaurant Sodium Load:</strong> Restaurant meals routinely contain 2,500–4,000 mg of sodium, prompting your kidneys to retain 1–2 liters of water for 24–48 hours to maintain osmotic balance.</li>
+                    <li><strong>Physical Food Mass in the GI Tract:</strong> The literal weight of digesting food and fiber takes 24–36 hours to clear. Drink 2.5–3 liters of water and take a 20-minute walk; your scale weight will normalize within 48 to 72 hours.</li>
+                </ul>
+
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>What if I already ate 100% of my daily calories by 3:00 PM?</h3>
+                    <p>Still eat a 350 to 400 kcal high-protein dinner (like 150 g chicken breast or white fish with steamed green vegetables). Going 350 kcal over your deficit target for one day still leaves you right near maintenance calories and prevents the binge-restrict cycle triggered by going to bed starving.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Should I do extra cardio tonight to burn off a heavy lunch?</h3>
+                    <p>Avoid punitive high-intensity workouts when your stomach is full. However, a relaxed 25- to 30-minute evening walk after lunch or dinner aids digestion, blunts post-meal glucose excursions, and gently burns 110–150 net calories without spiking appetite.</p>
+                </div>
+
+                <!-- END-OF-ARTICLE QR + PLAY STORE CTA BOX -->
+                <div class="app-cta-end">
+                    <div>
+                        <h3>Stay Consistent Even When Lunch Goes Off-Plan</h3>
+                        <p>Download CalorieCalc to track your daily and weekly calorie average with our <strong>100% Free Food Diary, Barcode Scanner, and Home Screen Widgets</strong>—plus unlock Pro features like <em>Fix My Day</em> and our 24/7 AI Nutrition Coach.</p>
+                        <div class="app-cta-perks">
+                            <span class="app-cta-perk">✓ Free Food Diary &amp; Barcode</span>
+                            <span class="app-cta-perk">✓ Free Home Screen Widgets</span>
+                            <span class="app-cta-perk">✓ Pro: Fix My Day Rebalancer</span>
+                            <span class="app-cta-perk">✓ Pro: 24/7 AI Nutrition Coach</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="app-cta-btn" target="_blank" rel="noopener">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                            Download Free on Google Play
+                        </a>
+                    </div>
+                    <div class="app-cta-qr-box">
+                        <img src="../assets/images/playstore-qr.png" alt="Scan QR Code to download CalorieCalc on Google Play" width="110" height="110" loading="lazy">
+                        <span>Scan with Android Camera</span>
+                    </div>
+                </div>
+
+                <div class="medical-disclaimer">
+                    <strong>Medical &amp; Nutritional Disclaimer:</strong>
+                    This article and interactive dinner rebalancing calculator are for educational purposes only and do not constitute medical advice or treatment for eating disorders. Never restrict daily caloric intake below safe physiological minimums (1,200 kcal for women, 1,500 kcal for men) without direct medical supervision.
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-disclaimer">
+                <strong>Medical &amp; Nutritional Disclaimer:</strong> The information, calculators, and AI insights provided on CalorieCalcApp.com and within the CalorieCalc mobile application are for educational and informational purposes only and do not constitute medical advice, diagnosis, or treatment. Always consult a qualified physician or registered dietitian before making significant changes to your diet, fasting protocol, or caloric intake.
+            </div>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo"><img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="32" height="32"> CalorieCalc</div>
+                    <p>AI-powered calorie tracking, 55+ micronutrient analytics, and 24/7 personal nutrition coaching.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="fl-col">
+                        <h4>Features</h4>
+                        <a href="../features/">All 37+ Features</a>
+                        <a href="../features/ai-food-scanner.html">AI Food Scanner</a>
+                        <a href="../features/ai-nutrition-coach.html">AI Nutrition Coach</a>
+                        <a href="../features/meal-planner.html">AI Meal Planner</a>
+                        <a href="../features/home-screen-widgets.html">Home Screen Widgets</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Free Tools &amp; Guides</h4>
+                        <a href="../tools/tdee-calculator.html">TDEE &amp; Macro Calculator</a>
+                        <a href="../tools/raw-cooked-weight-converter.html">Raw vs. Cooked Converter</a>
+                        <a href="../quiz/">90-Day Blueprint Quiz</a>
+                        <a href="../guides/">Nutrition Knowledge Hub</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Partners &amp; Support</h4>
+                        <a href="../partner.html">Partner Program</a>
+                        <a href="../influencer-program.html">Influencer Program</a>
+                        <a href="../user-affiliate.html">Refer &amp; Earn</a>
+                        <a href="../support.html">Help Center &amp; FAQ</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Legal</h4>
+                        <a href="../privacy-policy.html">Privacy Policy</a>
+                        <a href="../terms.html">Terms of Service</a>
+                        <a href="../refund-policy.html">Refund Policy</a>
+                        <a href="../delete-account.html">Delete Account</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 CalorieCalc. All rights reserved.</span>
+                <span><a href="../privacy-policy.html">Privacy</a> · <a href="../terms.html">Terms</a> · <a href="../refund-policy.html">Refunds</a> · <a href="../sitemap.xml">Sitemap</a></span>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script>
+        function runFmdCalc() {
+            const target = Math.max(1200, parseFloat(document.getElementById('fmdTarget').value) || 1750);
+            const eaten = Math.max(0, parseFloat(document.getElementById('fmdEaten').value) || 1580);
+            const protGoal = Math.max(40, parseFloat(document.getElementById('fmdProtGoal').value) || 140);
+            const protEaten = Math.max(0, parseFloat(document.getElementById('fmdProtEaten').value) || 85);
+
+            const rawRemaining = target - eaten;
+            // Enforce a minimum 360 kcal dinner floor so user never starves
+            const safeDinner = Math.max(360, rawRemaining);
+            const neededProt = Math.min(55, Math.max(35, protGoal - protEaten));
+
+            const totalToday = eaten + safeDinner;
+            const overage = Math.max(0, totalToday - target);
+            const perDayBuffer = Math.min(180, Math.round(overage / 3));
+            const next3DaysTarget = Math.max(1200, target - perDayBuffer);
+
+            document.getElementById('fmdOutDinner').textContent = Math.round(safeDinner) + ' kcal';
+            document.getElementById('fmdOutDinnerProt').textContent = 'Target ' + Math.round(neededProt) + ' g lean protein + fibrous veg';
+
+            if (overage === 0) {
+                document.getElementById('fmdOutVariance').textContent = 'On Target (0 kcal over)';
+                document.getElementById('fmdOutTotalToday').textContent = Math.round(totalToday).toLocaleString() + ' kcal total today';
+                document.getElementById('fmdOutRoll').textContent = Math.round(target).toLocaleString() + ' kcal/day';
+                document.getElementById('fmdOutRollSub').textContent = 'No 3-day adjustment needed';
+            } else {
+                document.getElementById('fmdOutVariance').textContent = '+' + Math.round(overage) + ' kcal';
+                document.getElementById('fmdOutTotalToday').textContent = Math.round(totalToday).toLocaleString() + ' kcal total today (includes dinner)';
+                document.getElementById('fmdOutRoll').textContent = Math.round(next3DaysTarget).toLocaleString() + ' kcal/day';
+                document.getElementById('fmdOutRollSub').textContent = '-' + perDayBuffer + ' kcal/day for next 3 days (safe floor kept)';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', runFmdCalc);
+    </script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Read US & European Nutrition Labels: Hidden Calories, Zero-Calorie Sprays & Per-100g Math | CalorieCalc</title>
+    <meta name="description" content="Spot hidden calories on US FDA and EU/UK nutrition labels. Use our interactive True Package Calorie, Cooking Spray & Added Sugar Teaspoon Calculator.">
+    <meta name="keywords" content="how to read nutrition labels for weight loss, zero calorie cooking spray real calories, US vs EU nutrition label per 100g calculator, hidden calories serving size rounding FDA, added sugar grams to teaspoons calculator">
+    <meta name="author" content="CalorieCalc Nutrition Team">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="theme-color" content="#047857">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://caloriecalcapp.com/guides/how-to-read-nutrition-labels-hidden-calories-us-eu.html">
+    <meta property="og:title" content="How to Spot Hidden Calories on US & European Nutrition Labels (With Calculator)">
+    <meta property="og:description" content="Why '0-calorie' cooking spray has 790 calories per bottle, how FDA rounding rules hide fats, and how to use EU per-100g math.">
+    <meta property="og:image" content="https://caloriecalcapp.com/assets/images/barcode-scan.png">
+    <meta property="og:site_name" content="CalorieCalc">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hidden Calories on US & EU Nutrition Labels (True Package Calculator)">
+    <meta name="twitter:description" content="Interactive True Serving, Cooking Spray & Sugar Teaspoon Calculator for US and European food packages.">
+    <meta name="twitter:image" content="https://caloriecalcapp.com/assets/images/barcode-scan.png">
+
+    <link rel="icon" type="image/png" href="../assets/images/app-icon.png?v=2">
+    <link rel="canonical" href="https://caloriecalcapp.com/guides/how-to-read-nutrition-labels-hidden-calories-us-eu.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .article-page { padding-top: 100px; padding-bottom: 80px; background: #fafaf9; color: #1c1917; line-height: 1.75; font-size: 1.0625rem; }
+        .article-container { max-width: 840px; margin: 0 auto; padding: 0 20px; }
+        .article-breadcrumbs { display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: #78716c; margin-bottom: 24px; flex-wrap: wrap; }
+        .article-breadcrumbs a { color: #047857; text-decoration: none; font-weight: 500; }
+        .article-breadcrumbs span { color: #a8a29e; }
+        .article-header { margin-bottom: 32px; }
+        .article-badge { display: inline-block; background: #ecfdf5; color: #047857; font-weight: 700; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 14px; border-radius: 9999px; border: 1px solid #a7f3d0; margin-bottom: 16px; }
+        .article-title { font-size: 2.45rem; font-weight: 800; line-height: 1.22; letter-spacing: -0.025em; color: #0f172a; margin-bottom: 16px; }
+        .article-meta { display: flex; align-items: center; gap: 12px; font-size: 0.875rem; color: #64748b; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; flex-wrap: wrap; }
+        .methodology-badge { display: inline-flex; align-items: center; gap: 6px; background: #f1f5f9; color: #334155; padding: 4px 10px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; }
+        .callout-box { background: #f0fdf4; border-left: 4px solid #059669; border-radius: 8px; padding: 20px 24px; margin: 28px 0; }
+        .callout-box.takeaway { background: #f8fafc; border-left: 4px solid #3b82f6; }
+        .callout-title { font-weight: 700; font-size: 1.125rem; color: #0f172a; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .article-content h2 { font-size: 1.75rem; font-weight: 800; color: #0f172a; margin-top: 48px; margin-bottom: 18px; letter-spacing: -0.02em; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 700; color: #1e293b; margin-top: 28px; margin-bottom: 12px; }
+        .article-content p { margin-bottom: 20px; }
+        .article-content ul, .article-content ol { margin-bottom: 24px; padding-left: 24px; }
+        .article-content li { margin-bottom: 10px; }
+        .data-table-wrapper { overflow-x: auto; margin: 24px 0; border-radius: 10px; border: 1px solid #e2e8f0; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left; background: #fff; }
+        .data-table th { background: #f8fafc; color: #334155; font-weight: 700; padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+        .data-table td { padding: 12px 16px; border-bottom: 1px solid #f1f5f9; color: #475569; }
+        .data-table tr:hover td { background: #f8fafc; }
+
+        /* Interactive Nutrition Label Calculator */
+        .calc-widget { background: #ffffff; border: 2px solid #10b981; border-radius: 16px; padding: 28px; margin: 36px 0; box-shadow: 0 12px 30px -8px rgba(16, 185, 129, 0.15); }
+        .calc-widget-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+        .calc-widget-title { font-size: 1.35rem; font-weight: 800; color: #0f172a; margin: 0 0 4px 0; }
+        .calc-widget-sub { font-size: 0.9rem; color: #64748b; margin: 0; }
+        .calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 16px; margin-bottom: 20px; }
+        .calc-field label { display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.03em; }
+        .calc-field select, .calc-field input { width: 100%; padding: 11px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; font-family: inherit; color: #0f172a; background: #f8fafc; font-weight: 600; }
+        .calc-field select:focus, .calc-field input:focus { outline: none; border-color: #059669; background: #fff; }
+        .calc-results { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+        .calc-stat { background: #ffffff; padding: 14px; border-radius: 8px; border: 1px solid #dcfce7; }
+        .calc-stat-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #64748b; display: block; margin-bottom: 4px; }
+        .calc-stat-val { font-size: 1.3rem; font-weight: 800; color: #065f46; }
+        .calc-stat-sub { font-size: 0.8rem; color: #475569; margin-top: 2px; }
+
+        /* Dual-Placement App CTA Boxes */
+        .app-cta-inline { background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%); color: #ffffff; border-radius: 16px; padding: 28px; margin: 36px 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; border: 1px solid #047857; }
+        .app-cta-inline-badge { display: inline-block; background: rgba(16, 185, 129, 0.2); color: #6ee7b7; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; margin-bottom: 8px; border: 1px solid rgba(110, 231, 183, 0.3); }
+        .app-cta-inline h3 { color: #ffffff; font-size: 1.3rem; font-weight: 800; margin: 0 0 8px 0; }
+        .app-cta-inline p { color: #cbd5e1; font-size: 0.92rem; margin: 0; line-height: 1.55; }
+        .app-cta-btn { background: #10b981; color: #052e16; font-weight: 800; font-size: 0.95rem; padding: 14px 22px; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; transition: transform 0.2s, background-color 0.2s; }
+        .app-cta-btn:hover { background: #34d399; transform: translateY(-2px); }
+
+        .app-cta-end { background: #ffffff; border: 2px solid #047857; border-radius: 18px; padding: 32px; margin: 48px 0 32px 0; display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; box-shadow: 0 15px 35px -10px rgba(4, 120, 87, 0.12); }
+        .app-cta-end h3 { font-size: 1.5rem; font-weight: 800; color: #0f172a; margin: 0 0 10px 0; }
+        .app-cta-end p { color: #475569; font-size: 0.95rem; margin: 0 0 16px 0; }
+        .app-cta-perks { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+        .app-cta-perk { background: #f0fdf4; color: #065f46; font-size: 0.8rem; font-weight: 700; padding: 5px 12px; border-radius: 6px; border: 1px solid #bbf7d0; }
+        .app-cta-qr-box { text-align: center; background: #f8fafc; padding: 14px; border-radius: 12px; border: 1px solid #e2e8f0; }
+        .app-cta-qr-box img { width: 110px; height: 110px; border-radius: 8px; display: block; margin: 0 auto 6px auto; }
+        .app-cta-qr-box span { font-size: 0.72rem; font-weight: 700; color: #475569; display: block; }
+
+        .faq-item { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 12px; padding: 20px 24px; }
+        .faq-item h3 { font-size: 1.1rem; margin: 0 0 8px 0; color: #0f172a; }
+        .faq-item p { margin: 0; color: #475569; font-size: 0.95rem; }
+        .medical-disclaimer { background: #fffbeb; border: 1px solid #fef3c7; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 18px 22px; margin-top: 48px; font-size: 0.875rem; color: #92400e; }
+        .medical-disclaimer strong { color: #78350f; display: block; margin-bottom: 4px; }
+        @media (max-width: 768px) {
+            .article-title { font-size: 1.95rem; }
+            .app-cta-inline { flex-direction: column; text-align: center; }
+            .app-cta-end { grid-template-columns: 1fr; text-align: center; }
+            .app-cta-perks { justify-content: center; }
+            .app-cta-qr-box { display: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Spot Hidden Calories & Ultra-Processed Foods on US & European Nutrition Labels",
+      "description": "Decode US FDA serving-size rounding rules, '0-calorie' cooking sprays, kJ-to-kcal conversions, and EU/UK per-100g nutrition panels.",
+      "image": "https://caloriecalcapp.com/assets/images/barcode-scan.png",
+      "author": { "@type": "Organization", "name": "CalorieCalc Nutrition Team", "url": "https://caloriecalcapp.com" },
+      "publisher": { "@type": "Organization", "name": "CalorieCalc", "logo": { "@type": "ImageObject", "url": "https://caloriecalcapp.com/assets/images/app-icon.png?v=2" } },
+      "datePublished": "2026-10-26T00:00:00+00:00",
+      "dateModified": "2026-10-26T00:00:00+00:00"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does 'zero-calorie' cooking spray actually have calories?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under US FDA rounding regulations (21 CFR 101.9), any product containing fewer than 5 calories per serving can legally be labeled as '0 Calories'. Cooking spray manufacturers set the serving size to a 1/4-second spray (0.25 grams of oil, or ~2.2 kcal). However, a realistic 4- to 6-second pan coat uses 4 to 6 grams of pure oil—adding 36 to 54 calories."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you convert kJ (kilojoules) to kcal (calories) on European and UK food labels?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Divide the kilojoules (kJ) number by 4.184 to get kilocalories (kcal). On EU and UK labels, both values are printed side by side under Energy (e.g., '1050 kJ / 250 kcal per 100g'). Always log the smaller 'kcal' figure."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-inner">
+            <a href="../" class="logo">
+                <img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="36" height="36">
+                <span>CalorieCalc</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="../features/">Features (37+)</a>
+                <a href="../tools/tdee-calculator.html" style="color:var(--emerald-700);font-weight:700;">🧮 TDEE Calculator</a>
+                <a href="../quiz/" style="color:#0284c7;font-weight:700;">📋 90-Day Quiz</a>
+                <a href="../guides/" style="color:var(--emerald-700);font-weight:700">Guides</a>
+                <a href="../#pricing">Pricing</a>
+                <a href="../partner.html">Partners</a>
+                <a href="../support.html">Support</a>
+                <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta-mobile" target="_blank" rel="noopener">
+                    Download Free on Google Play
+                </a>
+            </div>
+            <div class="nav-actions">
+                <button type="button" class="nav-qr-btn" onclick="openCalorieCalcQR()">📲 Scan QR</button>
+                <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                    Download Free
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="article-page">
+        <article class="article-container">
+            <nav class="article-breadcrumbs" aria-label="Breadcrumb">
+                <a href="../">Home</a>
+                <span>/</span>
+                <a href="./">Guides</a>
+                <span>/</span>
+                <span>How to Read US &amp; EU Nutrition Labels</span>
+            </nav>
+
+            <header class="article-header">
+                <span class="article-badge">Food Label Forensics</span>
+                <h1 class="article-title">How to Spot Hidden Calories on US &amp; European Nutrition Labels: Serving Rounding, Cooking Sprays &amp; Per-100g Math</h1>
+                <div class="article-meta">
+                    <span>By CalorieCalc Nutrition Team</span>
+                    <span>•</span>
+                    <span>Updated October 2026</span>
+                    <span>•</span>
+                    <span class="methodology-badge">🔍 FDA 21 CFR 101.9 &amp; EU Regulation 1169/2011</span>
+                </div>
+            </header>
+
+            <p>
+                Have you ever bought a bottle of "0-Calorie" olive oil cooking spray, a bag of "130-Calorie" protein chips, or a pack of ramen noodles—only to discover later that the container held 3.5 servings or relied on serving-size rounding loopholes?
+            </p>
+            <p>
+                Food manufacturers in both North America and Europe design front-of-pack claims to highlight the smallest possible number. Understanding how <strong>US FDA per-serving rounding rules</strong> differ from <strong>European &amp; UK mandatory per-100g declarations</strong> prevents 150 to 300 "phantom calories" from creeping into your daily log. Use the interactive label auditor below to check any packaged food or cooking spray.
+            </p>
+
+            <!-- INTERACTIVE CALCULATOR: TRUE PACKAGE & SUGAR TEASPOON AUDITOR -->
+            <section class="calc-widget" id="nutrition-label-calculator" aria-label="Interactive True Package Calorie and Added Sugar Teaspoon Calculator">
+                <div class="calc-widget-header">
+                    <div>
+                        <h2 class="calc-widget-title" style="border:none;margin:0;padding:0;">🔍 Interactive True Label Calorie &amp; Sugar Auditor</h2>
+                        <p class="calc-widget-sub">Test any US or EU nutrition label—or select a common "hidden calorie" package preset—to see true calories, Atwater macro discrepancy, and sugar teaspoons.</p>
+                    </div>
+                </div>
+
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label for="lblPreset">Package Audit Preset</label>
+                        <select id="lblPreset" onchange="applyLabelPreset()">
+                            <option value="custom">Custom Nutrition Label</option>
+                            <option value="granola" selected>"Healthy" Granola Bowl (Eat 85g vs 30g Label Serving)</option>
+                            <option value="spray">"0-Calorie" Cooking Spray (5-Second Pan Coat vs 0.25s Label)</option>
+                            <option value="cookies">Snack Pack Cookies (Eat Full 110g Pack vs 1-Cookie Label)</option>
+                            <option value="drink">Bottled Smoothie / Iced Coffee (Full 500ml Bottle)</option>
+                        </select>
+                    </div>
+                    <div class="calc-field">
+                        <label for="lblServWeight">Label Serving Weight (g)</label>
+                        <input type="number" id="lblServWeight" value="30" min="0.2" max="1000" step="0.5" oninput="runLabelCalc()">
+                    </div>
+                    <div class="calc-field">
+                        <label for="lblServKcal">Label Calories per Serving</label>
+                        <input type="number" id="lblServKcal" value="140" min="0" max="2000" step="5" oninput="runLabelCalc()">
+                    </div>
+                    <div class="calc-field">
+                        <label for="lblActualWeight">Actual Amount Eaten (g)</label>
+                        <input type="number" id="lblActualWeight" value="85" min="1" max="2000" step="1" oninput="runLabelCalc()">
+                    </div>
+                    <div class="calc-field">
+                        <label for="lblSugar">Sugars per Label Serving (g)</label>
+                        <input type="number" id="lblSugar" value="8" min="0" max="150" step="1" oninput="runLabelCalc()">
+                    </div>
+                </div>
+
+                <div class="calc-results">
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">True Calories Eaten</span>
+                        <div class="calc-stat-val" id="lblOutTrueKcal">397 kcal</div>
+                        <div class="calc-stat-sub" id="lblOutGap">+257 kcal above 1-serving label</div>
+                    </div>
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">EU / UK Standard (Per 100g)</span>
+                        <div class="calc-stat-val" id="lblOutPer100">467 kcal / 100g</div>
+                        <div class="calc-stat-sub" id="lblOutDensityNote">High caloric density (&gt;400 kcal/100g)</div>
+                    </div>
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">Total Sugar Consumed</span>
+                        <div class="calc-stat-val" id="lblOutSugar">22.7 g (5.7 tsp)</div>
+                        <div class="calc-stat-sub">1 teaspoon sugar = 4.0 grams</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="callout-box takeaway">
+                <div class="callout-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    4 Label Traps to Check in Under 5 Seconds
+                </div>
+                <ul>
+                    <li><strong>Trap 1 — The "0-Calorie" Cooking Spray Illusion:</strong> Cooking spray cans contain 100% oil (9 kcal per gram). Because a 0.25-second mist weighs 0.25 g (2.2 kcal), US labels can legally print <code>0 Calories</code> and <code>0g Fat</code>. Spraying a frying pan for 5 seconds dispenses ~4.5 g of oil (<strong>~40 kcal</strong>).</li>
+                    <li><strong>Trap 2 — Unrealistic Cereal &amp; Granola Serving Sizes:</strong> Many cereals and granolas list a 30 g (1 oz / ~1/3 cup) serving at 130 kcal, whereas a normal breakfast bowl holds 75–90 g (<strong>325–390 kcal before milk</strong>).</li>
+                    <li><strong>Trap 3 — Multi-Serving Grab-and-Go Bags:</strong> Always check the <em>"Servings per container"</em> line on tortilla chips, ramen packets, and bakery muffins—many single-serve-looking packages contain 2.5 to 3 servings.</li>
+                    <li><strong>Trap 4 — `kJ` vs. `kcal` on European &amp; UK Packages:</strong> European labels list Energy in both kilojoules (`kJ`) and kilocalories (`kcal`). Always read the second number (`kcal`).</li>
+                </ul>
+            </div>
+
+            <div class="article-content">
+                <h2>1. US FDA Nutrition Facts vs. EU / UK Nutrition Declarations</h2>
+                <p>
+                    If you buy imported foods or travel between the United States, the UK, and continental Europe, you will notice structural differences in how calories, fiber, and carbohydrates are calculated on the back of the box:
+                </p>
+
+                <div class="data-table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Label Feature</th>
+                                <th>US FDA Nutrition Facts Panel</th>
+                                <th>EU &amp; UK Nutrition Declaration</th>
+                                <th>How to Log Accurately</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Primary Reference Unit</strong></td>
+                                <td><strong>Per Serving</strong> (e.g., "2 cookies (28g)" or "1/2 cup")</td>
+                                <td><strong>Per 100g / 100ml</strong> (mandatory across all brands)</td>
+                                <td>Per-100g immediately reveals caloric density: <code>450 kcal/100g</code> means 45% of the food's weight is pure energy</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Carbohydrates &amp; Fiber</strong></td>
+                                <td><strong>Total Carbohydrate</strong> <em>includes</em> Dietary Fiber</td>
+                                <td><strong>Carbohydrate</strong> is already <em>net</em> (Fiber is listed on its own separate line)</td>
+                                <td>Never subtract fiber from EU/UK carbohydrate numbers—it has already been separated!</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rounding to Zero</strong></td>
+                                <td><code>&lt; 5 kcal</code> per serving = printed as <strong>0 kcal</strong>; <code>&lt; 0.5g fat</code> = printed as <strong>0g fat</strong></td>
+                                <td>Listed per 100g, so cooking oil spray shows <strong>~820–900 kcal per 100ml</strong></td>
+                                <td>Count cooking sprays as ~8–9 kcal per second of spraying</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Salt vs. Sodium</strong></td>
+                                <td>Listed in milligrams of <strong>Sodium (mg)</strong></td>
+                                <td>Listed in grams of <strong>Salt (g)</strong> (<code>Salt = Sodium × 2.5</code>)</td>
+                                <td>1.0 g of Salt on an EU/UK label equals 400 mg of Sodium</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- MID-ARTICLE CONTEXTUAL FEATURE CTA BOX -->
+                <div class="app-cta-inline">
+                    <div>
+                        <span class="app-cta-inline-badge">📷 100% Free Barcode Scanner + Plus AI Label OCR</span>
+                        <h3>Scan Any US or European Barcode or Nutrition Label</h3>
+                        <p>Use CalorieCalc's <strong>100% Free Barcode Scanner</strong> to pull verified nutrition data in 1 second—or use our <a href="../features/ai-food-scanner.html" style="color:#6ee7b7;text-decoration:underline;">AI Nutrition Label OCR Scanner</a> (Plus) to photograph any foreign or local package label and extract exact macros automatically.</p>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="app-cta-btn" target="_blank" rel="noopener">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                        Download on Google Play
+                    </a>
+                </div>
+
+                <h2>2. The Atwater 4-4-9 Sanity Check (Why Macros Don't Always Equal Printed Calories)</h2>
+                <p>
+                    Sometimes you will look at a protein bar label that prints <strong>190 kcal</strong>, yet when you multiply its macros using the standard Atwater factors—<strong>Protein (4 kcal/g) + Carbs (4 kcal/g) + Fat (9 kcal/g)</strong>—the math adds up to 235 kcal. Why?
+                </p>
+                <ul>
+                    <li><strong>Sugar Alcohols (Polyols like Erythritol, Maltitol, Xylitol) &amp; Soluble Fibers (Allulose, Polydextrose, Inulin):</strong> Under US FDATotal Carbohydrate rules, these ingredients are included in the total carb gram count, even though they provide only 0.2 to 2.4 kcal per gram instead of 4.0 kcal/g.</li>
+                    <li><strong>FDA 5- and 10-Calorie Rounding Increments:</strong> Above 50 calories per serving, US labels round to the nearest 10 calories (so 144 kcal is printed as 140 kcal, and 146 kcal is printed as 150 kcal).</li>
+                </ul>
+
+                <h2>3. Spotting Ultra-Processed "Health Halo" Foods on the Ingredient List</h2>
+                <p>
+                    Ingredients on both US and European food packages are legally listed in <strong>descending order by weight</strong>. Before trusting a front-of-box badge like <em>"Keto Friendly"</em>, <em>"High Fiber"</em>, or <em>"Made with Whole Grains"</em>, check the first three ingredients:
+                </p>
+                <ol>
+                    <li><strong>"Sugar-Splitting" Across Multiple Names:</strong> A cereal or protein bar can keep "cane sugar" out of the #1 spot by splitting sweeteners into three separate ingredients—such as <em>brown rice syrup, tapioca syrup, and fruit juice concentrate</em>. Check the <strong>Added Sugars</strong> line (4 g = 1 level teaspoon).</li>
+                    <li><strong>"Peanut Butter" vs. "Protein" Bars:</strong> If the #1 and #2 ingredients on a "protein bar" are peanuts, palm kernel oil, or chocolate coating rather than whey/milk protein isolate or soy crispies, it is calorically closer to a candy bar with added protein powder.</li>
+                </ol>
+
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>Should I subtract fiber from total carbs when counting calories?</h3>
+                    <p>For calorie deficit tracking, always log the total printed calories (`kcal`) and protein grams rather than manually subtracting fiber. Soluble fiber still yields roughly 1.5 to 2.0 kcal per gram via colonic fermentation, which is already accounted for in the printed calorie total.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What caloric density per 100g is best for weight loss?</h3>
+                    <p>Foods under <strong>150 kcal per 100g</strong> (fruits, vegetables, potatoes, white fish, chicken breast, 0% Greek yogurt, soups) have low energy density and high stomach volume. Foods above <strong>400 kcal per 100g</strong> (crackers, chips, pastries, nuts, cheeses, chocolate, oils) pack massive calories into small bites and should be portioned deliberately.</p>
+                </div>
+
+                <!-- END-OF-ARTICLE QR + PLAY STORE CTA BOX -->
+                <div class="app-cta-end">
+                    <div>
+                        <h3>Scan Barcodes &amp; Track 55+ Nutrients with CalorieCalc</h3>
+                        <p>Download CalorieCalc on Android for <strong>100% Free Barcode Scanning</strong>, Food Diary logging, and Home Screen Widgets—plus Plus/Pro access to AI Nutrition Label OCR and 55+ Micronutrient analytics (including Added Sugar, Fiber, and Sodium).</p>
+                        <div class="app-cta-perks">
+                            <span class="app-cta-perk">✓ Free Barcode Scanner</span>
+                            <span class="app-cta-perk">✓ Free Food Diary &amp; Widgets</span>
+                            <span class="app-cta-perk">✓ Plus: AI Label OCR Scanner</span>
+                            <span class="app-cta-perk">✓ Pro: 55+ Nutrient Breakdown</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="app-cta-btn" target="_blank" rel="noopener">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                            Download Free on Google Play
+                        </a>
+                    </div>
+                    <div class="app-cta-qr-box">
+                        <img src="../assets/images/playstore-qr.png" alt="Scan QR Code to download CalorieCalc on Google Play" width="110" height="110" loading="lazy">
+                        <span>Scan with Android Camera</span>
+                    </div>
+                </div>
+
+                <div class="medical-disclaimer">
+                    <strong>Medical &amp; Nutritional Disclaimer:</strong>
+                    This nutrition label guide and calculator are for educational and informational purposes only and do not constitute medical or regulatory advice. Always consult a physician or registered dietitian for specific medical nutrition therapy (such as low-sodium or diabetic carbohydrate management).
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-disclaimer">
+                <strong>Medical &amp; Nutritional Disclaimer:</strong> The information, calculators, and AI insights provided on CalorieCalcApp.com and within the CalorieCalc mobile application are for educational and informational purposes only and do not constitute medical advice, diagnosis, or treatment. Always consult a qualified physician or registered dietitian before making significant changes to your diet, fasting protocol, or caloric intake.
+            </div>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo"><img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="32" height="32"> CalorieCalc</div>
+                    <p>AI-powered calorie tracking, 55+ micronutrient analytics, and 24/7 personal nutrition coaching.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="fl-col">
+                        <h4>Features</h4>
+                        <a href="../features/">All 37+ Features</a>
+                        <a href="../features/ai-food-scanner.html">AI Food Scanner</a>
+                        <a href="../features/ai-nutrition-coach.html">AI Nutrition Coach</a>
+                        <a href="../features/meal-planner.html">AI Meal Planner</a>
+                        <a href="../features/home-screen-widgets.html">Home Screen Widgets</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Free Tools &amp; Guides</h4>
+                        <a href="../tools/tdee-calculator.html">TDEE &amp; Macro Calculator</a>
+                        <a href="../tools/raw-cooked-weight-converter.html">Raw vs. Cooked Converter</a>
+                        <a href="../quiz/">90-Day Blueprint Quiz</a>
+                        <a href="../guides/">Nutrition Knowledge Hub</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Partners &amp; Support</h4>
+                        <a href="../partner.html">Partner Program</a>
+                        <a href="../influencer-program.html">Influencer Program</a>
+                        <a href="../user-affiliate.html">Refer &amp; Earn</a>
+                        <a href="../support.html">Help Center &amp; FAQ</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Legal</h4>
+                        <a href="../privacy-policy.html">Privacy Policy</a>
+                        <a href="../terms.html">Terms of Service</a>
+                        <a href="../refund-policy.html">Refund Policy</a>
+                        <a href="../delete-account.html">Delete Account</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 CalorieCalc. All rights reserved.</span>
+                <span><a href="../privacy-policy.html">Privacy</a> · <a href="../terms.html">Terms</a> · <a href="../refund-policy.html">Refunds</a> · <a href="../sitemap.xml">Sitemap</a></span>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script>
+        const LABEL_PRESETS = {
+            granola: { servWeight: 30, servKcal: 140, actualWeight: 85, sugar: 8 },
+            spray:   { servWeight: 0.25, servKcal: 2.2, actualWeight: 5.0, sugar: 0 },
+            cookies: { servWeight: 28, servKcal: 140, actualWeight: 110, sugar: 10 },
+            drink:   { servWeight: 240, servKcal: 130, actualWeight: 500, sugar: 22 }
+        };
+
+        function applyLabelPreset() {
+            const key = document.getElementById('lblPreset').value;
+            if (!LABEL_PRESETS[key]) return;
+            const p = LABEL_PRESETS[key];
+            document.getElementById('lblServWeight').value = p.servWeight;
+            document.getElementById('lblServKcal').value = p.servKcal;
+            document.getElementById('lblActualWeight').value = p.actualWeight;
+            document.getElementById('lblSugar').value = p.sugar;
+            runLabelCalc();
+        }
+
+        function runLabelCalc() {
+            const servW = Math.max(0.1, parseFloat(document.getElementById('lblServWeight').value) || 30);
+            let servKcal = Math.max(0, parseFloat(document.getElementById('lblServKcal').value) || 0);
+            const actualW = Math.max(0.1, parseFloat(document.getElementById('lblActualWeight').value) || 85);
+            const sugarPerServ = Math.max(0, parseFloat(document.getElementById('lblSugar').value) || 0);
+
+            // Handle "0 kcal" spray rounding trap if user enters 0 for a tiny <0.5g serving
+            if (servKcal === 0 && servW <= 0.5) {
+                servKcal = servW * 8.84; // pure culinary oil = 8.84 kcal/g
+            }
+
+            const ratio = actualW / servW;
+            const trueKcal = Math.round(servKcal * ratio);
+            const printedSingle = Math.round(parseFloat(document.getElementById('lblServKcal').value) || 0);
+            const gap = trueKcal - printedSingle;
+
+            const per100g = Math.round((servKcal / servW) * 100);
+            const totalSugar = (sugarPerServ * ratio);
+            const sugarTsp = (totalSugar / 4.0);
+
+            let densityNote = 'Moderate caloric density (150–399 kcal/100g)';
+            if (per100g >= 400) densityNote = 'High caloric density (≥400 kcal/100g)';
+            else if (per100g < 150) densityNote = 'Low caloric density (<150 kcal/100g - High Volume)';
+
+            document.getElementById('lblOutTrueKcal').textContent = trueKcal.toLocaleString() + ' kcal';
+            document.getElementById('lblOutGap').textContent = (gap >= 0 ? '+' : '') + gap + ' kcal vs. 1-serving label (' + ratio.toFixed(1) + 'x servings)';
+            document.getElementById('lblOutPer100').textContent = per100g + ' kcal / 100g';
+            document.getElementById('lblOutDensityNote').textContent = densityNote;
+            document.getElementById('lblOutSugar').textContent = totalSugar.toFixed(1) + ' g (' + sugarTsp.toFixed(1) + ' tsp)';
+        }
+
+        document.addEventListener('DOMContentLoaded', runLabelCalc);
+    </script>
+</body>
+</html>

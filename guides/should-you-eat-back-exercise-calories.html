@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Should You Eat Back Exercise Calories? True Net Burn & MET Calculator (lbs & kg) | CalorieCalc</title>
+    <meta name="description" content="Find out why fitness watches overestimate workout calories by 25–40% and whether you should eat back exercise calories in a deficit. Use our interactive Net MET & 50% Eat-Back Calculator (lbs & kg).">
+    <meta name="keywords" content="should you eat back exercise calories in a calorie deficit, how many exercise calories to eat back, fitness watch calorie overestimate calculator, net vs gross workout calories MET calculator, eating back workout calories weight loss">
+    <meta name="author" content="CalorieCalc Nutrition Team">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="theme-color" content="#047857">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://caloriecalcapp.com/guides/should-you-eat-back-exercise-calories.html">
+    <meta property="og:title" content="Should You Eat Back Exercise Calories? Net Burn & 50% Rule Calculator">
+    <meta property="og:description" content="Calculate your true net workout calories using Compendium MET values (lbs & kg) and learn when to eat back 50% of exercise burn.">
+    <meta property="og:image" content="https://caloriecalcapp.com/assets/images/analytics.png">
+    <meta property="og:site_name" content="CalorieCalc">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Should You Eat Back Exercise Calories in a Deficit? (MET Calculator)">
+    <meta name="twitter:description" content="Why smartwatches include resting BMR in workout calories—and how to calculate your true net exercise burn.">
+    <meta name="twitter:image" content="https://caloriecalcapp.com/assets/images/analytics.png">
+
+    <link rel="icon" type="image/png" href="../assets/images/app-icon.png?v=2">
+    <link rel="canonical" href="https://caloriecalcapp.com/guides/should-you-eat-back-exercise-calories.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .article-page { padding-top: 100px; padding-bottom: 80px; background: #fafaf9; color: #1c1917; line-height: 1.75; font-size: 1.0625rem; }
+        .article-container { max-width: 840px; margin: 0 auto; padding: 0 20px; }
+        .article-breadcrumbs { display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: #78716c; margin-bottom: 24px; flex-wrap: wrap; }
+        .article-breadcrumbs a { color: #047857; text-decoration: none; font-weight: 500; }
+        .article-breadcrumbs span { color: #a8a29e; }
+        .article-header { margin-bottom: 32px; }
+        .article-badge { display: inline-block; background: #ecfdf5; color: #047857; font-weight: 700; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 14px; border-radius: 9999px; border: 1px solid #a7f3d0; margin-bottom: 16px; }
+        .article-title { font-size: 2.45rem; font-weight: 800; line-height: 1.22; letter-spacing: -0.025em; color: #0f172a; margin-bottom: 16px; }
+        .article-meta { display: flex; align-items: center; gap: 12px; font-size: 0.875rem; color: #64748b; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; flex-wrap: wrap; }
+        .methodology-badge { display: inline-flex; align-items: center; gap: 6px; background: #f1f5f9; color: #334155; padding: 4px 10px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; }
+        .callout-box { background: #f0fdf4; border-left: 4px solid #059669; border-radius: 8px; padding: 20px 24px; margin: 28px 0; }
+        .callout-box.takeaway { background: #f8fafc; border-left: 4px solid #3b82f6; }
+        .callout-title { font-weight: 700; font-size: 1.125rem; color: #0f172a; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .article-content h2 { font-size: 1.75rem; font-weight: 800; color: #0f172a; margin-top: 48px; margin-bottom: 18px; letter-spacing: -0.02em; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 700; color: #1e293b; margin-top: 28px; margin-bottom: 12px; }
+        .article-content p { margin-bottom: 20px; }
+        .article-content ul, .article-content ol { margin-bottom: 24px; padding-left: 24px; }
+        .article-content li { margin-bottom: 10px; }
+        .data-table-wrapper { overflow-x: auto; margin: 24px 0; border-radius: 10px; border: 1px solid #e2e8f0; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left; background: #fff; }
+        .data-table th { background: #f8fafc; color: #334155; font-weight: 700; padding: 12px 16px; border-bottom: 1px solid #e2e8f0; }
+        .data-table td { padding: 12px 16px; border-bottom: 1px solid #f1f5f9; color: #475569; }
+        .data-table tr:hover td { background: #f8fafc; }
+
+        /* Interactive MET Calculator */
+        .calc-widget { background: #ffffff; border: 2px solid #10b981; border-radius: 16px; padding: 28px; margin: 36px 0; box-shadow: 0 12px 30px -8px rgba(16, 185, 129, 0.15); }
+        .calc-widget-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+        .calc-widget-title { font-size: 1.35rem; font-weight: 800; color: #0f172a; margin: 0 0 4px 0; }
+        .calc-widget-sub { font-size: 0.9rem; color: #64748b; margin: 0; }
+        .unit-pill-group { display: inline-flex; background: #f1f5f9; border-radius: 8px; padding: 4px; border: 1px solid #cbd5e1; }
+        .unit-pill { border: none; background: transparent; padding: 6px 12px; font-size: 0.82rem; font-weight: 700; color: #475569; border-radius: 6px; cursor: pointer; transition: all 0.15s; }
+        .unit-pill.active { background: #047857; color: #ffffff; }
+        .calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); gap: 16px; margin-bottom: 20px; }
+        .calc-field label { display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.03em; }
+        .calc-field select, .calc-field input { width: 100%; padding: 11px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.95rem; font-family: inherit; color: #0f172a; background: #f8fafc; font-weight: 600; }
+        .calc-field select:focus, .calc-field input:focus { outline: none; border-color: #059669; background: #fff; }
+        .calc-results { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+        .calc-stat { background: #ffffff; padding: 14px; border-radius: 8px; border: 1px solid #dcfce7; }
+        .calc-stat-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #64748b; display: block; margin-bottom: 4px; }
+        .calc-stat-val { font-size: 1.3rem; font-weight: 800; color: #065f46; }
+        .calc-stat-sub { font-size: 0.8rem; color: #475569; margin-top: 2px; }
+
+        /* Dual-Placement App CTA Boxes */
+        .app-cta-inline { background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%); color: #ffffff; border-radius: 16px; padding: 28px; margin: 36px 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; border: 1px solid #047857; }
+        .app-cta-inline-badge { display: inline-block; background: rgba(16, 185, 129, 0.2); color: #6ee7b7; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; margin-bottom: 8px; border: 1px solid rgba(110, 231, 183, 0.3); }
+        .app-cta-inline h3 { color: #ffffff; font-size: 1.3rem; font-weight: 800; margin: 0 0 8px 0; }
+        .app-cta-inline p { color: #cbd5e1; font-size: 0.92rem; margin: 0; line-height: 1.55; }
+        .app-cta-btn { background: #10b981; color: #052e16; font-weight: 800; font-size: 0.95rem; padding: 14px 22px; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; transition: transform 0.2s, background-color 0.2s; }
+        .app-cta-btn:hover { background: #34d399; transform: translateY(-2px); }
+
+        .app-cta-end { background: #ffffff; border: 2px solid #047857; border-radius: 18px; padding: 32px; margin: 48px 0 32px 0; display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; box-shadow: 0 15px 35px -10px rgba(4, 120, 87, 0.12); }
+        .app-cta-end h3 { font-size: 1.5rem; font-weight: 800; color: #0f172a; margin: 0 0 10px 0; }
+        .app-cta-end p { color: #475569; font-size: 0.95rem; margin: 0 0 16px 0; }
+        .app-cta-perks { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+        .app-cta-perk { background: #f0fdf4; color: #065f46; font-size: 0.8rem; font-weight: 700; padding: 5px 12px; border-radius: 6px; border: 1px solid #bbf7d0; }
+        .app-cta-qr-box { text-align: center; background: #f8fafc; padding: 14px; border-radius: 12px; border: 1px solid #e2e8f0; }
+        .app-cta-qr-box img { width: 110px; height: 110px; border-radius: 8px; display: block; margin: 0 auto 6px auto; }
+        .app-cta-qr-box span { font-size: 0.72rem; font-weight: 700; color: #475569; display: block; }
+
+        .faq-item { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 12px; padding: 20px 24px; }
+        .faq-item h3 { font-size: 1.1rem; margin: 0 0 8px 0; color: #0f172a; }
+        .faq-item p { margin: 0; color: #475569; font-size: 0.95rem; }
+        .medical-disclaimer { background: #fffbeb; border: 1px solid #fef3c7; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 18px 22px; margin-top: 48px; font-size: 0.875rem; color: #92400e; }
+        .medical-disclaimer strong { color: #78350f; display: block; margin-bottom: 4px; }
+        @media (max-width: 768px) {
+            .article-title { font-size: 1.95rem; }
+            .app-cta-inline { flex-direction: column; text-align: center; }
+            .app-cta-end { grid-template-columns: 1fr; text-align: center; }
+            .app-cta-perks { justify-content: center; }
+            .app-cta-qr-box { display: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Should You Eat Back Exercise Calories? True Net Burn & MET Calculator (lbs & kg)",
+      "description": "Why smartwatches double-count resting BMR during workouts, how to calculate true Net MET calories burned, and when to apply the 50% eat-back rule.",
+      "image": "https://caloriecalcapp.com/assets/images/analytics.png",
+      "author": { "@type": "Organization", "name": "CalorieCalc Nutrition Team", "url": "https://caloriecalcapp.com" },
+      "publisher": { "@type": "Organization", "name": "CalorieCalc", "logo": { "@type": "ImageObject", "url": "https://caloriecalcapp.com/assets/images/app-icon.png?v=2" } },
+      "datePublished": "2026-10-26T00:00:00+00:00",
+      "dateModified": "2026-10-26T00:00:00+00:00"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Should I eat back exercise calories in a calorie deficit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on how you calculated your TDEE. If you selected 'Moderately Active' or 'Very Active' when setting your daily calorie goal, your workouts are already factored into your daily target—eating them back double-counts them. If you set your baseline TDEE to 'Sedentary' (1.2x BMR), eating back up to 50% of your net workout calories on training days supports recovery while protecting your deficit against smartwatch overestimation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between gross and net exercise calories?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gross calories include both the energy required to perform the workout AND your Resting Metabolic Rate (1.0 MET) during that hour—calories you would have burned sitting on the sofa anyway. Net exercise calories subtract 1.0 MET of resting expenditure so you only count the extra energy burned by moving."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-inner">
+            <a href="../" class="logo">
+                <img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="36" height="36">
+                <span>CalorieCalc</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="../features/">Features (37+)</a>
+                <a href="../tools/tdee-calculator.html" style="color:var(--emerald-700);font-weight:700;">🧮 TDEE Calculator</a>
+                <a href="../quiz/" style="color:#0284c7;font-weight:700;">📋 90-Day Quiz</a>
+                <a href="../guides/" style="color:var(--emerald-700);font-weight:700">Guides</a>
+                <a href="../#pricing">Pricing</a>
+                <a href="../partner.html">Partners</a>
+                <a href="../support.html">Support</a>
+                <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta-mobile" target="_blank" rel="noopener">
+                    Download Free on Google Play
+                </a>
+            </div>
+            <div class="nav-actions">
+                <button type="button" class="nav-qr-btn" onclick="openCalorieCalcQR()">📲 Scan QR</button>
+                <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                    Download Free
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="article-page">
+        <article class="article-container">
+            <nav class="article-breadcrumbs" aria-label="Breadcrumb">
+                <a href="../">Home</a>
+                <span>/</span>
+                <a href="./">Guides</a>
+                <span>/</span>
+                <span>Should You Eat Back Exercise Calories?</span>
+            </nav>
+
+            <header class="article-header">
+                <span class="article-badge">Exercise &amp; Energy Expenditure</span>
+                <h1 class="article-title">Should You Eat Back Exercise Calories? True Net Burn &amp; MET Calculator (lbs &amp; kg)</h1>
+                <div class="article-meta">
+                    <span>By CalorieCalc Nutrition Team</span>
+                    <span>•</span>
+                    <span>Updated October 2026</span>
+                    <span>•</span>
+                    <span class="methodology-badge">🏃 2024 Compendium of Physical Activities (METs)</span>
+                </div>
+            </header>
+
+            <p>
+                Few things frustrate dieters more than finishing a 60-minute gym session, seeing "650 Calories Burned" on a smartwatch or treadmill console, eating a 600-calorie recovery meal, and watching body weight plateau for four straight weeks.
+            </p>
+            <p>
+                There are two mathematical reasons eating back 100% of your watch's workout calories stalls fat loss: <strong>double-counting your activity multiplier</strong> and confusing <strong>Gross Calories with Net Calories</strong>. Use the interactive MET calculator below to find your true net exercise burn in US pounds (`lbs`) or European/UK kilograms (`kg`).
+            </p>
+
+            <!-- INTERACTIVE CALCULATOR: NET MET & 50% EAT-BACK CALCULATOR -->
+            <section class="calc-widget" id="net-exercise-calorie-calculator" aria-label="Interactive Net Exercise Calorie and 50 Percent Eat Back Calculator">
+                <div class="calc-widget-header">
+                    <div>
+                        <h2 class="calc-widget-title" style="border:none;margin:0;padding:0;">🏃 Interactive True Net Burn &amp; 50% Eat-Back Calculator</h2>
+                        <p class="calc-widget-sub">Based on the Compendium of Physical Activities: <code>Gross kcal = MET × Weight(kg) × (Minutes ÷ 60)</code>; <code>Net kcal = (MET - 1.0) × Weight(kg) × (Minutes ÷ 60)</code>.</p>
+                    </div>
+                    <div class="unit-pill-group" role="group" aria-label="Body weight unit selector">
+                        <button type="button" class="unit-pill active" id="metBtnLbs" onclick="setMetUnit('lbs')">US (lbs)</button>
+                        <button type="button" class="unit-pill" id="metBtnKg" onclick="setMetUnit('kg')">EU/UK (kg)</button>
+                    </div>
+                </div>
+
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label for="metActivity">Workout / Activity Type</label>
+                        <select id="metActivity" onchange="runMetCalc()">
+                            <option value="3.8">Brisk Walking (3.5 mph / 5.6 km/h · 3.8 METs)</option>
+                            <option value="5.0" selected>Weight Lifting — Vigorous Compound Sets (5.0 METs)</option>
+                            <option value="3.5">Weight Lifting — Moderate / Machine Hypertrophy (3.5 METs)</option>
+                            <option value="8.3">Running — 5 mph / 8 km/h (12 min/mi · 8.3 METs)</option>
+                            <option value="9.8">Running — 6 mph / 9.7 km/h (10 min/mi · 9.8 METs)</option>
+                            <option value="7.5">Indoor Cycling / Spin Class — Moderate-Vigorous (7.5 METs)</option>
+                            <option value="8.0">HIIT / Circuit Training (8.0 METs)</option>
+                            <option value="6.0">Swimming Laps — Freestyle Moderate (6.0 METs)</option>
+                            <option value="4.8">Incline Treadmill Walk (3 mph @ 6% grade · 4.8 METs)</option>
+                        </select>
+                    </div>
+                    <div class="calc-field">
+                        <label for="metWeight" id="metWeightLabel">Your Body Weight (lbs)</label>
+                        <input type="number" id="metWeight" value="176" min="80" max="450" step="1" oninput="runMetCalc()">
+                    </div>
+                    <div class="calc-field">
+                        <label for="metMins">Active Duration (Minutes)</label>
+                        <input type="number" id="metMins" value="45" min="5" max="300" step="5" oninput="runMetCalc()">
+                    </div>
+                    <div class="calc-field">
+                        <label for="metBaseline">How Did You Set Your Daily TDEE?</label>
+                        <select id="metBaseline" onchange="runMetCalc()">
+                            <option value="sedentary" selected>Sedentary Baseline (1.2x BMR - Workouts Excluded)</option>
+                            <option value="active">Active TDEE (1.375x–1.725x - Workouts Already Included)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="calc-results">
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">Gross Burn (Watch Display)</span>
+                        <div class="calc-stat-val" id="metOutGross">300 kcal</div>
+                        <div class="calc-stat-sub" id="metOutRmr">Includes 60 kcal resting BMR</div>
+                    </div>
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">True Net Exercise Burn</span>
+                        <div class="calc-stat-val" id="metOutNet">240 kcal</div>
+                        <div class="calc-stat-sub">Extra energy burned above rest</div>
+                    </div>
+                    <div class="calc-stat">
+                        <span class="calc-stat-label">Safe Eat-Back Allowance</span>
+                        <div class="calc-stat-val" id="metOutEatBack">+120 kcal</div>
+                        <div class="calc-stat-sub" id="metOutAdvice">50% of Net Burn (Sedentary Base)</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="callout-box takeaway">
+                <div class="callout-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    When to Eat Back vs. Ignore Workout Calories
+                </div>
+                <ul>
+                    <li><strong>Method A — The "Fixed Active TDEE" Approach (Simplest):</strong> Calculate your target in our <a href="../tools/tdee-calculator.html">TDEE Calculator</a> using <em>Lightly Active (3–4 workouts/wk)</em> or <em>Moderately Active (4–5 workouts/wk)</em>, subtract 400–500 kcal, and eat that <strong>exact same calorie target every day</strong> without eating back individual workouts.</li>
+                    <li><strong>Method B — The "Sedentary Base + 50% Net Eat-Back" Approach:</strong> Set your baseline to <em>Sedentary (1.2x BMR)</em>, and on days you complete a dedicated workout, eat back <strong>50% of your Net Exercise Calories</strong> (preferably as 20–30 g protein + 25–40 g carbohydrates around training).</li>
+                    <li><strong>Never Eat Back Both:</strong> Choosing "Moderately Active" AND eating back your smartwatch calories counts the exact same workout twice.</li>
+                </ul>
+            </div>
+
+            <div class="article-content">
+                <h2>1. Why Smartwatches &amp; Cardio Machines Overestimate Burn by 25–40%</h2>
+                <p>
+                    Wearable wrist trackers estimate energy expenditure using optical heart rate (photoplethysmography) combined with accelerometer motion. During resistance training, HIIT, or incline walking, two systematic errors occur:
+                </p>
+                <ol>
+                    <li><strong>Gross vs. Net Calorie Inflation:</strong> During a 60-minute weightlifting session, an 80 kg (176 lb) adult would have burned ~80 kcal just sitting at a desk (1.0 MET). Many fitness trackers and cardio consoles report <strong>Total (Gross) Calories</strong> (e.g., 380 kcal) rather than <strong>Active (Net) Calories</strong> (300 kcal). Since your resting BMR is already inside your daily calorie budget, eating back the full 380 kcal automatically shrinks your deficit by 80 kcal.</li>
+                    <li><strong>Heart Rate vs. Oxygen Consumption (`VO2`) Lag:</strong> Lifting weights elevates heart rate rapidly due to muscular occlusion and nervous system arousal, even though actual oxygen consumption across the 60-minute session (where 40+ minutes are spent resting between sets) averages only 3.5 to 5.0 METs.</li>
+                </ol>
+
+                <h2>2. True Net Calorie Burn Reference Table (US lbs &amp; EU kg)</h2>
+                <p>
+                    Here are the net calories burned (with 1.0 MET of resting BMR already subtracted) for <strong>45 minutes of continuous activity</strong> across three body weights, derived from the 2024 Compendium of Physical Activities:
+                </p>
+
+                <div class="data-table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Activity (45 Minutes)</th>
+                                <th>MET Value (Gross / Net)</th>
+                                <th>135 lbs / 61 kg (Net Burn)</th>
+                                <th>176 lbs / 80 kg (Net Burn)</th>
+                                <th>215 lbs / 98 kg (Net Burn)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Walking Briskly (3.5 mph / 5.6 km/h)</strong></td>
+                                <td>3.8 / 2.8 Net</td>
+                                <td>128 kcal</td>
+                                <td><strong>168 kcal</strong></td>
+                                <td>206 kcal</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Resistance Training (Moderate Machines)</strong></td>
+                                <td>3.5 / 2.5 Net</td>
+                                <td>114 kcal</td>
+                                <td><strong>150 kcal</strong></td>
+                                <td>184 kcal</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Resistance Training (Vigorous Compound)</strong></td>
+                                <td>5.0 / 4.0 Net</td>
+                                <td>183 kcal</td>
+                                <td><strong>240 kcal</strong></td>
+                                <td>294 kcal</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Incline Walk (3 mph @ 6% Grade)</strong></td>
+                                <td>4.8 / 3.8 Net</td>
+                                <td>174 kcal</td>
+                                <td><strong>228 kcal</strong></td>
+                                <td>279 kcal</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Indoor Spin / Cycling (Moderate-Hard)</strong></td>
+                                <td>7.5 / 6.5 Net</td>
+                                <td>297 kcal</td>
+                                <td><strong>390 kcal</strong></td>
+                                <td>478 kcal</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Running (6 mph / 9.7 km/h · 10 min/mi)</strong></td>
+                                <td>9.8 / 8.8 Net</td>
+                                <td>403 kcal</td>
+                                <td><strong>528 kcal</strong></td>
+                                <td>647 kcal</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- MID-ARTICLE CONTEXTUAL FEATURE CTA BOX -->
+                <div class="app-cta-inline">
+                    <div>
+                        <span class="app-cta-inline-badge">🏋️ 3 Free Exercise Logs/Day + Verified MET Database</span>
+                        <h3>Log Workouts with Body-Weight-Adjusted MET Math</h3>
+                        <p>CalorieCalc's built-in <a href="../features/exercise-tracker.html" style="color:#6ee7b7;text-decoration:underline;">Exercise &amp; Workout Tracker</a> calculates burn using your exact logged body weight (`lbs` or `kg`) and Compendium MET values—with <strong>3 free exercise logs per day</strong> on our Free tier and unlimited custom workout logging on Plus.</p>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="app-cta-btn" target="_blank" rel="noopener">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                        Download on Google Play
+                    </a>
+                </div>
+
+                <h2>3. Exceptions: When You SHOULD Eat Back More Than 50%</h2>
+                <p>
+                    While recreational 45-minute gym workouts rarely require extra food beyond a well-set TDEE, high-volume endurance athletes face a genuine risk of Low Energy Availability (LEA) if they do not refuel:
+                </p>
+                <ul>
+                    <li><strong>Long Endurance Sessions (75+ Minutes of Running, Cycling, or Rowing):</strong> When a single training session burns 650 to 1,200+ net calories (such as half-marathon prep or a 2-hour road ride), eat back <strong>60% to 75% of net calories</strong>—primarily from easily digested carbohydrates (bananas, rice, oats, sports gels) and 30 g of lean protein—so your total daily deficit never exceeds 500–600 kcal.</li>
+                    <li><strong>Physically Demanding Jobs (15,000+ Daily Steps):</strong> Construction workers, hospital nurses, warehouse staff, and postal carriers should use a higher baseline activity multiplier rather than eating sedentary calories.</li>
+                </ul>
+
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>Why do I feel extra hungry on days I swim or do long cardio?</h3>
+                    <p>Prolonged aerobic exercise (especially cold-water swimming or 60+ minutes of running) depletes liver and muscle glycogen and temporarily elevates ghrelin. Allocating your 50% eat-back calories to a high-protein, high-volume meal (like 200 g 0% Greek yogurt with berries and oats, or chicken breast with boiled potatoes) blunts post-cardio hunger effectively.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Should I eat less on rest days?</h3>
+                    <p>Muscle protein synthesis remains elevated for 24 to 48 hours <em>after</em> resistance training. Keeping your calorie and protein intake consistent across training and rest days—or eating only 100–200 kcal less carbohydrates on full rest days—supports better muscle recovery than slashing rest-day calories drastically.</p>
+                </div>
+
+                <!-- END-OF-ARTICLE QR + PLAY STORE CTA BOX -->
+                <div class="app-cta-end">
+                    <div>
+                        <h3>Track Both Nutrition &amp; MET Workouts in CalorieCalc</h3>
+                        <p>Download CalorieCalc for Android to pair your <strong>100% Free Food Diary &amp; Barcode Scanner</strong> with our MET Exercise Tracker (3 free logs/day, unlimited on Plus) and 4 Free Home Screen Widgets.</p>
+                        <div class="app-cta-perks">
+                            <span class="app-cta-perk">✓ 3 Free Exercise Logs / Day</span>
+                            <span class="app-cta-perk">✓ Free Food Diary &amp; Barcode</span>
+                            <span class="app-cta-perk">✓ Free Home Screen Widgets</span>
+                            <span class="app-cta-perk">✓ Plus: Unlimited Workouts</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="app-cta-btn" target="_blank" rel="noopener">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                            Download Free on Google Play
+                        </a>
+                    </div>
+                    <div class="app-cta-qr-box">
+                        <img src="../assets/images/playstore-qr.png" alt="Scan QR Code to download CalorieCalc on Google Play" width="110" height="110" loading="lazy">
+                        <span>Scan with Android Camera</span>
+                    </div>
+                </div>
+
+                <div class="medical-disclaimer">
+                    <strong>Medical &amp; Nutritional Disclaimer:</strong>
+                    The MET calculations and exercise nutrition guidelines in this article are for informational and educational purposes only and do not constitute medical advice. Always consult a physician, sports dietitian, or certified healthcare professional before starting a new exercise program or calorie deficit.
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-disclaimer">
+                <strong>Medical &amp; Nutritional Disclaimer:</strong> The information, calculators, and AI insights provided on CalorieCalcApp.com and within the CalorieCalc mobile application are for educational and informational purposes only and do not constitute medical advice, diagnosis, or treatment. Always consult a qualified physician or registered dietitian before making significant changes to your diet, fasting protocol, or caloric intake.
+            </div>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo"><img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="32" height="32"> CalorieCalc</div>
+                    <p>AI-powered calorie tracking, 55+ micronutrient analytics, and 24/7 personal nutrition coaching.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="fl-col">
+                        <h4>Features</h4>
+                        <a href="../features/">All 37+ Features</a>
+                        <a href="../features/ai-food-scanner.html">AI Food Scanner</a>
+                        <a href="../features/ai-nutrition-coach.html">AI Nutrition Coach</a>
+                        <a href="../features/meal-planner.html">AI Meal Planner</a>
+                        <a href="../features/home-screen-widgets.html">Home Screen Widgets</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Free Tools &amp; Guides</h4>
+                        <a href="../tools/tdee-calculator.html">TDEE &amp; Macro Calculator</a>
+                        <a href="../tools/raw-cooked-weight-converter.html">Raw vs. Cooked Converter</a>
+                        <a href="../quiz/">90-Day Blueprint Quiz</a>
+                        <a href="../guides/">Nutrition Knowledge Hub</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Partners &amp; Support</h4>
+                        <a href="../partner.html">Partner Program</a>
+                        <a href="../influencer-program.html">Influencer Program</a>
+                        <a href="../user-affiliate.html">Refer &amp; Earn</a>
+                        <a href="../support.html">Help Center &amp; FAQ</a>
+                    </div>
+                    <div class="fl-col">
+                        <h4>Legal</h4>
+                        <a href="../privacy-policy.html">Privacy Policy</a>
+                        <a href="../terms.html">Terms of Service</a>
+                        <a href="../refund-policy.html">Refund Policy</a>
+                        <a href="../delete-account.html">Delete Account</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 CalorieCalc. All rights reserved.</span>
+                <span><a href="../privacy-policy.html">Privacy</a> · <a href="../terms.html">Terms</a> · <a href="../refund-policy.html">Refunds</a> · <a href="../sitemap.xml">Sitemap</a></span>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script>
+        let currentMetUnit = 'lbs';
+
+        function setMetUnit(unit) {
+            if (currentMetUnit === unit) return;
+            const wInput = document.getElementById('metWeight');
+            const val = parseFloat(wInput.value) || 0;
+            currentMetUnit = unit;
+            document.getElementById('metBtnLbs').classList.toggle('active', unit === 'lbs');
+            document.getElementById('metBtnKg').classList.toggle('active', unit === 'kg');
+            document.getElementById('metWeightLabel').textContent = unit === 'lbs' ? 'Your Body Weight (lbs)' : 'Your Body Weight (kg)';
+            if (unit === 'kg') {
+                wInput.value = Math.round(val * 0.453592);
+            } else {
+                wInput.value = Math.round(val / 0.453592);
+            }
+            runMetCalc();
+        }
+
+        function runMetCalc() {
+            const met = parseFloat(document.getElementById('metActivity').value) || 5.0;
+            const wVal = Math.max(40, parseFloat(document.getElementById('metWeight').value) || 176);
+            const mins = Math.max(1, parseFloat(document.getElementById('metMins').value) || 45);
+            const baseMode = document.getElementById('metBaseline').value;
+
+            const weightKg = currentMetUnit === 'lbs' ? wVal * 0.453592 : wVal;
+            const hours = mins / 60;
+
+            const grossKcal = Math.round(met * weightKg * hours);
+            const rmrKcal = Math.round(1.0 * weightKg * hours);
+            const netKcal = Math.max(0, grossKcal - rmrKcal);
+            const halfNet = Math.round(netKcal * 0.5);
+
+            document.getElementById('metOutGross').textContent = grossKcal + ' kcal';
+            document.getElementById('metOutRmr').textContent = 'Includes ' + rmrKcal + ' kcal resting BMR';
+            document.getElementById('metOutNet').textContent = netKcal + ' kcal';
+
+            if (baseMode === 'active') {
+                document.getElementById('metOutEatBack').textContent = netKcal > 600 ? '+' + Math.round((netKcal - 400) * 0.5) + ' kcal' : '+0 kcal';
+                document.getElementById('metOutAdvice').textContent = netKcal > 600
+                    ? 'Long session buffer (Active TDEE already covers ~400 kcal)'
+                    : 'Already built into your Active TDEE target';
+            } else {
+                document.getElementById('metOutEatBack').textContent = '+' + halfNet + ' kcal';
+                document.getElementById('metOutAdvice').textContent = '50% of Net Burn (Safe Sedentary Base Rule)';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', runMetCalc);
+    </script>
+</body>
+</html>

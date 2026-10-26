@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calorie & Nutrition Guides — CalorieCalc Knowledge Base</title>
-    <meta name="description" content="Science-backed guides and tutorials on calorie deficit calculations, intermittent fasting, restaurant dining, meal prep, and breaking weight loss plateaus.">
-    <meta name="keywords" content="calorie deficit guide, nutrition guides, how to count calories, weight loss articles, calorie tracking tutorials">
+    <title>Calorie & Nutrition Guides + Interactive Calculators (US & EU) — CalorieCalc</title>
+    <meta name="description" content="Science-backed nutrition guides and interactive calculators for US, UK & European dieters: raw vs. cooked weights (oz & g), MET exercise eat-back, 16:8 fasting, restaurant oil math, and high-protein grocery lists.">
+    <meta name="keywords" content="calorie deficit guides, raw vs cooked weight calculator, should you eat back exercise calories, intermittent fasting macro calculator, how to track calories without food scale, nutrition label hidden calories">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#047857">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://caloriecalcapp.com/guides/">
-    <meta property="og:title" content="Calorie & Nutrition Guides — CalorieCalc Knowledge Base">
-    <meta property="og:description" content="Explore actionable, science-grounded tutorials on setting calorie deficits, tracking macros, and sustainable fat loss.">
+    <meta property="og:title" content="Calorie & Nutrition Guides + Free Interactive Calculators — CalorieCalc">
+    <meta property="og:description" content="Explore 11 evidence-based nutrition guides and interactive calculators (US oz/lbs & EU g/kg) for sustainable fat loss.">
     <meta property="og:image" content="https://caloriecalcapp.com/assets/images/analytics.png">
 
     <link rel="icon" type="image/png" href="../assets/images/app-icon.png?v=2">
@@ -25,9 +25,62 @@
 
     <style>
         .guides-hero {
-            padding: 120px 24px 60px;
+            padding: 120px 24px 48px;
             text-align: center;
             background: radial-gradient(circle at 50% 20%, rgba(4, 120, 87, 0.08), transparent 70%);
+        }
+        .tools-strip {
+            max-width: 1140px;
+            margin: 0 auto 12px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .tool-banner-card {
+            background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 24px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #10b981;
+        }
+        .tool-banner-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px -6px rgba(4, 120, 87, 0.3);
+        }
+        .tool-banner-badge {
+            align-self: flex-start;
+            background: rgba(255,255,255,0.16);
+            color: #a7f3d0;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 4px 10px;
+            border-radius: 999px;
+            margin-bottom: 10px;
+        }
+        .tool-banner-card h3 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin: 0 0 8px 0;
+        }
+        .tool-banner-card p {
+            color: #d1fae5;
+            font-size: 0.88rem;
+            line-height: 1.55;
+            margin: 0 0 14px 0;
+        }
+        .tool-banner-cta {
+            color: #6ee7b7;
+            font-size: 0.85rem;
+            font-weight: 800;
         }
         .guides-grid {
             display: grid;
@@ -35,7 +88,7 @@
             gap: 28px;
             max-width: 1140px;
             margin: 0 auto;
-            padding: 40px 20px 80px;
+            padding: 28px 20px 80px;
         }
         .guide-card {
             background: #ffffff;
@@ -67,7 +120,7 @@
             margin-bottom: 14px;
         }
         .guide-card h2 {
-            font-size: 1.25rem;
+            font-size: 1.22rem;
             font-weight: 700;
             color: #0f172a;
             line-height: 1.4;
@@ -99,26 +152,26 @@
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "name": "CalorieCalc Nutrition & Tracking Guides",
-      "description": "Science-backed guides and tutorials on calorie deficit calculations, intermittent fasting, dining out, and meal prep.",
+      "name": "CalorieCalc Nutrition & Tracking Guides (US & EU)",
+      "description": "Science-backed guides and interactive calculators on calorie deficit math, raw vs. cooked food yields, MET exercise burn, intermittent fasting, dining out, and meal prep.",
       "url": "https://caloriecalcapp.com/guides/"
     }
     </script>
 </head>
 <body>
 
-        <nav class="nav scrolled" id="nav">
+    <nav class="nav scrolled" id="nav">
         <div class="nav-inner">
-            <a href="../index.html" class="logo">
+            <a href="../" class="logo">
                 <img src="../assets/images/app-icon.png?v=2" alt="CalorieCalc" width="36" height="36">
                 <span>CalorieCalc</span>
             </a>
             <div class="nav-links" id="navLinks">
-                <a href="../features/index.html">Features (37+)</a>
+                <a href="../features/">Features (37+)</a>
                 <a href="../tools/tdee-calculator.html" style="color:var(--emerald-700);font-weight:700;">🧮 TDEE Calculator</a>
-                <a href="../quiz/index.html" style="color:#0284c7;font-weight:700;">📋 90-Day Quiz</a>
-                <a href="../guides/index.html" style="color:var(--emerald-700);font-weight:700">Guides</a>
-                <a href="../index.html#pricing">Pricing</a>
+                <a href="../quiz/" style="color:#0284c7;font-weight:700;">📋 90-Day Quiz</a>
+                <a href="../guides/" style="color:var(--emerald-700);font-weight:700">Guides</a>
+                <a href="../#pricing">Pricing</a>
                 <a href="../partner.html">Partners</a>
                 <a href="../support.html">Support</a>
                 <a href="https://play.google.com/store/apps/details?id=com.caloriecalc.calorie_tracker_app" class="nav-cta-mobile" target="_blank" rel="noopener">
@@ -140,17 +193,133 @@
 
     <header class="guides-hero">
         <div class="container">
-            <div class="section-tag">Evidence-Based Learning</div>
-            <h1 class="section-title">Nutrition & Tracking Guides</h1>
-            <p class="section-sub">Clear, actionable tutorials on energy balance, macronutrient planning, and realistic tracking strategies for lasting health.</p>
+            <div class="section-tag">Evidence-Based Learning &amp; Interactive Calculators</div>
+            <h1 class="section-title">Nutrition &amp; Calorie Tracking Knowledge Hub</h1>
+            <p class="section-sub">Practical, math-grounded tutorials and interactive calculators supporting both US Imperial (<code>oz / lbs / $</code>) and European/UK Metric (<code>g / kg / € / £</code>) measurements.</p>
         </div>
     </header>
 
+    <!-- STANDALONE INTERACTIVE TOOLS STRIP -->
+    <section class="tools-strip" aria-label="Interactive Web Calculators">
+        <a href="../tools/tdee-calculator.html" class="tool-banner-card">
+            <div>
+                <span class="tool-banner-badge">🧮 Interactive Tool #1</span>
+                <h3>TDEE, BMR &amp; Calorie Deficit Macro Calculator</h3>
+                <p>Calculate your Mifflin-St Jeor maintenance expenditure, safe 300–500 kcal fat-loss deficit, and daily protein/carb/fat split.</p>
+            </div>
+            <span class="tool-banner-cta">Open TDEE Calculator →</span>
+        </a>
+        <a href="../tools/raw-cooked-weight-converter.html" class="tool-banner-card">
+            <div>
+                <span class="tool-banner-badge">⚖️ Interactive Tool #2</span>
+                <h3>Raw vs. Cooked Food Weight &amp; Calorie Converter (oz &amp; g)</h3>
+                <p>Convert raw vs. cooked weights for chicken breast, beef mince, salmon, rice, pasta, oats, and potatoes using USDA moisture-yield factors.</p>
+            </div>
+            <span class="tool-banner-cta">Open Raw ↔ Cooked Converter →</span>
+        </a>
+        <a href="../quiz/" class="tool-banner-card">
+            <div>
+                <span class="tool-banner-badge">📋 Interactive Tool #3</span>
+                <h3>90-Day Personalized Calorie &amp; Habit Blueprint Quiz</h3>
+                <p>Answer 6 quick questions about your schedule and eating habits to generate a custom 90-day fat-loss target timeline.</p>
+            </div>
+            <span class="tool-banner-cta">Take 60-Second Quiz →</span>
+        </a>
+    </section>
+
     <main class="guides-grid">
         <!-- Guide 1 -->
+        <a href="how-to-count-calories-home-cooked-meals.html" class="guide-card">
+            <span class="guide-tag">Kitchen Math + Converter</span>
+            <h2>How to Count Calories in Home-Cooked Meals: Raw vs. Cooked Weight &amp; Batch Recipe Math</h2>
+            <p>Why chicken loses 25% water weight and rice triples in the pot—plus an interactive US (`oz`) &amp; EU (`g`) Raw ↔ Cooked Weight Converter.</p>
+            <div class="guide-footer">
+                <span>Interactive Calculator · 11 min read</span>
+                <span class="guide-cta">Read Guide →</span>
+            </div>
+        </a>
+
+        <!-- Guide 2 -->
+        <a href="should-you-eat-back-exercise-calories.html" class="guide-card">
+            <span class="guide-tag">Workouts + MET Calculator</span>
+            <h2>Should You Eat Back Exercise Calories? True Net Burn &amp; MET Calculator (lbs &amp; kg)</h2>
+            <p>Why smartwatches include resting BMR in workout calories, how to calculate true net MET burn, and when to use the 50% eat-back rule.</p>
+            <div class="guide-footer">
+                <span>Interactive Calculator · 10 min read</span>
+                <span class="guide-cta">Read Guide →</span>
+            </div>
+        </a>
+
+        <!-- Guide 3 -->
+        <a href="what-to-eat-for-dinner-after-overeating-lunch.html" class="guide-card">
+            <span class="guide-tag">Recovery + Buffer Planner</span>
+            <h2>Overate at Lunch? How to Rebalance Dinner Without Ruining Your Weekly Calorie Deficit</h2>
+            <p>Use our interactive "Fix My Day" Dinner &amp; 3-Day Rolling Buffer Calculator plus 5 high-volume 350–420 kcal dinner templates.</p>
+            <div class="guide-footer">
+                <span>Interactive Calculator · 9 min read</span>
+                <span class="guide-cta">Read Guide →</span>
+            </div>
+        </a>
+
+        <!-- Guide 4 -->
+        <a href="how-to-track-calories-without-food-scale.html" class="guide-card">
+            <span class="guide-tag">Habits + Hand Translator</span>
+            <h2>How to Track Calories Without a Food Scale: Hand Portions (oz &amp; g) &amp; Home Screen Widgets</h2>
+            <p>Translate Palms, Cupped Hands, Fists, and Thumbs into ounces, grams, and macros—and eliminate logging friction with free Android widgets.</p>
+            <div class="guide-footer">
+                <span>Interactive Calculator · 9 min read</span>
+                <span class="guide-cta">Read Guide →</span>
+            </div>
+        </a>
+
+        <!-- Guide 5 -->
+        <a href="how-to-read-nutrition-labels-hidden-calories-us-eu.html" class="guide-card">
+            <span class="guide-tag">Label Forensics + Auditor</span>
+            <h2>How to Spot Hidden Calories on US &amp; European Nutrition Labels (Sprays, Rounding &amp; Per-100g)</h2>
+            <p>Audit any US FDA or EU/UK food package for serving-size rounding, "0-calorie" cooking spray oil, and hidden teaspoons of sugar.</p>
+            <div class="guide-footer">
+                <span>Interactive Calculator · 10 min read</span>
+                <span class="guide-cta">Read Guide →</span>
+            </div>
+        </a>
+
+        <!-- Guide 6 -->
+        <a href="intermittent-fasting-calorie-deficit-guide.html" class="guide-card">
+            <span class="guide-tag">Meal Timing + Window Planner</span>
+            <h2>Intermittent Fasting &amp; Calorie Deficit: 16:8 Meal Timing &amp; Break-Fast Macro Planner</h2>
+            <p>Calculate your 16:8 or 14:10 eating window macros and learn what to eat for your first meal so you don't bloat or overeat.</p>
+            <div class="guide-footer">
+                <span>Interactive Calculator · 10 min read</span>
+                <span class="guide-cta">Read Guide →</span>
+            </div>
+        </a>
+
+        <!-- Guide 7 -->
+        <a href="high-protein-calorie-deficit-grocery-list.html" class="guide-card">
+            <span class="guide-tag">Shopping + Cost Calculator</span>
+            <h2>The High-Protein Calorie Deficit Grocery List &amp; Protein Cost Calculator ($ / € / £)</h2>
+            <p>Compare cost per 30g of lean protein across US &amp; European supermarket staples and check any food's protein-per-100-kcal density grade.</p>
+            <div class="guide-footer">
+                <span>Interactive Calculator · 10 min read</span>
+                <span class="guide-cta">Read Guide →</span>
+            </div>
+        </a>
+
+        <!-- Guide 8 -->
+        <a href="tracking-calories-eating-out-restaurants.html" class="guide-card">
+            <span class="guide-tag">Social Dining + Oil Calculator</span>
+            <h2>How to Track Calories When Dining Out: Restaurant Oil &amp; Shared Table Calculator</h2>
+            <p>Estimate commercial kitchen butter and oil, split shared starters accurately, and decode restaurant menu preparation buzzwords.</p>
+            <div class="guide-footer">
+                <span>Interactive Calculator · 9 min read</span>
+                <span class="guide-cta">Read Guide →</span>
+            </div>
+        </a>
+
+        <!-- Guide 9 -->
         <a href="how-to-calculate-calorie-deficit.html" class="guide-card">
             <span class="guide-tag">Fundamentals</span>
-            <h2>How to Calculate & Track Your Daily Calorie Deficit</h2>
+            <h2>How to Calculate &amp; Track Your Daily Calorie Deficit</h2>
             <p>Master the clinical Mifflin-St Jeor equation, compute maintenance TDEE, and establish a healthy 300–500 kcal deficit without hunger.</p>
             <div class="guide-footer">
                 <span>11 min read</span>
@@ -158,51 +327,18 @@
             </div>
         </a>
 
-        <!-- Guide 2 -->
-        <a href="intermittent-fasting-calorie-deficit-guide.html" class="guide-card">
-            <span class="guide-tag">Meal Timing</span>
-            <h2>Intermittent Fasting & Calorie Deficit: Safe Combination</h2>
-            <p>Discover how 16/8 and 14/10 fasting schedules interact with daily caloric intake, meal distribution, and lean muscle retention.</p>
-            <div class="guide-footer">
-                <span>10 min read</span>
-                <span class="guide-cta">Read Guide →</span>
-            </div>
-        </a>
-
-        <!-- Guide 3 -->
-        <a href="tracking-calories-eating-out-restaurants.html" class="guide-card">
-            <span class="guide-tag">Social Dining</span>
-            <h2>How to Track Calories When Dining Out at Restaurants</h2>
-            <p>Heuristics for hidden cooking fats, hand-portion metrics, and calorie banking so you never have to avoid dinners with friends.</p>
-            <div class="guide-footer">
-                <span>9 min read</span>
-                <span class="guide-cta">Read Guide →</span>
-            </div>
-        </a>
-
-        <!-- Guide 4 -->
-        <a href="how-to-count-calories-home-cooked-meals.html" class="guide-card">
-            <span class="guide-tag">Kitchen Skills</span>
-            <h2>How to Count Calories in Home-Cooked Meals & Batch Prep</h2>
-            <p>Stop guessing on stews and casseroles. Learn the 3-step formula for per-serving calorie calculations and raw vs. cooked weights.</p>
-            <div class="guide-footer">
-                <span>10 min read</span>
-                <span class="guide-cta">Read Guide →</span>
-            </div>
-        </a>
-
-        <!-- Guide 5 -->
+        <!-- Guide 10 -->
         <a href="why-am-i-not-losing-weight-in-calorie-deficit.html" class="guide-card">
             <span class="guide-tag">Troubleshooting</span>
             <h2>Why Am I in a Calorie Deficit and Not Losing Weight?</h2>
-            <p>Understand water retention, the whoosh effect, subtle tracking creep, and unconscious NEAT reduction to break weight stalls.</p>
+            <p>Understand water retention, the whoosh effect, subtle tracking creep, and unconscious NEAT reduction to break weight loss plateaus.</p>
             <div class="guide-footer">
                 <span>11 min read</span>
                 <span class="guide-cta">Read Guide →</span>
             </div>
         </a>
 
-        <!-- Guide 6 -->
+        <!-- Guide 11 -->
         <a href="low-calorie-food-swaps-for-weight-loss.html" class="guide-card">
             <span class="guide-tag">Volume Eating</span>
             <h2>Smart Food Swaps: Cut 400+ Calories Without Hunger</h2>
@@ -212,20 +348,9 @@
                 <span class="guide-cta">Read Guide →</span>
             </div>
         </a>
-
-        <!-- Guide 7 -->
-        <a href="high-protein-calorie-deficit-grocery-list.html" class="guide-card">
-            <span class="guide-tag">Meal Prep</span>
-            <h2>The High-Protein Calorie Deficit Grocery Shopping List</h2>
-            <p>An aisle-by-aisle supermarket checklist of versatile, high-satiety protein staples and produce for meal prep success.</p>
-            <div class="guide-footer">
-                <span>10 min read</span>
-                <span class="guide-cta">Read Guide →</span>
-            </div>
-        </a>
     </main>
 
-        <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-disclaimer">
                 <strong>Medical &amp; Nutritional Disclaimer:</strong> The information, calculators, and AI insights provided on CalorieCalcApp.com and within the CalorieCalc mobile application are for educational and informational purposes only and do not constitute medical advice, diagnosis, or treatment. Always consult a qualified physician or registered dietitian before making significant changes to your diet, fasting protocol, or caloric intake.
@@ -238,7 +363,7 @@
                 <div class="footer-links">
                     <div class="fl-col">
                         <h4>Features</h4>
-                        <a href="../features/index.html">All 37+ Features</a>
+                        <a href="../features/">All 37+ Features</a>
                         <a href="../features/ai-food-scanner.html">AI Food Scanner</a>
                         <a href="../features/ai-nutrition-coach.html">AI Nutrition Coach</a>
                         <a href="../features/meal-planner.html">AI Meal Planner</a>
@@ -247,9 +372,9 @@
                     <div class="fl-col">
                         <h4>Free Tools &amp; Guides</h4>
                         <a href="../tools/tdee-calculator.html">TDEE &amp; Macro Calculator</a>
-                        <a href="../quiz/index.html">90-Day Blueprint Quiz</a>
-                        <a href="../guides/index.html">Nutrition Knowledge Hub</a>
-                        <a href="../guides/how-to-calculate-calorie-deficit.html">Calorie Deficit Guide</a>
+                        <a href="../tools/raw-cooked-weight-converter.html">Raw vs. Cooked Converter</a>
+                        <a href="../quiz/">90-Day Blueprint Quiz</a>
+                        <a href="../guides/">Nutrition Knowledge Hub</a>
                     </div>
                     <div class="fl-col">
                         <h4>Partners &amp; Support</h4>
